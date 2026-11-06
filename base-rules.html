@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="version" content="3.0.2">
+<title>Lorcana Base Rules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/storybook.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="fleuron" viewBox="0 0 26 14"><path d="M13 1.5 17 7l-4 5.5L9 7Z" fill="currentColor"/><circle cx="3.5" cy="7" r="1.4" fill="currentColor"/><circle cx="22.5" cy="7" r="1.4" fill="currentColor"/></symbol>
+</svg>
+
+<header class="titlepage col">
+  <svg class="inkwell" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M24 70h32M26 70c-4-8-4-20 2-26h24c6 6 6 18 2 26"/>
+    <path d="M32 44v-6h16v6M30 38h20"/>
+    <path d="M30 56c6 3 14 3 20 0" opacity=".6"/>
+    <path d="M41 37C46 24 56 12 70 6c-4 10-10 18-19 25"/>
+    <path d="M48 26c4-2 8-2 11 0M53 19c3-1 6-1 9 0" opacity=".7"/>
+  </svg>
+  <div class="crumbline"><a href="./">Home</a> · <a href="quick-reference.html">Quick reference</a></div>
+  <div class="kicker" style="margin-top:22px">Lorcana · Rules</div>
+  <h1>Base Rules</h1>
+  <p class="sub">The rules we keep checking, set down in one place.</p>
+  <div class="drops" aria-hidden="true">
+    <span style="background:var(--amber)"></span><span style="background:var(--amethyst)"></span><span style="background:var(--emerald)"></span>
+    <span style="background:var(--ruby)"></span><span style="background:var(--sapphire)"></span><span style="background:var(--steel)"></span>
+  </div>
+</header>
+
+<nav class="contents" aria-label="Contents">
+  <ol>
+    <li class="back"><a href="quick-reference.html">← Quick reference</a></li>
+    <li><a href="#setup"><b>I</b>Setup</a></li>
+    <li><a href="#turn"><b>II</b>The turn</a></li>
+    <li><a href="#ink"><b>III</b>Ink</a></li>
+    <li><a href="#types"><b>IV</b>Cards</a></li>
+    <li><a href="#quest"><b>V</b>Questing</a></li>
+    <li><a href="#challenge"><b>VI</b>Challenges</a></li>
+    <li><a href="#songs"><b>VII</b>Songs &amp; Shift</a></li>
+    <li><a href="#keywords"><b>VIII</b>Keywords</a></li>
+    <li><a href="#glossary"><b>IX</b>Glossary</a></li>
+    <li><a href="#formats"><b>X</b>Formats</a></li>
+  </ol>
+</nav>
+
+<main class="col">
+
+<section class="chapter" id="setup">
+  <div class="chapter-head"><span class="num">Chapter I</span><h2>Setup</h2></div>
+  <p class="lead">Each player brings a deck of at least sixty cards in one or two inks. The first to gather twenty lore wins. End your turn with an empty deck and you lose, though drawing your last card is not fatal on its own.</p>
+  <dl class="terms">
+    <dt>Deck</dt><dd>60 cards or more. Up to four copies of any card with the same full name (name and version). One or two ink colors.</dd>
+    <dt>Opening</dt><dd>Shuffle, choose a first player, and draw seven. Once, you may put any number of cards on the bottom of your deck, draw that many, then shuffle.</dd>
+    <dt>Zones</dt><dd>Deck, hand, play, inkwell and discard. The inkwell is a face-down pile that pays for everything.</dd>
+  </dl>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="turn">
+  <div class="chapter-head"><span class="num">Chapter II</span><h2>The turn</h2></div>
+  <div class="phases">
+    <div>
+      <h3>Beginning</h3>
+      <ol>
+        <li><b>Ready</b> your exerted cards.</li>
+        <li><b>Set:</b> start-of-turn effects happen, and each of your locations gives you its lore.</li>
+        <li><b>Draw</b> a card. The first player skips this on turn one.</li>
+      </ol>
+    </div>
+    <div>
+      <h3>Main</h3>
+      <p class="muted" style="margin-bottom:4px">In any order, as often as you can pay:</p>
+      <ul>
+        <li>Ink one card (once per turn)</li>
+        <li>Play characters, actions, items, locations</li>
+        <li>Quest</li>
+        <li>Challenge</li>
+        <li>Move a character to a location</li>
+        <li>Use abilities</li>
+      </ul>
+    </div>
+    <div>
+      <h3>End</h3>
+      <ul>
+        <li>End-of-turn effects happen.</li>
+        <li>An empty deck now means you lose.</li>
+        <li>Play passes to your opponent.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="ink">
+  <div class="chapter-head"><span class="num">Chapter III</span><h2>Ink</h2></div>
+  <p class="lead">Once a turn, reveal a card that bears the inkwell symbol and lay it face down in your inkwell. Each card there is one ink. To play a card, exert ink equal to its cost; it all readies again next turn.</p>
+  <p class="note"><b>New in Hyperia City</b>Some cards create ink drops: counters in your inkwell. Remove one to pay 1 ink toward any cost. You can save them for later turns.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="types">
+  <div class="chapter-head"><span class="num">Chapter IV</span><h2>Cards</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Type</th><th>Stays in play</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>Character</td><td>Yes</td><td>Quests for lore, challenges and defends. Stays until banished.</td></tr>
+        <tr><td>Action</td><td>No</td><td>One effect, then to the discard. Songs are actions a character can sing for free.</td></tr>
+        <tr><td>Item</td><td>Yes</td><td>Ongoing effects or abilities.</td></tr>
+        <tr><td>Location</td><td>Yes</td><td>Lore each turn and bonuses for characters inside. Can be challenged.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Reading a character</h3>
+  <dl class="terms">
+    <dt>Cost</dt><dd>Ink to play it.</dd>
+    <dt>Strength</dt><dd>Damage it deals in a challenge.</dd>
+    <dt>Willpower</dt><dd>Damage it can take before it’s banished.</dd>
+    <dt>Lore</dt><dd>Lore you gain when it quests.</dd>
+  </dl>
+  <p class="note"><b>Drying</b>A character played this turn is still drying. It can’t quest, challenge, sing or use exert abilities until your next turn.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="quest">
+  <div class="chapter-head"><span class="num">Chapter V</span><h2>Questing</h2></div>
+  <p class="lead">Exert a ready, dry character and gain lore equal to its lore value. It stays exerted until your next turn, which leaves it open to challenge.</p>
+  <p>Locations add their lore at the start of your turn. Pay a location’s move cost to send a character inside.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="challenge">
+  <div class="chapter-head"><span class="num">Chapter VI</span><h2>Challenges</h2></div>
+  <ol class="rules">
+    <li><span><b>Choose your challenger.</b> Exert one of your ready, dry characters.</span></li>
+    <li><span><b>Choose a target.</b> An opposing character that is exerted, or an opposing location.</span></li>
+    <li><span><b>Trade blows.</b> Each deals damage equal to its strength to the other, at the same time.</span></li>
+    <li><span><b>Banish the fallen.</b> Damage equal to or above willpower sends a character to the discard.</span></li>
+  </ol>
+  <p class="note"><b>Remember</b>Damage stays until healed or banished. Locations never deal damage back.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="songs">
+  <div class="chapter-head"><span class="num">Chapter VII</span><h2>Songs &amp; Shift</h2></div>
+  <dl class="terms">
+    <dt>Singing</dt><dd>Exert a ready, dry character whose cost is at least the song’s cost to play it for free. Or pay the ink as usual.</dd>
+    <dt>Sing Together</dt><dd>Exert any number of your ready characters whose costs add up to N or more.</dd>
+    <dt>Shift</dt><dd>Pay the Shift cost to play a character on top of one of yours with the same name. It keeps the damage and the ready or exerted state, and can act right away if the one beneath was dry.</dd>
+  </dl>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="keywords">
+  <div class="chapter-head"><span class="num">Chapter VIII</span><h2>Keywords</h2></div>
+  <p class="muted">All fourteen in the Comprehensive Rules.</p>
+  <div class="dictionary">
+    <p><span class="term">Alert</span><span class="new">new</span><br>Can challenge as if it had Evasive.</p>
+    <p><span class="term">Bodyguard</span><br>May enter play exerted. Opponents must challenge it first if able.</p>
+    <p><span class="term">Boost N</span><span class="new">new</span><br>Once during your turn, pay N to put your top card face down under it. Other abilities care about what’s underneath.</p>
+    <p><span class="term">Challenger +N</span><br>+N strength while challenging.</p>
+    <p><span class="term">Evasive</span><br>Only Evasive or Alert characters can challenge it.</p>
+    <p><span class="term">Reckless</span><br>Can’t quest. Must challenge each turn if able.</p>
+    <p><span class="term">Resist +N</span><br>Damage dealt to it is reduced by N.</p>
+    <p><span class="term">Rush</span><br>Can challenge the turn it’s played.</p>
+    <p><span class="term">Shift N</span><br>Pay N to play it on top of a same-named character.</p>
+    <p><span class="term">Sing Together N</span><span class="new">new</span><br>Exert characters with total cost N or more to sing it.</p>
+    <p><span class="term">Singer N</span><br>Counts as cost N for singing.</p>
+    <p><span class="term">Support</span><br>When it quests, add its strength to another character this turn.</p>
+    <p><span class="term">Vanish</span><br>Banished when an opponent’s action chooses it.</p>
+    <p><span class="term">Ward</span><br>Opponents can’t choose it with effects. They can still challenge it.</p>
+  </div>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="glossary">
+  <div class="chapter-head"><span class="num">Chapter IX</span><h2>Glossary</h2></div>
+  <div class="dictionary">
+    <p><span class="term">Ready</span><br>Upright and usable.</p>
+    <p><span class="term">Exert</span><br>Turn it sideways to use it. It stays that way until your next Ready step.</p>
+    <p><span class="term">Drying</span><br>A character on the turn it’s played. Dry characters can quest, challenge and sing.</p>
+    <p><span class="term">Banish</span><br>Remove from play to its owner’s discard.</p>
+    <p><span class="term">Full name</span><br>Name plus version, such as “Mickey Mouse - Brave Little Tailor.” Deck limits use it; Shift uses the base name.</p>
+    <p><span class="term">The bag</span><br>Where triggered abilities wait. The active player resolves theirs first.</p>
+    <p><span class="term">Game state check</span><br>After every step and effect: has anyone reached 20 lore, and does any character have lethal damage?</p>
+  </div>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="formats">
+  <div class="chapter-head"><span class="num">Chapter X</span><h2>Formats</h2></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Format</th><th>Legal sets</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Core</td><td>Sets 9 to 14</td><td>Rotating. The four oldest sets leave once a year. Hyperia City joined at its Oct 16 prerelease.</td></tr>
+        <tr><td>Infinity</td><td>Every set</td><td>Non-rotating, with its own banlist. Casual play uses every set too.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>Reprints</b>A card reprinted in a Core-legal set is legal in Core, older printings with the same full name included.</p>
+</section>
+
+<footer class="colophon">
+  <h2>Colophon</h2>
+  <p>An unofficial fan reference for our table. Card text overrides anything here; the Comprehensive Rules have the final word. Set in IM Fell English and Alegreya.</p>
+  <ul>
+    <li><a href="https://files.disneylorcana.com/Disney-Lorcana-Comprehensive-Rules_EN.pdf" target="_blank" rel="noopener">Official Comprehensive Rules (PDF)</a></li>
+    <li><a href="https://www.disneylorcana.com/en-US/news/2026/02/winterspell-release-notes" target="_blank" rel="noopener">Winterspell release notes (Comprehensive Rules 2.0)</a></li>
+    <li><a href="https://www.disneylorcana.com/en-US/news/2025/10/2025-10_release-notes" target="_blank" rel="noopener">Whispers in the Well release notes (Alert, Boost)</a></li>
+    <li><a href="https://gamertagmythras.com/blog/disney-lorcana/lorcana-ink-drops-explained" target="_blank" rel="noopener">Ink drops explained (Comprehensive Rules 2.3.0)</a></li>
+  </ul>
+  <div class="meta">
+    <span class="ver">Version 3.0.2</span>
+    <span>Updated 2026-10-29</span>
+    <span>Rules basis: Comprehensive Rules 2.3.0</span>
+    <a href="CHANGELOG.md">View changelog</a>
+    <a href="./">Home</a>
+  </div>
+</footer>
+</main>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
