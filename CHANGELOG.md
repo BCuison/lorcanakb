@@ -16,6 +16,12 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.7.0] - 2026-11-07
+#### Added
+- `rules-changes.html`: official rules updates, errata and bans, newest first, linked from Base Rules, Quick reference and Home
+#### Fixed
+- Underdog keyword (Winterspell) was missing; keyword count is now sixteen
+
 ### [3.6.0] - 2026-11-07
 #### Added
 - Newer mechanics chapter on Base Rules (Boost, Teams and new Shift variants, ink drops, Adventurous), from official release notes
@@ -108,6 +114,12 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## quick-reference.html
+
+### [4.3.0] - 2026-11-07
+#### Added
+- Rules changes in the Base Rules list
+#### Changed
+- Keyword count is now sixteen
 
 ### [4.2.0] - 2026-11-07
 #### Added
@@ -232,6 +244,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## docs/knowledgebase.md
 
+### [1.6.0] - 2026-11-07
+#### Added
+- Underdog in the keyword list (now 16); pointer to `rules-changes.html`
+
 ### [1.5.0] - 2026-11-07
 #### Added
 - Adventurous keyword (Hyperia City); keyword count is now 15
@@ -279,6 +295,12 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## index.html
+
+### [3.3.0] - 2026-11-07
+#### Added
+- Rules changes entry in the contents
+#### Changed
+- Keyword count is now sixteen
 
 ### [3.2.2] - 2026-11-07
 #### Changed
@@ -709,6 +731,12 @@ Each file is versioned independently. Entries are newest first.
 
 ## base-rules.html
 
+### [3.2.0] - 2026-11-07
+#### Added
+- Underdog in Keywords (now sixteen)
+- Banned cards note in Formats, linking to Rules changes
+- Rules changes link in the footer
+
 ### [3.1.0] - 2026-11-07
 #### Added
 - Chapter IX Newer mechanics: Boost (Whispers in the Well), Team, Duo/Combo/Temporary/classification Shift and Vinelings (Attack of the Vine), ink drops and Adventurous (Hyperia City), with open questions noted
@@ -776,3 +804,12 @@ Each file is versioned independently. Entries are newest first.
 - Hexagon motif from the card ink-cost frame for ink drops, the ink guide drop and numbered steps
 - Light mode (moonlit paper, ink-blue text) and dark mode (indigo ink, lantern gold), following the system setting or the lightbulb toggle
 - Marcellus headings, Figtree body text
+
+---
+
+## rules-changes.html
+
+### [1.0.0] - 2026-11-07
+#### Added
+- At a glance: current Comprehensive Rules (2.3) and Tournament Rules versions, Core legal sets and banned lists for Core, Infinity and Coconut
+- Change log, newest first, from official release notes and announcements: bans (Apr 2025, Mar 2026, Nov 2026), Fabled rotation, Whispers in the Well, Winterspell (CR 2.0), Wilds Unknown (CR 2.1), Attack of the Vine (CR 2.2), Tournament Rules update, rotation explainer, Format Coconut beta, Hyperia City (CR 2.3); rules, errata and format changes for each with source links
