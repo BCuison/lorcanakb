@@ -1,9 +1,9 @@
-/* Lorcana KB shared script v1.2.1
+/* Lorcana KB shared script v1.4.0
    1. Opens every page at the top unless the link targets a section (#id).
    2. Light/dark toggle (lightbulb, top left). Choice is remembered per browser.
    4. Tracks the contents bar height (--nav-h) so section links land below it when it wraps.
-   3. Theme menu (right of the lightbulb): Storybook (default) or Classic.
-      Swaps the page stylesheet between storybook.css and classic.css. */
+   3. Theme menu (right of the lightbulb): Classic, Illuminary (default) or Storybook, listed alphabetically.
+      Swaps the page stylesheet between classic.css, illuminary.css and storybook.css. */
 (function () {
   var KEY = 'lorcana-kb-theme';
   var root = document.documentElement;
@@ -21,14 +21,20 @@
 
   /* ---- design theme (skin) ---- */
   var SKIN_KEY = 'lorcana-kb-skin';
-  var SKINS = [['storybook', 'Storybook'], ['classic', 'Classic']];
-  var SKIN_RE = /(storybook|classic)\.css(\?.*)?$/;
+  var DEFAULT_SKIN = 'illuminary';
+  var SKINS = [['classic', 'Classic'], ['illuminary', 'Illuminary'], ['storybook', 'Storybook']];
+  var SKIN_RE = /(classic|illuminary|storybook)\.css(\?.*)?$/;
   function skinLink() {
     var links = document.querySelectorAll('link[rel="stylesheet"]');
     for (var i = 0; i < links.length; i++) if (SKIN_RE.test(links[i].getAttribute('href') || '')) return links[i];
     return null;
   }
-  function getSkin() { try { var v = localStorage.getItem(SKIN_KEY); return v === 'classic' ? 'classic' : 'storybook'; } catch (e) { return 'storybook'; } }
+  function getSkin() {
+    var v = null;
+    try { v = localStorage.getItem(SKIN_KEY); } catch (e) {}
+    for (var i = 0; i < SKINS.length; i++) if (SKINS[i][0] === v) return v;
+    return DEFAULT_SKIN;
+  }
   function applySkin(name) {
     var l = skinLink(); if (!l) return;
     var href = l.getAttribute('href');
@@ -48,7 +54,7 @@
     sel.id = 'skin-select'; sel.title = 'Theme';
     SKINS.forEach(function (o) {
       var opt = document.createElement('option');
-      opt.value = o[0]; opt.textContent = o[1] + (o[0] === 'storybook' ? ' (default)' : '');
+      opt.value = o[0]; opt.textContent = o[1] + (o[0] === DEFAULT_SKIN ? ' (default)' : '');
       sel.appendChild(opt);
     });
     sel.value = getSkin();

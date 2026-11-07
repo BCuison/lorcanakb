@@ -16,6 +16,19 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.4.1] - 2026-11-07
+#### Fixed
+- Home links point at `index.html` instead of the folder, so they open the home page when viewing files locally, not a directory listing (all pages and `scripts/build-inks.py`; ink guides regenerated)
+
+### [3.4.0] - 2026-11-07
+#### Changed
+- Illuminary is the default theme: every page and `scripts/build-inks.py` now link `illuminary.css` (ink guides regenerated)
+- Theme menu lists Classic, Illuminary, Storybook in alphabetical order
+
+### [3.3.0] - 2026-11-07
+#### Added
+- Illuminary theme (`assets/css/illuminary.css`), a third choice in the theme menu with full light and dark support
+
 ### [3.2.0] - 2026-11-07
 #### Added
 - `lore.html`, the Lorcana story set by set, linked from the Quick reference nav between Tools and Base Rules
@@ -358,6 +371,15 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/js/site.js
 
+### [1.4.0] - 2026-11-07
+#### Changed
+- Illuminary is the default theme; a saved Classic or Storybook choice is still honored
+- Theme menu sorted alphabetically
+
+### [1.3.0] - 2026-11-07
+#### Added
+- Illuminary option in the theme menu
+
 ### [1.2.1] - 2026-10-30
 #### Added
 - Measures the contents bar height so jump links clear it when it wraps
@@ -682,3 +704,14 @@ Each file is versioned independently. Entries are newest first.
 #### Added
 - Lore page: the realm, then the story by arc (The Flood, The Sea Witch, The Hexwell Crown, Whispers & Winter, The Vine, Hyperia City) with a subsection per set from The First Chapter to Hyperia City, plus announced 2027 sets
 - Wikipedia-style numbered citations on each summary, linking to a References chapter of 20 official sources
+
+---
+
+## assets/css/illuminary.css
+
+### [1.0.0] - 2026-11-07
+#### Added
+- Illuminary theme, named for the Great Illuminary: a midnight header with an aurora of the six inks and glimmer specks (dark in both modes), then a quiet reading column
+- Hexagon motif from the card ink-cost frame for ink drops, the ink guide drop and numbered steps
+- Light mode (moonlit paper, ink-blue text) and dark mode (indigo ink, lantern gold), following the system setting or the lightbulb toggle
+- Marcellus headings, Figtree body text
