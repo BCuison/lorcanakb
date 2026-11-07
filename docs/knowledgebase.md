@@ -1,6 +1,6 @@
 # Lorcana Knowledgebase
 
-Version: 1.4.2 | Updated: 2026-10-27 | [Changelog](../CHANGELOG.md)
+Version: 1.5.0 | Updated: 2026-11-07 | [Changelog](../CHANGELOG.md)
 
 In-depth companion to [`base-rules.html`](../base-rules.html). Base Rules stays "at the table"; nuance, rulings and strategy live here.
 
@@ -29,7 +29,12 @@ In-depth companion to [`base-rules.html`](../base-rules.html). Base Rules stays 
 
 ## 2. Keywords in depth
 
-The Comprehensive Rules list 14 keywords: Alert, Bodyguard, Boost, Challenger, Evasive, Reckless, Resist, Rush, Shift, Singer, Sing Together, Support, Vanish, Ward.
+There are 15 keywords: Adventurous (Hyperia City, Oct 2026), Alert, Bodyguard, Boost, Challenger, Evasive, Reckless, Resist, Rush, Shift, Singer, Sing Together, Support, Vanish, Ward.
+
+### Adventurous (Hyperia City, Set 14)
+- Can't challenge, and must quest each turn if able. The opposite of Reckless.
+- Five older cards were reworded to use it (Hyperia City release notes).
+- Source: [Hyperia City release notes](https://disneylorcana.com/en/news/2026/10/disney-lorcana-tcg-set-release-notes-hyperia-city/)
 
 ### Alert (Whispers in the Well, Set 10)
 - Can challenge as if it had Evasive.

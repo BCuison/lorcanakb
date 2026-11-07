@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="3.0.2">
+<meta name="version" content="3.1.0">
 <title>Lorcana Base Rules</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,8 +45,9 @@
     <li><a href="#challenge"><b>VI</b>Challenges</a></li>
     <li><a href="#songs"><b>VII</b>Songs &amp; Shift</a></li>
     <li><a href="#keywords"><b>VIII</b>Keywords</a></li>
-    <li><a href="#glossary"><b>IX</b>Glossary</a></li>
-    <li><a href="#formats"><b>X</b>Formats</a></li>
+    <li><a href="#mechanics"><b>IX</b>Newer mechanics</a></li>
+    <li><a href="#glossary"><b>X</b>Glossary</a></li>
+    <li><a href="#formats"><b>XI</b>Formats</a></li>
   </ol>
 </nav>
 
@@ -103,7 +104,7 @@
 <section class="chapter" id="ink">
   <div class="chapter-head"><span class="num">Chapter III</span><h2>Ink</h2></div>
   <p class="lead">Once a turn, reveal a card that bears the inkwell symbol and lay it face down in your inkwell. Each card there is one ink. To play a card, exert ink equal to its cost; it all readies again next turn.</p>
-  <p class="note"><b>New in Hyperia City</b>Some cards create ink drops: counters in your inkwell. Remove one to pay 1 ink toward any cost. You can save them for later turns.</p>
+  <p class="note"><b>New in Hyperia City</b>Some cards create ink drops: counters in your inkwell. Remove one to pay 1 ink toward any cost. You can save them for later turns. <a href="#ink-drops">More on ink drops</a>.</p>
 </section>
 
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
@@ -159,7 +160,7 @@
   <dl class="terms">
     <dt>Singing</dt><dd>Exert a ready, dry character whose cost is at least the song’s cost to play it for free. Or pay the ink as usual.</dd>
     <dt>Sing Together</dt><dd>Exert any number of your ready characters whose costs add up to N or more.</dd>
-    <dt>Shift</dt><dd>Pay the Shift cost to play a character on top of one of yours with the same name. It keeps the damage and the ready or exerted state, and can act right away if the one beneath was dry.</dd>
+    <dt>Shift</dt><dd>Pay the Shift cost to play a character on top of one of yours with the same name. It keeps the damage and the ready or exerted state, and can act right away if the one beneath was dry. Newer variants, such as Duo Shift, are in <a href="#teams">Newer mechanics</a>.</dd>
   </dl>
 </section>
 
@@ -167,11 +168,12 @@
 
 <section class="chapter" id="keywords">
   <div class="chapter-head"><span class="num">Chapter VIII</span><h2>Keywords</h2></div>
-  <p class="muted">All fourteen in the Comprehensive Rules.</p>
+  <p class="muted">All fifteen, including Adventurous from Hyperia City.</p>
   <div class="dictionary">
+    <p><span class="term">Adventurous</span><span class="new">new</span><a class="rules-link" href="#adventurous">more →</a><br>Can’t challenge. Must quest each turn if able. The opposite of Reckless.</p>
     <p><span class="term">Alert</span><span class="new">new</span><br>Can challenge as if it had Evasive.</p>
     <p><span class="term">Bodyguard</span><br>May enter play exerted. Opponents must challenge it first if able.</p>
-    <p><span class="term">Boost N</span><span class="new">new</span><br>Once during your turn, pay N to put your top card face down under it. Other abilities care about what’s underneath.</p>
+    <p><span class="term">Boost N</span><span class="new">new</span><a class="rules-link" href="#boost">more →</a><br>Once during your turn, pay N to put your top card face down under it. Other abilities care about what’s underneath.</p>
     <p><span class="term">Challenger +N</span><br>+N strength while challenging.</p>
     <p><span class="term">Evasive</span><br>Only Evasive or Alert characters can challenge it.</p>
     <p><span class="term">Reckless</span><br>Can’t quest. Must challenge each turn if able.</p>
@@ -188,8 +190,55 @@
 
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
 
+<section class="chapter" id="mechanics">
+  <div class="chapter-head"><span class="num">Chapter IX</span><h2>Newer mechanics</h2></div>
+  <p class="muted">How the mechanics from the latest sets work, newest last. Card text wins if it says otherwise.</p>
+
+  <h3 id="boost">Boost</h3>
+  <p class="muted">Whispers in the Well · Nov 2025</p>
+  <dl class="terms">
+    <dt>Use it</dt><dd>During your turn, pay the Boost cost in ink to put the top card of your deck face down under that character. Each Boost ability works once per turn.</dd>
+    <dt>Cards under</dt><dd>Face-down cards under a character can’t be looked at by anyone, like your inkwell. They aren’t in play, and putting a card under something isn’t playing it.</dd>
+    <dt>Why bother</dt><dd>Cards reward it: some trigger whenever you put a card under them, some check whether there’s a card under them, and many from Winterspell on get stronger for each card underneath.</dd>
+    <dt>Leaving play</dt><dd>The whole stack moves together. If the character is banished, every card under it goes to the discard face up.</dd>
+  </dl>
+  <p class="note"><b>Watch your deck</b>Every Boost takes a card off the top of your deck. Since Comprehensive Rules 2.0 you lose if you end your turn with no cards in your deck.</p>
+
+  <h3 id="teams">Teams and new Shift</h3>
+  <p class="muted">Attack of the Vine · Jul 2026</p>
+  <dl class="terms">
+    <dt>Team</dt><dd>A classification on dual-named characters such as Sulley &amp; Boo. It counts as three names (Sulley, Boo, and Sulley &amp; Boo) but is still one character.</dd>
+    <dt>Duo Shift</dt><dd>Play it on top of two of your characters at once, one with each name. For Mickey &amp; Minnie, that’s a Mickey Mouse and a Minnie Mouse.</dd>
+    <dt>Combo Shift</dt><dd>Either kind: on one character with either name, or on two, one for each name.</dd>
+    <dt>Mixed states</dt><dd>Shifting onto a dry and a drying character makes the new one drying. Onto a ready and an exerted one, it’s exerted.</dd>
+    <dt>Not allowed</dt><dd>You can’t Duo Shift onto a single dual-named character. It’s one character, and Duo Shift needs two.</dd>
+    <dt>Temporary Shift</dt><dd>At the end of your turn, remove all damage from it and return only that card to your hand. The cards under it stay in play.</dd>
+    <dt>Classification Shift</dt><dd>Some Shifts name a classification or item instead of a character name. Temporary Red Panda Shift goes on any Red Panda; Potato Shift goes on an item named Potato.</dd>
+    <dt>Vinelings</dt><dd>Leafy copies made by the Vine. They’re printed Floodborn from the start, so they count as Floodborn without shifting.</dd>
+  </dl>
+
+  <h3 id="ink-drops">Ink drops</h3>
+  <p class="muted">Hyperia City · Oct 2026</p>
+  <dl class="terms">
+    <dt>What they are</dt><dd>Counters, not cards. When a card says you get an ink drop, put one in your inkwell. Each is worth 1 ink.</dd>
+    <dt>Spend them</dt><dd>Whenever you pay an ink cost, remove any number of drops to pay 1 ink each. Mix them with exerted ink cards, or skip them. A removed drop is gone.</dd>
+    <dt>Timing</dt><dd>Use them the turn you get them, or save them for a big turn later. There’s no limit on how many you hold.</dd>
+    <dt>Not paying ink</dt><dd>A cost that says “remove 2 ink drops”, like Baymax’s Shift, isn’t an ink payment. It doesn’t count for effects that care about paying ink.</dd>
+    <dt>Watch for</dt><dd>Some cards check whether you removed a drop to play them, such as Madam Mim and Intense Research. Every ink can make drops.</dd>
+  </dl>
+  <p class="note"><b>No tokens?</b>Printed ink drop counters come in boosters. A die or coin works just as well.</p>
+
+  <h3 id="adventurous">Adventurous</h3>
+  <p class="muted">Hyperia City · Oct 2026</p>
+  <p>A new keyword, the opposite of Reckless: the character can’t challenge and must quest each turn if able. Five older cards were reworded to use it: Cobra Bubbles - Dedicated Official, Ariel - Curious Traveler, Woody - Town Sheriff, Gaston - Frightful Bully and the action This Growing Pressure.</p>
+
+  <p class="note"><b>Still unclear</b>The official pages don’t yet say whether ink drops count as cards in your inkwell for effects that count them, or whether a shifted Team character counts as Floodborn. Check the Comprehensive Rules or a judge.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
 <section class="chapter" id="glossary">
-  <div class="chapter-head"><span class="num">Chapter IX</span><h2>Glossary</h2></div>
+  <div class="chapter-head"><span class="num">Chapter X</span><h2>Glossary</h2></div>
   <div class="dictionary">
     <p><span class="term">Ready</span><br>Upright and usable.</p>
     <p><span class="term">Exert</span><br>Turn it sideways to use it. It stays that way until your next Ready step.</p>
@@ -204,7 +253,7 @@
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
 
 <section class="chapter" id="formats">
-  <div class="chapter-head"><span class="num">Chapter X</span><h2>Formats</h2></div>
+  <div class="chapter-head"><span class="num">Chapter XI</span><h2>Formats</h2></div>
   <div class="table-wrap">
     <table>
       <thead><tr><th>Format</th><th>Legal sets</th><th>Notes</th></tr></thead>
@@ -223,12 +272,17 @@
   <ul>
     <li><a href="https://files.disneylorcana.com/Disney-Lorcana-Comprehensive-Rules_EN.pdf" target="_blank" rel="noopener">Official Comprehensive Rules (PDF)</a></li>
     <li><a href="https://www.disneylorcana.com/en-US/news/2026/02/winterspell-release-notes" target="_blank" rel="noopener">Winterspell release notes (Comprehensive Rules 2.0)</a></li>
-    <li><a href="https://www.disneylorcana.com/en-US/news/2025/10/2025-10_release-notes" target="_blank" rel="noopener">Whispers in the Well release notes (Alert, Boost)</a></li>
+    <li><a href="https://disneylorcana.com/en/news/2025/11/2025-10_release-notes/" target="_blank" rel="noopener">Whispers in the Well release notes (Alert, Boost; official)</a></li>
+    <li><a href="https://disneylorcana.com/en/news/2026/01/casting-a-winterspell/" target="_blank" rel="noopener">Casting a Winterspell (Boost scaling; official)</a></li>
+    <li><a href="https://disneylorcana.com/en/news/2026/07/disney-lorcana-tcg-set-release-notes-attack-of-the-vine/" target="_blank" rel="noopener">Attack of the Vine release notes (Team, Duo, Combo and Temporary Shift; official)</a></li>
+    <li><a href="https://disneylorcana.com/en/news/2026/06/flood-ink-evolved/" target="_blank" rel="noopener">Flood Ink Evolved (Vinelings; official)</a></li>
+    <li><a href="https://disneylorcana.com/en/news/2026/10/disney-lorcana-tcg-set-release-notes-hyperia-city/" target="_blank" rel="noopener">Hyperia City release notes (ink drops, Adventurous; official)</a></li>
+    <li><a href="https://disneylorcana.com/en/news/2026/09/ink-drop-deep-dive/" target="_blank" rel="noopener">Ink drop deep dive (official)</a></li>
     <li><a href="https://gamertagmythras.com/blog/disney-lorcana/lorcana-ink-drops-explained" target="_blank" rel="noopener">Ink drops explained (Comprehensive Rules 2.3.0)</a></li>
   </ul>
   <div class="meta">
-    <span class="ver">Version 3.0.2</span>
-    <span>Updated 2026-10-29</span>
+    <span class="ver">Version 3.1.0</span>
+    <span>Updated 2026-11-07</span>
     <span>Rules basis: Comprehensive Rules 2.3.0</span>
     <a href="CHANGELOG.md">View changelog</a>
     <a href="index.html">Home</a>

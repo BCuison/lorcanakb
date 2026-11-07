@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.6.0] - 2026-11-07
+#### Added
+- Newer mechanics chapter on Base Rules (Boost, Teams and new Shift variants, ink drops, Adventurous), from official release notes
+
 ### [3.5.0] - 2026-11-07
 #### Added
 - Lore tracker on the Tools page (`table-tools.html`, `assets/js/tools.js`), styled in all three themes
@@ -104,6 +108,12 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## quick-reference.html
+
+### [4.2.0] - 2026-11-07
+#### Added
+- Newer mechanics in the Base Rules list
+#### Changed
+- Keyword count is now fifteen
 
 ### [4.1.0] - 2026-11-07
 #### Added
@@ -222,6 +232,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## docs/knowledgebase.md
 
+### [1.5.0] - 2026-11-07
+#### Added
+- Adventurous keyword (Hyperia City); keyword count is now 15
+
 ### [1.4.2] - 2026-10-29
 #### Fixed
 - Links point to Base Rules and the Inks page
@@ -265,6 +279,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## index.html
+
+### [3.2.2] - 2026-11-07
+#### Changed
+- Base rules description mentions newer mechanics and fifteen keywords
 
 ### [3.2.1] - 2026-11-07
 #### Changed
@@ -690,6 +708,17 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## base-rules.html
+
+### [3.1.0] - 2026-11-07
+#### Added
+- Chapter IX Newer mechanics: Boost (Whispers in the Well), Team, Duo/Combo/Temporary/classification Shift and Vinelings (Attack of the Vine), ink drops and Adventurous (Hyperia City), with open questions noted
+- Adventurous added to Keywords (now fifteen), linking to its section
+- Links to it from Shift, the Boost keyword and the ink drops note
+- Official sources for each mechanic
+#### Changed
+- Glossary is now Chapter X and Formats Chapter XI
+#### Fixed
+- Whispers in the Well release notes link pointed to the news listing instead of the notes
 
 ### [3.0.2] - 2026-10-29
 #### Changed
