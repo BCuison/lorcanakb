@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.2.0] - 2026-11-07
+#### Added
+- `lore.html`, the Lorcana story set by set, linked from the Quick reference nav between Tools and Base Rules
+
 ### [3.1.0] - 2026-10-29
 #### Changed
 - Quick reference restored as the hub; Base Rules, The Inks and Illumineer's Quest are pages opened from its nav menu
@@ -83,6 +87,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## quick-reference.html
+
+### [4.1.0] - 2026-11-07
+#### Added
+- Lore link in the nav, between Tools and Base Rules
 
 ### [4.0.1] - 2026-10-29
 #### Changed
@@ -240,6 +248,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## index.html
+
+### [3.2.0] - 2026-11-07
+#### Added
+- Lore entry in the contents
 
 ### [3.1.0] - 2026-10-29
 #### Added
@@ -522,6 +534,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.5.0] - 2026-11-07
+#### Added
+- Footnote citation (`sup.cite`) and reference list (`ol.refs`) styles for the Lore page
+
 ### [1.4.1] - 2026-10-30
 #### Fixed
 - Contents bar couldn't be scrolled with a mouse. It now wraps onto extra lines at 640px and wider, or on any mouse/trackpad device; touch phones keep the swipeable row
@@ -555,6 +571,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.2.0] - 2026-11-07
+#### Added
+- Footnote citation (`sup.cite`) and reference list (`ol.refs`) styles for the Lore page
 
 ### [1.1.1] - 2026-10-30
 #### Fixed
@@ -653,3 +673,12 @@ Each file is versioned independently. Entries are newest first.
 
 ### [1.0.0] - 2026-10-29
 - Ink guide index, moved from the quick reference's Chapter XI
+
+---
+
+## lore.html
+
+### [1.0.0] - 2026-11-07
+#### Added
+- Lore page: the realm, then the story by arc (The Flood, The Sea Witch, The Hexwell Crown, Whispers & Winter, The Vine, Hyperia City) with a subsection per set from The First Chapter to Hyperia City, plus announced 2027 sets
+- Wikipedia-style numbered citations on each summary, linking to a References chapter of 20 official sources

@@ -10,10 +10,11 @@ lorcana-kb/
 ├── CHANGELOG.md           Version history for every file
 ├── .gitignore
 ├── index.html             Site home page
-├── quick-reference.html   Hub: nav to Tools, Base Rules, The Inks, Illumineer's Quest
+├── quick-reference.html   Hub: nav to Tools, Lore, Base Rules, The Inks, Illumineer's Quest
 ├── base-rules.html        Base rules (setup through formats)
 ├── inks.html              Ink guide index
 ├── table-tools.html       Table tools (coin flipper)
+├── lore.html              Lorcana story, set by set
 ├── illumineers-quest.html Co-op quest index
 ├── quests/
 │   └── palace-heist.html  Rules for one quest (one page per quest)
@@ -36,7 +37,7 @@ lorcana-kb/
 - **Long-form notes** (`.md`) live in `docs/`. GitHub renders them; a static site generator can convert them later.
 - **Design:** two themes share the same markup. Pages link `assets/css/storybook.css` (default); the theme menu in `site.js` swaps it for `classic.css`. Any new class needs styles in both files.
 - **Tools** live on `table-tools.html`, linked first in the Quick Reference nav. Markup in the page, logic in `assets/js/tools.js`.
-- **Quick reference is the hub.** Its nav menu opens each section page (Tools, Base Rules, The Inks, Illumineer's Quest); each section page links back with "← Quick reference".
+- **Quick reference is the hub.** Its nav menu opens each section page (Tools, Lore, Base Rules, The Inks, Illumineer's Quest); each section page links back with "← Quick reference".
 - **Ink guides** are generated: edit the data in `scripts/build-inks.py`, then run `python3 scripts/build-inks.py .` from the repo root. Pairings and key cards use side-by-side format columns; add a format by adding a column.
 - **Future folders** (create when needed):
   - `assets/img/` for images
