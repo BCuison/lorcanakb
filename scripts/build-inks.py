@@ -1,4 +1,4 @@
-# Generates inks/<ink>.html from the storybook template and the INKS data below.
+# Generates inks/<ink>.html from the page template and the INKS data below.
 # Usage (from repo root): python3 scripts/build-inks.py .
 import html, sys
 OUT = sys.argv[1]
@@ -117,13 +117,13 @@ def page(d):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {FONTS}
-<link rel="stylesheet" href="../assets/css/storybook.css">
+<link rel="stylesheet" href="../assets/css/illuminary.css">
 </head>
 <body style="--accent: var(--{d["slug"]})">
 {FLEURON_DEF}
 
 <header class="titlepage col">
-  <div class="crumbline"><a href="../">Home</a> · <a href="{INKS_PAGE}">The inks</a></div>
+  <div class="crumbline"><a href="../index.html">Home</a> · <a href="{INKS_PAGE}">The inks</a></div>
   <div class="bigdrop" aria-hidden="true" style="margin-top:22px"></div>
   <h1>{n}</h1>
   <p class="sub">{E(d["tagline"])}</p>
@@ -159,7 +159,7 @@ def page(d):
     <a href="{INKS_PAGE}">All inks</a>
     <a href="{QR}">Base rules</a>
     <a href="../CHANGELOG.md">View changelog</a>
-    <a href="../">Home</a>
+    <a href="../index.html">Home</a>
   </div>
 </footer>
 </main>

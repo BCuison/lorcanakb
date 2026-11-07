@@ -19,8 +19,9 @@ lorcana-kb/
 ├── quests/
 │   └── palace-heist.html  Rules for one quest (one page per quest)
 ├── assets/
-│   ├── css/storybook.css  Storybook theme (default)
 │   ├── css/classic.css    Classic theme (original 1.x look)
+│   ├── css/illuminary.css Illuminary theme (default; midnight header, hexagon ink motif)
+│   ├── css/storybook.css  Storybook theme
 │   └── js/
 │       ├── site.js        Shared script (scroll reset, light/dark toggle, theme menu)
 │       └── tools.js       Interactive tools (coin flipper)
@@ -35,7 +36,7 @@ lorcana-kb/
 ### Conventions
 - **Site pages** (`.html`) live at the root so they work as-is on GitHub Pages, Netlify or any static host. Links between pages are relative.
 - **Long-form notes** (`.md`) live in `docs/`. GitHub renders them; a static site generator can convert them later.
-- **Design:** two themes share the same markup. Pages link `assets/css/storybook.css` (default); the theme menu in `site.js` swaps it for `classic.css`. Any new class needs styles in both files.
+- **Design:** three themes share the same markup. Pages link `assets/css/illuminary.css` (default); the theme menu in `site.js` swaps it for `classic.css` or `storybook.css`, and lists themes alphabetically. Any new class needs styles in all three files. Each theme supports light and dark mode.
 - **Tools** live on `table-tools.html`, linked first in the Quick Reference nav. Markup in the page, logic in `assets/js/tools.js`.
 - **Quick reference is the hub.** Its nav menu opens each section page (Tools, Lore, Base Rules, The Inks, Illumineer's Quest); each section page links back with "← Quick reference".
 - **Ink guides** are generated: edit the data in `scripts/build-inks.py`, then run `python3 scripts/build-inks.py .` from the repo root. Pairings and key cards use side-by-side format columns; add a format by adding a column.
