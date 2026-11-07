@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.5.0] - 2026-11-07
+#### Added
+- Lore tracker on the Tools page (`table-tools.html`, `assets/js/tools.js`), styled in all three themes
+
 ### [3.4.1] - 2026-11-07
 #### Fixed
 - Home links point at `index.html` instead of the folder, so they open the home page when viewing files locally, not a directory listing (all pages and `scripts/build-inks.py`; ink guides regenerated)
@@ -262,6 +266,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## index.html
 
+### [3.2.1] - 2026-11-07
+#### Changed
+- Tools entry mentions the lore tracker
+
 ### [3.2.0] - 2026-11-07
 #### Added
 - Lore entry in the contents
@@ -494,6 +502,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/js/tools.js
 
+### [1.3.0] - 2026-11-07
+#### Added
+- Lore tracker logic: saved state (localStorage), undo history, win announcement through a polite live region, two-tap reset
+
 ### [1.2.1] - 2026-10-29
 #### Changed
 - Button reads "Flip Again" after a flip
@@ -512,6 +524,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## table-tools.html
+
+### [2.2.0] - 2026-11-07
+#### Added
+- Tool II Lore Tracker: a Players picker (2, 3, 4), 2 to 4 players with editable names and ink seat colors, −1/+1/+2/+3 buttons, progress to 20 with a win state, Undo, and New game with a second-tap confirm. Saved in this browser
 
 ### [2.1.4] - 2026-10-29
 #### Changed
@@ -556,6 +572,12 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.6.0] - 2026-11-07
+#### Added
+- Lore tracker styles (shared layout; theme colors mapped through `--tk-*` variables)
+#### Changed
+- Footer matches Classic: no "Colophon" heading, same spacing, size and layout; colors still follow the theme
+
 ### [1.5.0] - 2026-11-07
 #### Added
 - Footnote citation (`sup.cite`) and reference list (`ol.refs`) styles for the Lore page
@@ -593,6 +615,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.3.0] - 2026-11-07
+#### Added
+- Lore tracker styles (shared layout; theme colors mapped through `--tk-*` variables)
 
 ### [1.2.0] - 2026-11-07
 #### Added
@@ -708,6 +734,12 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/illuminary.css
+
+### [1.1.0] - 2026-11-07
+#### Added
+- Lore tracker styles (shared layout; theme colors mapped through `--tk-*` variables)
+#### Changed
+- Footer matches Classic: no "Colophon" heading, same spacing, size and layout; colors still follow the theme
 
 ### [1.0.0] - 2026-11-07
 #### Added

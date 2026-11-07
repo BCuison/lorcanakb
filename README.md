@@ -13,7 +13,7 @@ lorcana-kb/
 ├── quick-reference.html   Hub: nav to Tools, Lore, Base Rules, The Inks, Illumineer's Quest
 ├── base-rules.html        Base rules (setup through formats)
 ├── inks.html              Ink guide index
-├── table-tools.html       Table tools (coin flipper)
+├── table-tools.html       Table tools (coin flipper, lore tracker)
 ├── lore.html              Lorcana story, set by set
 ├── illumineers-quest.html Co-op quest index
 ├── quests/
@@ -24,7 +24,7 @@ lorcana-kb/
 │   ├── css/storybook.css  Storybook theme
 │   └── js/
 │       ├── site.js        Shared script (scroll reset, light/dark toggle, theme menu)
-│       └── tools.js       Interactive tools (coin flipper)
+│       └── tools.js       Interactive tools (coin flipper, lore tracker)
 ├── scripts/
 │   └── build-inks.py      Generates the six ink guides
 ├── inks/

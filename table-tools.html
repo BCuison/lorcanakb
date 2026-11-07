@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="2.1.4">
+<meta name="version" content="2.2.0">
 <title>Lorcana Table Tools</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,17 +12,20 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="fleuron" viewBox="0 0 26 14"><path d="M13 1.5 17 7l-4 5.5L9 7Z" fill="currentColor"/><circle cx="3.5" cy="7" r="1.4" fill="currentColor"/><circle cx="22.5" cy="7" r="1.4" fill="currentColor"/></symbol></svg>
+
 <header class="titlepage col">
   <div class="crumbline"><a href="index.html">Home</a> · <a href="quick-reference.html">Quick reference</a></div>
   <div class="kicker" style="margin-top:22px">At the table</div>
   <h1>Tools</h1>
-  <p class="sub">Small helpers for settling things fairly.</p>
+  <p class="sub">Small helpers for the table: who goes first, and who’s winning.</p>
 </header>
 
 <nav class="contents" aria-label="Contents">
   <ol>
     <li class="back"><a href="quick-reference.html">← Quick reference</a></li>
     <li><a href="#coin-flipper"><b>I</b>Coin Flipper</a></li>
+    <li><a href="#lore-tracker"><b>II</b>Lore Tracker</a></li>
   </ol>
 </nav>
 
@@ -91,12 +94,36 @@
   </div>
 </section>
 
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="lore-tracker">
+  <div class="chapter-head"><span class="num">Tool II</span><h2>Lore Tracker</h2></div>
+  <p class="muted">First to 20 lore wins. Scores and names stay put if you leave the page.</p>
+  <div class="tracker" id="tracker">
+    <div class="tracker-bar">
+      <div class="tracker-seats" role="group" aria-labelledby="tracker-seats-label">
+        <span class="tracker-label" id="tracker-seats-label">Players</span>
+        <button type="button" class="seat-btn" data-count="2" aria-pressed="true">2</button>
+        <button type="button" class="seat-btn" data-count="3" aria-pressed="false">3</button>
+        <button type="button" class="seat-btn" data-count="4" aria-pressed="false">4</button>
+      </div>
+      <div class="tracker-actions">
+        <button type="button" class="seat-btn" id="tracker-undo" disabled>Undo</button>
+        <button type="button" class="seat-btn" id="tracker-reset">New game</button>
+      </div>
+    </div>
+    <div class="tracker-players" id="tracker-players"></div>
+    <p class="sr-only" id="tracker-status" aria-live="polite"></p>
+  </div>
+  <noscript><p class="note"><b>Needs JavaScript</b>The lore tracker runs in your browser. Turn on JavaScript to use it.</p></noscript>
+</section>
+
 <footer class="colophon">
   <h2>Colophon</h2>
-  <p>Each flip is a fair 50/50 drawn from the browser’s secure random source. The coin art is original.</p>
+  <p>Each flip is a fair 50/50 drawn from the browser’s secure random source. The coin art is original. The lore tracker saves to this browser only.</p>
   <div class="meta">
-    <span class="ver">Version 2.1.4</span>
-    <span>Updated 2026-10-27</span>
+    <span class="ver">Version 2.2.0</span>
+    <span>Updated 2026-11-07</span>
     <a href="quick-reference.html">Quick reference</a>
     <a href="CHANGELOG.md">View changelog</a>
     <a href="index.html">Home</a>
