@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.16.0] - 2026-11-08
+#### Added
+- Keyword icons on Base Rules, styled in all three themes
+
 ### [3.15.0] - 2026-11-08
 #### Added
 - Story timeline at the top of the Lore page
@@ -648,6 +652,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.8.0] - 2026-11-08
+#### Added
+- Keyword icon style (`.kw-icon`) in the theme accent; `.dictionary` joins the shared `--tk-*` color mapping
+
 ### [1.7.1] - 2026-11-08
 #### Fixed
 - Diagrams extend into the side padding below 560px wide so labels stay readable on phones
@@ -699,6 +707,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.5.0] - 2026-11-08
+#### Added
+- Keyword icon style (`.kw-icon`) in the theme accent; `.dictionary` joins the shared `--tk-*` color mapping
 
 ### [1.4.1] - 2026-11-08
 #### Fixed
@@ -782,6 +794,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## base-rules.html
+
+### [3.8.0] - 2026-11-08
+#### Added
+- An original line icon beside each of the sixteen keywords (decorative; hidden from screen readers)
 
 ### [3.7.1] - 2026-11-08
 #### Fixed
@@ -876,6 +892,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/illuminary.css
+
+### [1.3.0] - 2026-11-08
+#### Added
+- Keyword icon style (`.kw-icon`) in the theme accent; `.dictionary` joins the shared `--tk-*` color mapping
 
 ### [1.2.1] - 2026-11-08
 #### Fixed
