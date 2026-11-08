@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.15.0] - 2026-11-08
+#### Added
+- Story timeline at the top of the Lore page
+
 ### [3.14.0] - 2026-11-08
 #### Added
 - Core ink pairing grid on the Inks page
@@ -858,6 +862,11 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## lore.html
+
+### [1.1.0] - 2026-11-08
+#### Added
+- Timeline of Sets 1–14 grouped by story arc, with years; arcs link to their chapters and set numbers to their sections
+- Anchors on each set heading (`#set-1` to `#set-14`)
 
 ### [1.0.0] - 2026-11-07
 #### Added
