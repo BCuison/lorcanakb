@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="3.6.0">
+<meta name="version" content="3.7.0">
 <title>Lorcana Base Rules</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -308,6 +308,40 @@
     <dt>Sing Together</dt><dd>Exert any number of your ready characters whose costs add up to N or more.</dd>
     <dt>Shift</dt><dd>Pay the Shift cost to play a character on top of one of yours with the same name. It keeps the damage and the ready or exerted state, and can act right away if the one beneath was dry. Newer variants, such as Duo Shift, are in <a href="#teams">Newer mechanics</a>.</dd>
   </dl>
+  <figure class="diagram">
+    <svg viewBox="0 0 440 284" role="img" aria-labelledby="dg-shift-t">
+      <title id="dg-shift-t">Shift example. A character costing 3, version A, is in play with 1 damage. You pay its Shift cost of 4 to play version B, which costs 6, on top of it. Version B sits on top of version A, keeps the 1 damage and the ready or exerted state, and can act this turn if version A was dry.</title>
+      <defs><marker id="dg-shift-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
+      <text class="dg-h" x="80" y="32" text-anchor="middle">In play</text>
+      <rect class="dg-box" x="40" y="48" width="80" height="112" rx="6"/>
+      <polygon class="dg-box" points="56.0,54.0 65.5,59.5 65.5,70.5 56.0,76.0 46.5,70.5 46.5,59.5"/><text class="dg-b" x="56" y="70" text-anchor="middle" style="font-size:13px">3</text>
+      <rect class="dg-bar" x="48" y="100" width="52" height="6" rx="3"/>
+      <text class="dg-s" x="48" y="122">Version A</text>
+      <circle class="dg-dmg" cx="106" cy="144" r="11"/><text class="dg-b" x="106" y="149" text-anchor="middle" style="font-size:13px">1</text>
+      <path class="dg-line" d="M136 104h62" marker-end="url(#dg-shift-a)"/>
+      <text class="dg-b" x="166" y="92" text-anchor="middle">Shift 4</text>
+      <text class="dg-s" x="166" y="126" text-anchor="middle">same name</text>
+      <text class="dg-h" x="286" y="32" text-anchor="middle">Shifted</text>
+      <rect class="dg-box" x="222" y="62" width="80" height="112" rx="6"/>
+      <polygon class="dg-box" points="238.0,68.0 247.5,73.5 247.5,84.5 238.0,90.0 228.5,84.5 228.5,73.5"/><text class="dg-b" x="238" y="84" text-anchor="middle" style="font-size:13px">3</text>
+      <rect class="dg-bar" x="230" y="114" width="52" height="6" rx="3"/>
+      <text class="dg-s" x="230" y="136">Version A</text>
+      <rect class="dg-hl" x="246" y="44" width="80" height="112" rx="6"/>
+      <polygon class="dg-box" points="262.0,50.0 271.5,55.5 271.5,66.5 262.0,72.0 252.5,66.5 252.5,55.5"/><text class="dg-b" x="262" y="66" text-anchor="middle" style="font-size:13px">6</text>
+      <rect class="dg-bar" x="254" y="96" width="52" height="6" rx="3"/>
+      <text class="dg-s" x="254" y="118">Version B</text><rect class="dg-bar" x="254" y="128" width="40" height="5" rx="2.5" style="fill:var(--tk-muted)"/>
+      <circle class="dg-dmg" cx="312" cy="140" r="11"/><text class="dg-b" x="312" y="145" text-anchor="middle" style="font-size:13px">1</text>
+      <text class="dg-s" x="342" y="70">new card</text><text class="dg-s" x="342" y="86">on top</text>
+      <text class="dg-s" x="222" y="194">card beneath stays</text><text class="dg-s" x="222" y="210">under it</text>
+      <g class="dg-acc"><circle cx="46" cy="230" r="3.5"/><circle cx="46" cy="250" r="3.5"/><circle cx="46" cy="270" r="3.5"/></g>
+      <g class="dg-t">
+        <text x="58" y="235">Pay 4, the Shift cost, instead of the full 6</text>
+        <text x="58" y="255">Keeps the 1 damage and its ready or exerted state</text>
+        <text x="58" y="275">Can act this turn if the card beneath was dry</text>
+      </g>
+    </svg>
+    <figcaption>Shifting a new version onto a character already in play.</figcaption>
+  </figure>
 </section>
 
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
@@ -430,7 +464,7 @@
     <li><a href="https://gamertagmythras.com/blog/disney-lorcana/lorcana-ink-drops-explained" target="_blank" rel="noopener">Ink drops explained (Comprehensive Rules 2.3.0)</a></li>
   </ul>
   <div class="meta">
-    <span class="ver">Version 3.6.0</span>
+    <span class="ver">Version 3.7.0</span>
     <span>Updated 2026-11-07</span>
     <span>Rules basis: Comprehensive Rules 2.3.0</span>
     <a href="CHANGELOG.md">View changelog</a>

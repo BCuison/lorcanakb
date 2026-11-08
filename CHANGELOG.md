@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.12.0] - 2026-11-08
+#### Added
+- Shift stacking diagram on Base Rules
+
 ### [3.11.0] - 2026-11-08
 #### Added
 - Table layout diagram on Base Rules
@@ -754,6 +758,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## base-rules.html
+
+### [3.7.0] - 2026-11-08
+#### Added
+- Shift diagram in Songs & Shift: a new version played on top for its Shift cost, keeping damage and ready or exerted state
 
 ### [3.6.0] - 2026-11-08
 #### Added
