@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="3.2.0">
+<meta name="version" content="3.7.1">
 <title>Lorcana Base Rules</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,6 +61,30 @@
     <dt>Opening</dt><dd>Shuffle, choose a first player, and draw seven. Once, you may put any number of cards on the bottom of your deck, draw that many, then shuffle.</dd>
     <dt>Zones</dt><dd>Deck, hand, play, inkwell and discard. The inkwell is a face-down pile that pays for everything.</dd>
   </dl>
+  <figure class="diagram">
+    <svg viewBox="0 0 440 312" role="img" aria-labelledby="dg-table-t">
+      <title id="dg-table-t">A common layout for your side of the table: the inkwell, face down, on the left; the play area for characters, items and locations in the middle; the deck, face down, and the discard pile, face up, on the right; your hand off the table, hidden from your opponent.</title>
+      <rect class="dg-field" x="6" y="8" width="428" height="226" rx="12"/>
+      <text class="dg-b" x="24" y="34">Inkwell</text><text class="dg-s" x="24" y="52">face down</text>
+      <rect class="dg-back" x="24" y="66" width="60" height="38" rx="4"/><rect class="dg-back" x="24" y="80" width="60" height="38" rx="4"/><rect class="dg-back" x="24" y="94" width="60" height="38" rx="4"/><rect class="dg-back" x="24" y="108" width="60" height="38" rx="4"/>
+      <text class="dg-s" x="24" y="166">1 ink each,</text><text class="dg-s" x="24" y="182">readies every</text><text class="dg-s" x="24" y="198">turn</text>
+      <rect class="dg-box dg-dash" x="104" y="20" width="236" height="200" rx="10"/>
+      <text class="dg-b" x="118" y="44">Play area</text><text class="dg-s" x="118" y="62">everyone can see it</text>
+      <rect class="dg-box" x="118" y="78" width="40" height="56" rx="4"/><rect class="dg-bar" x="124" y="120" width="24" height="5" rx="2.5"/><rect class="dg-box" x="166" y="78" width="40" height="56" rx="4"/><rect class="dg-bar" x="172" y="120" width="24" height="5" rx="2.5"/>
+      <g transform="rotate(90 242 106)"><rect class="dg-box" x="222" y="78" width="40" height="56" rx="4"/><rect class="dg-bar" x="228" y="120" width="24" height="5" rx="2.5"/></g>
+      <rect class="dg-box" x="286" y="78" width="40" height="56" rx="4"/><rect class="dg-bar" x="292" y="120" width="24" height="5" rx="2.5"/>
+      <g text-anchor="middle" class="dg-s"><text x="162" y="154">characters</text><text x="242" y="154">exerted</text><text x="306" y="154">item</text></g>
+      <rect class="dg-box" x="118" y="166" width="76" height="40" rx="4"/><rect class="dg-bar" x="126" y="194" width="50" height="5" rx="2.5"/>
+      <text class="dg-s" x="204" y="191">location (sideways)</text>
+      <rect class="dg-back" x="362" y="30" width="44" height="60" rx="4"/><rect class="dg-back" x="359" y="27" width="44" height="60" rx="4"/><rect class="dg-back" x="356" y="24" width="44" height="60" rx="4"/>
+      <g text-anchor="middle"><text class="dg-b" x="380" y="106">Deck</text><text class="dg-s" x="380" y="122">face down</text></g>
+      <rect class="dg-box" x="358" y="134" width="44" height="60" rx="4"/><rect class="dg-bar" x="364" y="180" width="28" height="5" rx="2.5"/>
+      <g text-anchor="middle"><text class="dg-b" x="380" y="212">Discard</text><text class="dg-s" x="380" y="228">face up</text></g>
+      <rect class="dg-back" x="203" y="248" width="34" height="48" rx="4" transform="rotate(-24 220 340)"/><rect class="dg-back" x="203" y="248" width="34" height="48" rx="4" transform="rotate(-12 220 340)"/><rect class="dg-back" x="203" y="248" width="34" height="48" rx="4" transform="rotate(0 220 340)"/><rect class="dg-back" x="203" y="248" width="34" height="48" rx="4" transform="rotate(12 220 340)"/><rect class="dg-back" x="203" y="248" width="34" height="48" rx="4" transform="rotate(24 220 340)"/>
+      <text class="dg-b" x="290" y="272">Hand</text><text class="dg-s" x="290" y="290">hidden from</text><text class="dg-s" x="290" y="306">your opponent</text>
+    </svg>
+    <figcaption>A common way to lay out your side of the table. Your opponent mirrors it across from you.</figcaption>
+  </figure>
 </section>
 
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
@@ -97,6 +121,50 @@
       </ul>
     </div>
   </div>
+  <figure class="diagram">
+    <svg viewBox="0 0 400 382" role="img" aria-labelledby="dg-turn-t">
+      <title id="dg-turn-t">Flow of a turn: ready, set and draw, then the main phase actions in any order, then the end of the turn, then your opponent's turn.</title>
+      <defs><marker id="dg-turn-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
+      <text class="dg-s" x="40" y="15">Beginning</text>
+      <rect class="dg-box" x="40" y="22" width="100" height="50" rx="8"/>
+      <rect class="dg-box" x="165" y="22" width="100" height="50" rx="8"/>
+      <rect class="dg-box" x="290" y="22" width="100" height="50" rx="8"/>
+      <g text-anchor="middle">
+        <text class="dg-b" x="90" y="43">Ready</text><text class="dg-s" x="90" y="61">exerted cards</text>
+        <text class="dg-b" x="215" y="43">Set</text><text class="dg-s" x="215" y="61">location lore</text>
+        <text class="dg-b" x="340" y="43">Draw</text><text class="dg-s" x="340" y="61">one card</text>
+      </g>
+      <path class="dg-line" d="M340 73v10H215v13" marker-end="url(#dg-turn-a)"/>
+      <path class="dg-line" d="M141 47h22" marker-end="url(#dg-turn-a)"/>
+      <path class="dg-line" d="M266 47h22" marker-end="url(#dg-turn-a)"/>
+
+      <rect class="dg-hl" x="40" y="100" width="350" height="186" rx="10"/>
+      <text class="dg-h" x="56" y="126">Main phase</text>
+      <text class="dg-s" x="56" y="145">Any order, as often as you can pay</text>
+      <g class="dg-pills">
+        <rect class="dg-field" x="56" y="158" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="219" y="158" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="56" y="198" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="219" y="198" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="56" y="238" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="219" y="238" width="155" height="32" rx="16"/>
+      </g>
+      <g text-anchor="middle" class="dg-t">
+        <text x="133.5" y="179">Ink a card (once)</text><text x="296.5" y="179">Play a card</text>
+        <text x="133.5" y="219">Quest</text><text x="296.5" y="219">Challenge</text>
+        <text x="133.5" y="259">Move to a location</text><text x="296.5" y="259">Use an ability</text>
+      </g>
+
+      <path class="dg-line" d="M215 287v25" marker-end="url(#dg-turn-a)"/>
+      <rect class="dg-box" x="40" y="316" width="350" height="50" rx="8"/>
+      <text class="dg-b" x="215" y="337" text-anchor="middle">End</text>
+      <text class="dg-s" x="215" y="355" text-anchor="middle">end-of-turn effects; an empty deck now loses</text>
+
+      <path class="dg-line dg-dash" d="M40 341H22V47h16" marker-end="url(#dg-turn-a)"/>
+      <text class="dg-s" transform="translate(14 194) rotate(-90)" text-anchor="middle">opponent's turn, then yours again</text>
+    </svg>
+    <figcaption>One turn from start to finish. The first player skips the draw on turn one.</figcaption>
+  </figure>
 </section>
 
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
@@ -129,6 +197,50 @@
     <dt>Willpower</dt><dd>Damage it can take before it’s banished.</dd>
     <dt>Lore</dt><dd>Lore you gain when it quests.</dd>
   </dl>
+  <figure class="diagram">
+    <svg viewBox="0 0 440 256" role="img" aria-labelledby="dg-card-t">
+      <title id="dg-card-t">Parts of a character card: cost in a hexagon at top left, with a ring around it if the card is inkable; ink color below the cost; name and version on a banner; classifications under the banner; strength and willpower at the right of the banner; rules text in the lower box; lore value at the right of the rules text.</title>
+      <rect class="dg-box" x="140" y="16" width="160" height="224" rx="10"/>
+      <rect class="dg-field dg-dash" x="148" y="24" width="144" height="102" rx="4"/>
+      <polygon class="dg-acc-s" points="166.0,27.0 184.2,37.5 184.2,58.5 166.0,69.0 147.8,58.5 147.8,37.5"/>
+      <polygon class="dg-box" points="166.0,33.0 179.0,40.5 179.0,55.5 166.0,63.0 153.0,55.5 153.0,40.5"/>
+      <text class="dg-h" x="166" y="54" text-anchor="middle">3</text>
+      <circle cx="166" cy="86" r="8" style="fill:var(--sapphire)"/>
+      <rect class="dg-box" x="140" y="128" width="112" height="32" rx="3"/>
+      <rect class="dg-bar" x="150" y="136" width="70" height="7" rx="3"/>
+      <rect class="dg-bar" x="150" y="148" width="46" height="5" rx="2.5" opacity=".7"/>
+      <circle class="dg-box" cx="263" cy="144" r="11"/>
+      <path class="dg-box" d="M276 134h20v10c0 7-5 12-10 14-5-2-10-7-10-14z"/>
+      <g text-anchor="middle" class="dg-b" style="font-size:13px"><text x="263" y="149">2</text><text x="286" y="149">3</text></g>
+      <rect class="dg-bar" x="150" y="166" width="84" height="5" rx="2.5" opacity=".7"/>
+      <rect class="dg-field" x="148" y="178" width="120" height="54" rx="4"/>
+      <rect class="dg-bar" x="156" y="186" width="40" height="6" rx="3" style="fill:var(--tk-muted)"/>
+      <rect class="dg-bar" x="156" y="198" width="102" height="5" rx="2.5"/>
+      <rect class="dg-bar" x="156" y="208" width="96" height="5" rx="2.5"/>
+      <rect class="dg-bar" x="156" y="218" width="70" height="5" rx="2.5"/>
+      <path class="dg-acc" d="M284 186l7 9-7 9-7-9zM284 206l7 9-7 9-7-9z"/>
+
+      <g class="dg-lead">
+        <path d="M132 22l14 9"/><path d="M132 60l20-8"/><path d="M132 98l24-8"/>
+        <path d="M132 148h12"/><path d="M132 186l16-16"/><path d="M132 224l14-10"/>
+        <path d="M312 116l-45 17"/><path d="M312 168l-22-12"/><path d="M312 210l-20-8"/>
+      </g>
+      <g text-anchor="end">
+        <text class="dg-b" x="128" y="22">Inkable ring</text><text class="dg-s" x="128" y="37">no ring: can’t be inked</text>
+        <text class="dg-b" x="128" y="62">Cost</text><text class="dg-s" x="128" y="77">ink to play it</text>
+        <text class="dg-b" x="128" y="100">Ink color</text><text class="dg-s" x="128" y="115">one of the six</text>
+        <text class="dg-b" x="128" y="150">Name</text><text class="dg-s" x="128" y="165">and version</text>
+        <text class="dg-b" x="128" y="188">Classifications</text><text class="dg-s" x="128" y="203">Storyborn, Hero…</text>
+        <text class="dg-b" x="128" y="226">Rules text</text><text class="dg-s" x="128" y="241">keywords, abilities</text>
+      </g>
+      <g>
+        <text class="dg-b" x="316" y="116">Strength</text><text class="dg-s" x="316" y="131">damage it deals</text>
+        <text class="dg-b" x="316" y="170">Willpower</text><text class="dg-s" x="316" y="185">damage it can take</text>
+        <text class="dg-b" x="316" y="212">Lore</text><text class="dg-s" x="316" y="227">gained per quest</text>
+      </g>
+    </svg>
+    <figcaption>A character card, drawn as a sketch. Exact placement varies a little between sets.</figcaption>
+  </figure>
   <p class="note"><b>Drying</b>A character played this turn is still drying. It can’t quest, challenge, sing or use exert abilities until your next turn.</p>
 </section>
 
@@ -150,6 +262,40 @@
     <li><span><b>Trade blows.</b> Each deals damage equal to its strength to the other, at the same time.</span></li>
     <li><span><b>Banish the fallen.</b> Damage equal to or above willpower sends a character to the discard.</span></li>
   </ol>
+  <figure class="diagram">
+    <svg viewBox="0 0 440 262" role="img" aria-labelledby="dg-chal-t">
+      <title id="dg-chal-t">Example challenge. Your challenger, strength 3 and willpower 4, exerts and challenges an exerted opposing character with strength 2 and willpower 3. Each deals its strength as damage to the other. Your challenger takes 2, less than its willpower of 4, and stays. The target takes 3, equal to its willpower of 3, and is banished.</title>
+      <defs><marker id="dg-chal-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
+      <g text-anchor="middle">
+        <text class="dg-h" x="100" y="20">Your challenger</text><text class="dg-s" x="100" y="38">exerts to challenge</text>
+        <text class="dg-h" x="340" y="20">The target</text><text class="dg-s" x="340" y="38">must already be exerted</text>
+      </g>
+      <rect class="dg-box" x="40" y="52" width="120" height="80" rx="8"/>
+      <rect class="dg-box" x="280" y="52" width="120" height="80" rx="8"/>
+      <g text-anchor="middle">
+        <text class="dg-n" x="70" y="95">3</text><text class="dg-s" x="70" y="116">strength</text>
+        <text class="dg-n" x="130" y="95">4</text><text class="dg-s" x="130" y="116">willpower</text>
+        <text class="dg-n" x="310" y="95">2</text><text class="dg-s" x="310" y="116">strength</text>
+        <text class="dg-n" x="370" y="95">3</text><text class="dg-s" x="370" y="116">willpower</text>
+      </g>
+      <path class="dg-line" d="M168 78h102" marker-end="url(#dg-chal-a)"/>
+      <path class="dg-line" d="M272 108H170" marker-end="url(#dg-chal-a)"/>
+      <g text-anchor="middle" class="dg-t" style="font-size:13.5px">
+        <text x="220" y="70">deals 3</text><text x="220" y="128">deals 2</text>
+      </g>
+      <text class="dg-s" x="220" y="96" text-anchor="middle">at once</text>
+
+      <path class="dg-line dg-dash" d="M100 140v16M340 140v16"/>
+      <rect class="dg-good" x="30" y="162" width="140" height="62" rx="10"/>
+      <rect class="dg-bad" x="270" y="162" width="140" height="62" rx="10"/>
+      <g text-anchor="middle">
+        <text class="dg-b" x="100" y="187">Stays in play</text><text class="dg-s" x="100" y="208">2 damage, below 4</text>
+        <text class="dg-b" x="340" y="187">Banished</text><text class="dg-s" x="340" y="208">3 damage, reaches 3</text>
+      </g>
+      <text class="dg-s" x="220" y="252" text-anchor="middle">Cards drawn sideways are exerted.</text>
+    </svg>
+    <figcaption>One challenge, worked through. Damage stays on the survivor until it is healed. A location can be the target too, but it never deals damage back.</figcaption>
+  </figure>
   <p class="note"><b>Remember</b>Damage stays until healed or banished. Locations never deal damage back.</p>
 </section>
 
@@ -162,6 +308,40 @@
     <dt>Sing Together</dt><dd>Exert any number of your ready characters whose costs add up to N or more.</dd>
     <dt>Shift</dt><dd>Pay the Shift cost to play a character on top of one of yours with the same name. It keeps the damage and the ready or exerted state, and can act right away if the one beneath was dry. Newer variants, such as Duo Shift, are in <a href="#teams">Newer mechanics</a>.</dd>
   </dl>
+  <figure class="diagram">
+    <svg viewBox="0 0 440 284" role="img" aria-labelledby="dg-shift-t">
+      <title id="dg-shift-t">Shift example. A character costing 3, version A, is in play with 1 damage. You pay its Shift cost of 4 to play version B, which costs 6, on top of it. Version B sits on top of version A, keeps the 1 damage and the ready or exerted state, and can act this turn if version A was dry.</title>
+      <defs><marker id="dg-shift-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
+      <text class="dg-h" x="80" y="32" text-anchor="middle">In play</text>
+      <rect class="dg-box" x="40" y="48" width="80" height="112" rx="6"/>
+      <polygon class="dg-box" points="56.0,54.0 65.5,59.5 65.5,70.5 56.0,76.0 46.5,70.5 46.5,59.5"/><text class="dg-b" x="56" y="70" text-anchor="middle" style="font-size:13px">3</text>
+      <rect class="dg-bar" x="48" y="100" width="52" height="6" rx="3"/>
+      <text class="dg-s" x="48" y="122">Version A</text>
+      <circle class="dg-dmg" cx="106" cy="144" r="11"/><text class="dg-b" x="106" y="149" text-anchor="middle" style="font-size:13px">1</text>
+      <path class="dg-line" d="M136 104h62" marker-end="url(#dg-shift-a)"/>
+      <text class="dg-b" x="166" y="92" text-anchor="middle">Shift 4</text>
+      <text class="dg-s" x="166" y="126" text-anchor="middle">same name</text>
+      <text class="dg-h" x="286" y="32" text-anchor="middle">Shifted</text>
+      <rect class="dg-box" x="222" y="62" width="80" height="112" rx="6"/>
+      <polygon class="dg-box" points="238.0,68.0 247.5,73.5 247.5,84.5 238.0,90.0 228.5,84.5 228.5,73.5"/><text class="dg-b" x="238" y="84" text-anchor="middle" style="font-size:13px">3</text>
+      <rect class="dg-bar" x="230" y="114" width="52" height="6" rx="3"/>
+      <text class="dg-s" x="230" y="136">Version A</text>
+      <rect class="dg-hl" x="246" y="44" width="80" height="112" rx="6"/>
+      <polygon class="dg-box" points="262.0,50.0 271.5,55.5 271.5,66.5 262.0,72.0 252.5,66.5 252.5,55.5"/><text class="dg-b" x="262" y="66" text-anchor="middle" style="font-size:13px">6</text>
+      <rect class="dg-bar" x="254" y="96" width="52" height="6" rx="3"/>
+      <text class="dg-s" x="254" y="118">Version B</text><rect class="dg-bar" x="254" y="128" width="40" height="5" rx="2.5" style="fill:var(--tk-muted)"/>
+      <circle class="dg-dmg" cx="312" cy="140" r="11"/><text class="dg-b" x="312" y="145" text-anchor="middle" style="font-size:13px">1</text>
+      <text class="dg-s" x="342" y="70">new card</text><text class="dg-s" x="342" y="86">on top</text>
+      <text class="dg-s" x="222" y="194">card beneath stays</text><text class="dg-s" x="222" y="210">under it</text>
+      <g class="dg-acc"><circle cx="46" cy="230" r="3.5"/><circle cx="46" cy="250" r="3.5"/><circle cx="46" cy="270" r="3.5"/></g>
+      <g class="dg-t">
+        <text x="58" y="235">Pay 4, the Shift cost, instead of the full 6</text>
+        <text x="58" y="255">Keeps the 1 damage and its ready or exerted state</text>
+        <text x="58" y="275">Can act this turn if the card beneath was dry</text>
+      </g>
+    </svg>
+    <figcaption>Shifting a new version onto a character already in play.</figcaption>
+  </figure>
 </section>
 
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
@@ -284,7 +464,7 @@
     <li><a href="https://gamertagmythras.com/blog/disney-lorcana/lorcana-ink-drops-explained" target="_blank" rel="noopener">Ink drops explained (Comprehensive Rules 2.3.0)</a></li>
   </ul>
   <div class="meta">
-    <span class="ver">Version 3.2.0</span>
+    <span class="ver">Version 3.7.1</span>
     <span>Updated 2026-11-07</span>
     <span>Rules basis: Comprehensive Rules 2.3.0</span>
     <a href="CHANGELOG.md">View changelog</a>

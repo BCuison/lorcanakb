@@ -16,6 +16,30 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.12.1] - 2026-11-08
+#### Fixed
+- Diagrams use the full screen width on phones so their labels stay readable
+
+### [3.12.0] - 2026-11-08
+#### Added
+- Shift stacking diagram on Base Rules
+
+### [3.11.0] - 2026-11-08
+#### Added
+- Table layout diagram on Base Rules
+
+### [3.10.0] - 2026-11-08
+#### Added
+- Challenge diagram on Base Rules
+
+### [3.9.0] - 2026-11-08
+#### Added
+- Card anatomy diagram on Base Rules
+
+### [3.8.0] - 2026-11-08
+#### Added
+- Turn flowchart diagram on Base Rules, with shared diagram styles in all three themes
+
 ### [3.7.0] - 2026-11-07
 #### Added
 - `rules-changes.html`: official rules updates, errata and bans, newest first, linked from Base Rules, Quick reference and Home
@@ -612,6 +636,14 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.7.1] - 2026-11-08
+#### Fixed
+- Diagrams extend into the side padding below 560px wide so labels stay readable on phones
+
+### [1.7.0] - 2026-11-08
+#### Added
+- Diagram styles (`figure.diagram` and `dg-*` SVG classes), colored through the shared `--tk-*` mapping
+
 ### [1.6.0] - 2026-11-07
 #### Added
 - Lore tracker styles (shared layout; theme colors mapped through `--tk-*` variables)
@@ -655,6 +687,14 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.4.1] - 2026-11-08
+#### Fixed
+- Diagrams extend into the side padding below 560px wide so labels stay readable on phones
+
+### [1.4.0] - 2026-11-08
+#### Added
+- Diagram styles (`figure.diagram` and `dg-*` SVG classes), colored through the shared `--tk-*` mapping
 
 ### [1.3.0] - 2026-11-07
 #### Added
@@ -731,6 +771,30 @@ Each file is versioned independently. Entries are newest first.
 
 ## base-rules.html
 
+### [3.7.1] - 2026-11-08
+#### Fixed
+- Card anatomy: shorter Lore label so it doesn't run to the edge on phones
+
+### [3.7.0] - 2026-11-08
+#### Added
+- Shift diagram in Songs & Shift: a new version played on top for its Shift cost, keeping damage and ready or exerted state
+
+### [3.6.0] - 2026-11-08
+#### Added
+- Table layout diagram in Setup: inkwell, play area (characters, exerted, item, location), deck, discard and hand, marked face up or face down
+
+### [3.5.0] - 2026-11-08
+#### Added
+- Worked challenge diagram in Challenges: both characters exerted, damage traded at once, one survives and one is banished
+
+### [3.4.0] - 2026-11-08
+#### Added
+- Card anatomy diagram in Cards: cost, inkable ring, ink color, name and version, classifications, strength, willpower, rules text and lore
+
+### [3.3.0] - 2026-11-08
+#### Added
+- Turn flowchart in The turn: beginning steps, main phase actions, end step and the hand-off to the opponent
+
 ### [3.2.0] - 2026-11-07
 #### Added
 - Underdog in Keywords (now sixteen)
@@ -791,6 +855,14 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/illuminary.css
+
+### [1.2.1] - 2026-11-08
+#### Fixed
+- Diagrams extend into the side padding below 560px wide so labels stay readable on phones
+
+### [1.2.0] - 2026-11-08
+#### Added
+- Diagram styles (`figure.diagram` and `dg-*` SVG classes), colored through the shared `--tk-*` mapping
 
 ### [1.1.0] - 2026-11-07
 #### Added
