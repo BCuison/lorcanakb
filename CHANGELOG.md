@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.9.0] - 2026-11-08
+#### Added
+- Card anatomy diagram on Base Rules
+
 ### [3.8.0] - 2026-11-08
 #### Added
 - Turn flowchart diagram on Base Rules, with shared diagram styles in all three themes
@@ -742,6 +746,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## base-rules.html
+
+### [3.4.0] - 2026-11-08
+#### Added
+- Card anatomy diagram in Cards: cost, inkable ring, ink color, name and version, classifications, strength, willpower, rules text and lore
 
 ### [3.3.0] - 2026-11-08
 #### Added

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="3.3.0">
+<meta name="version" content="3.4.0">
 <title>Lorcana Base Rules</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -173,6 +173,50 @@
     <dt>Willpower</dt><dd>Damage it can take before it’s banished.</dd>
     <dt>Lore</dt><dd>Lore you gain when it quests.</dd>
   </dl>
+  <figure class="diagram">
+    <svg viewBox="0 0 440 256" role="img" aria-labelledby="dg-card-t">
+      <title id="dg-card-t">Parts of a character card: cost in a hexagon at top left, with a ring around it if the card is inkable; ink color below the cost; name and version on a banner; classifications under the banner; strength and willpower at the right of the banner; rules text in the lower box; lore value at the right of the rules text.</title>
+      <rect class="dg-box" x="140" y="16" width="160" height="224" rx="10"/>
+      <rect class="dg-field dg-dash" x="148" y="24" width="144" height="102" rx="4"/>
+      <polygon class="dg-acc-s" points="166.0,27.0 184.2,37.5 184.2,58.5 166.0,69.0 147.8,58.5 147.8,37.5"/>
+      <polygon class="dg-box" points="166.0,33.0 179.0,40.5 179.0,55.5 166.0,63.0 153.0,55.5 153.0,40.5"/>
+      <text class="dg-h" x="166" y="54" text-anchor="middle">3</text>
+      <circle cx="166" cy="86" r="8" style="fill:var(--sapphire)"/>
+      <rect class="dg-box" x="140" y="128" width="112" height="32" rx="3"/>
+      <rect class="dg-bar" x="150" y="136" width="70" height="7" rx="3"/>
+      <rect class="dg-bar" x="150" y="148" width="46" height="5" rx="2.5" opacity=".7"/>
+      <circle class="dg-box" cx="263" cy="144" r="11"/>
+      <path class="dg-box" d="M276 134h20v10c0 7-5 12-10 14-5-2-10-7-10-14z"/>
+      <g text-anchor="middle" class="dg-b" style="font-size:13px"><text x="263" y="149">2</text><text x="286" y="149">3</text></g>
+      <rect class="dg-bar" x="150" y="166" width="84" height="5" rx="2.5" opacity=".7"/>
+      <rect class="dg-field" x="148" y="178" width="120" height="54" rx="4"/>
+      <rect class="dg-bar" x="156" y="186" width="40" height="6" rx="3" style="fill:var(--tk-muted)"/>
+      <rect class="dg-bar" x="156" y="198" width="102" height="5" rx="2.5"/>
+      <rect class="dg-bar" x="156" y="208" width="96" height="5" rx="2.5"/>
+      <rect class="dg-bar" x="156" y="218" width="70" height="5" rx="2.5"/>
+      <path class="dg-acc" d="M284 186l7 9-7 9-7-9zM284 206l7 9-7 9-7-9z"/>
+
+      <g class="dg-lead">
+        <path d="M132 22l14 9"/><path d="M132 60l20-8"/><path d="M132 98l24-8"/>
+        <path d="M132 148h12"/><path d="M132 186l16-16"/><path d="M132 224l14-10"/>
+        <path d="M312 116l-45 17"/><path d="M312 168l-22-12"/><path d="M312 210l-20-8"/>
+      </g>
+      <g text-anchor="end">
+        <text class="dg-b" x="128" y="22">Inkable ring</text><text class="dg-s" x="128" y="37">no ring: can’t be inked</text>
+        <text class="dg-b" x="128" y="62">Cost</text><text class="dg-s" x="128" y="77">ink to play it</text>
+        <text class="dg-b" x="128" y="100">Ink color</text><text class="dg-s" x="128" y="115">one of the six</text>
+        <text class="dg-b" x="128" y="150">Name</text><text class="dg-s" x="128" y="165">and version</text>
+        <text class="dg-b" x="128" y="188">Classifications</text><text class="dg-s" x="128" y="203">Storyborn, Hero…</text>
+        <text class="dg-b" x="128" y="226">Rules text</text><text class="dg-s" x="128" y="241">keywords, abilities</text>
+      </g>
+      <g>
+        <text class="dg-b" x="316" y="116">Strength</text><text class="dg-s" x="316" y="131">damage it deals</text>
+        <text class="dg-b" x="316" y="170">Willpower</text><text class="dg-s" x="316" y="185">damage it can take</text>
+        <text class="dg-b" x="316" y="212">Lore</text><text class="dg-s" x="316" y="227">gained when it quests</text>
+      </g>
+    </svg>
+    <figcaption>A character card, drawn as a sketch. Exact placement varies a little between sets.</figcaption>
+  </figure>
   <p class="note"><b>Drying</b>A character played this turn is still drying. It can’t quest, challenge, sing or use exert abilities until your next turn.</p>
 </section>
 
@@ -328,7 +372,7 @@
     <li><a href="https://gamertagmythras.com/blog/disney-lorcana/lorcana-ink-drops-explained" target="_blank" rel="noopener">Ink drops explained (Comprehensive Rules 2.3.0)</a></li>
   </ul>
   <div class="meta">
-    <span class="ver">Version 3.3.0</span>
+    <span class="ver">Version 3.4.0</span>
     <span>Updated 2026-11-07</span>
     <span>Rules basis: Comprehensive Rules 2.3.0</span>
     <a href="CHANGELOG.md">View changelog</a>
