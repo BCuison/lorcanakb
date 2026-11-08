@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.11.0] - 2026-11-08
+#### Added
+- Table layout diagram on Base Rules
+
 ### [3.10.0] - 2026-11-08
 #### Added
 - Challenge diagram on Base Rules
@@ -750,6 +754,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## base-rules.html
+
+### [3.6.0] - 2026-11-08
+#### Added
+- Table layout diagram in Setup: inkwell, play area (characters, exerted, item, location), deck, discard and hand, marked face up or face down
 
 ### [3.5.0] - 2026-11-08
 #### Added
