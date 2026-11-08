@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.18.1] - 2026-11-08
+#### Fixed
+- Card Rarity: textured Legendaries (from Set 5) and how to read raised or textured cards
+
 ### [3.18.0] - 2026-11-08
 #### Added
 - Finishes chapter on the Card Rarity page: standard, foil and the special foils of Epic, Enchanted and Iconic
@@ -966,6 +970,12 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## rarity.html
+
+### [1.2.1] - 2026-11-08
+#### Fixed
+- Legendaries from Shimmering Skies (Set 5) on have a raised, glossy texture on parts of the art, foil or not; added to the Legendary, Standard and Foil rows
+- Raised or textured cards note replaces the guess that "embossed" meant Iconic
+- Two references for the Set 5 texture
 
 ### [1.2.0] - 2026-11-08
 #### Added
