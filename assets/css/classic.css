@@ -1,4 +1,4 @@
-/* Lorcana KB classic styles v1.4.0
+/* Lorcana KB classic styles v1.4.1
    The original 1.x look (navy header, rounded cards, pill navigation), rebuilt to style
    the storybook markup so either theme can be picked from the theme menu.
    Layout: full-bleed header, then a single column of bordered cards. */
@@ -268,3 +268,7 @@ ol.refs .src { font-style: italic; }
 .dg-h { fill: var(--tk-text); font-family: var(--display); font-size: 17px; }
 .dg-n { fill: var(--tk-text); font-family: var(--display); font-size: 24px; }
 .dg-s { fill: var(--tk-muted); font-size: 12.5px; }
+@media (max-width: 560px) {
+  .diagram { max-width: none; margin-inline: calc(50% - 50vw + 12px); }
+  .diagram figcaption { padding-inline: 14px; }
+}

@@ -1,4 +1,4 @@
-/* Lorcana KB storybook styles v1.7.0
+/* Lorcana KB storybook styles v1.7.1
    Layout: a single reading column like a bound rulebook. Chapters with Roman numerals,
    gilt rules and fleurons instead of boxes; tables and dictionary entries for scanning.
    Light = ivory page, indigo ink. Dark = night page, parchment ink. Gilt accent in both. */
@@ -314,3 +314,7 @@ ol.refs .src { font-style: italic; }
 .dg-h { fill: var(--tk-text); font-family: var(--display); font-size: 17px; }
 .dg-n { fill: var(--tk-text); font-family: var(--display); font-size: 24px; }
 .dg-s { fill: var(--tk-muted); font-size: 12.5px; }
+@media (max-width: 560px) {
+  .diagram { max-width: none; margin-inline: calc(50% - 50vw + 12px); }
+  .diagram figcaption { padding-inline: 14px; }
+}

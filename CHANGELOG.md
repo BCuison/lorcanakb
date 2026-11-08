@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.12.1] - 2026-11-08
+#### Fixed
+- Diagrams use the full screen width on phones so their labels stay readable
+
 ### [3.12.0] - 2026-11-08
 #### Added
 - Shift stacking diagram on Base Rules
@@ -632,6 +636,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.7.1] - 2026-11-08
+#### Fixed
+- Diagrams extend into the side padding below 560px wide so labels stay readable on phones
+
 ### [1.7.0] - 2026-11-08
 #### Added
 - Diagram styles (`figure.diagram` and `dg-*` SVG classes), colored through the shared `--tk-*` mapping
@@ -679,6 +687,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.4.1] - 2026-11-08
+#### Fixed
+- Diagrams extend into the side padding below 560px wide so labels stay readable on phones
 
 ### [1.4.0] - 2026-11-08
 #### Added
@@ -758,6 +770,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## base-rules.html
+
+### [3.7.1] - 2026-11-08
+#### Fixed
+- Card anatomy: shorter Lore label so it doesn't run to the edge on phones
 
 ### [3.7.0] - 2026-11-08
 #### Added
@@ -839,6 +855,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/illuminary.css
+
+### [1.2.1] - 2026-11-08
+#### Fixed
+- Diagrams extend into the side padding below 560px wide so labels stay readable on phones
 
 ### [1.2.0] - 2026-11-08
 #### Added

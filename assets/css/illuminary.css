@@ -1,4 +1,4 @@
-/* Lorcana KB illuminary styles v1.2.0
+/* Lorcana KB illuminary styles v1.2.1
    Named for the Great Illuminary. A midnight "Inklands" header with an aurora of the six inks,
    then a quiet reading column. The one recurring motif is the hexagon from the ink-cost frame
    on Lorcana cards: ink drops and numbered steps are hexagonal badges.
@@ -321,3 +321,7 @@ ol.refs .src { font-style: italic; }
 .dg-h { fill: var(--tk-text); font-family: var(--display); font-size: 17px; }
 .dg-n { fill: var(--tk-text); font-family: var(--display); font-size: 24px; }
 .dg-s { fill: var(--tk-muted); font-size: 12.5px; }
+@media (max-width: 560px) {
+  .diagram { max-width: none; margin-inline: calc(50% - 50vw + 12px); }
+  .diagram figcaption { padding-inline: 14px; }
+}
