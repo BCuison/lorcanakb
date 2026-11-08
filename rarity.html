@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="version" content="1.2.1">
+<title>Lorcana Card Rarity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/illuminary.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="rg-silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1f3f5"/><stop offset=".5" stop-color="#b9c0c7"/><stop offset="1" stop-color="#8c949c"/></linearGradient>
+    <linearGradient id="rg-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc85"/><stop offset=".55" stop-color="#d9a92e"/><stop offset="1" stop-color="#a87a12"/></linearGradient>
+    <linearGradient id="rg-bronze" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0a46b"/><stop offset="1" stop-color="#9a5b2a"/></linearGradient>
+    <linearGradient id="rg-rainbow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e5484d"/><stop offset=".2" stop-color="#f5a524"/><stop offset=".4" stop-color="#f5d90a"/><stop offset=".6" stop-color="#30a46c"/><stop offset=".8" stop-color="#3e8ed0"/><stop offset="1" stop-color="#8e4ec6"/></linearGradient>
+    <linearGradient id="rg-gray" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dbde"/><stop offset="1" stop-color="#9da1a7"/></linearGradient>
+    <linearGradient id="rg-rainbow2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3e8ed0"/><stop offset=".3" stop-color="#30a46c"/><stop offset=".55" stop-color="#f5d90a"/><stop offset=".8" stop-color="#f5a524"/><stop offset="1" stop-color="#e5484d"/></linearGradient>
+  </defs>
+  <symbol id="r-common" viewBox="0 0 48 48"><clipPath id="rc-common"><path d="M24 9a15 15 0 1 0 0.01 0Z"/></clipPath><path d="M24 9a15 15 0 1 0 0.01 0Z" fill="url(#rg-gray)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-common)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M31 9.5C21 11 15.5 19.5 19 26.5 22 32.5 29 33.5 33.5 37"/><path d="M9.5 28C13 33.5 18 37.5 25.5 39"/></g></symbol>
+  <symbol id="r-uncommon" viewBox="0 0 48 48"><clipPath id="rc-uncommon"><path d="M7 10.5L24 15.5 41 10.5V36.5L24 41.5 7 36.5Z"/></clipPath><path d="M7 10.5L24 15.5 41 10.5V36.5L24 41.5 7 36.5Z" fill="#ffffff" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-uncommon)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M24 15.5V29"/><path d="M24 40C23 31 16 26.5 7 26"/><path d="M24 40C25 31 32 26.5 41 26"/></g></symbol>
+  <symbol id="r-rare" viewBox="0 0 48 48"><clipPath id="rc-rare"><path d="M24.00 8.00 L40.45 36.50 L7.55 36.50Z"/></clipPath><path d="M24.00 8.00 L40.45 36.50 L7.55 36.50Z" fill="url(#rg-bronze)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-rare)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M15 40C15 31 18.5 25 24 21.5"/><path d="M33 40C33 31 29.5 25 24 21.5"/></g></symbol>
+  <symbol id="r-super-rare" viewBox="0 0 48 48"><clipPath id="rc-super-rare"><path d="M24 4.5L43.5 24 24 43.5 4.5 24Z"/></clipPath><path d="M24 4.5L43.5 24 24 43.5 4.5 24Z" fill="url(#rg-silver)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-super-rare)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M16.5 36.5Q24 32.5 31.5 36.5"/><path d="M22.5 34V6"/><path d="M25.5 34V6"/><path d="M20 34.5C15.5 27 12.5 21 11 17"/><path d="M28 34.5C32.5 27 35.5 21 37 17"/></g></symbol>
+  <symbol id="r-legendary" viewBox="0 0 48 48"><clipPath id="rc-legendary"><path d="M24.00 7.50 L41.59 20.28 L34.87 40.97 L13.13 40.97 L6.41 20.28Z"/></clipPath><path d="M24.00 7.50 L41.59 20.28 L34.87 40.97 L13.13 40.97 L6.41 20.28Z" fill="url(#rg-gold)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-legendary)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M24 7.5C20 17 14 24 8 28"/><path d="M24 7.5C22.5 19 20.5 31 19.5 43"/><path d="M24 7.5C28 17 34 24 40 28"/><path d="M24 7.5C25.5 19 27.5 31 28.5 43"/></g></symbol>
+  <symbol id="r-epic" viewBox="0 0 48 48"><clipPath id="rc-epic"><path d="M24 6C33 6 42.5 12.5 42.5 22 42.5 31 31 36.5 24 43.5 17 36.5 5.5 31 5.5 22 5.5 12.5 15 6 24 6Z"/></clipPath><path d="M24 6C33 6 42.5 12.5 42.5 22 42.5 31 31 36.5 24 43.5 17 36.5 5.5 31 5.5 22 5.5 12.5 15 6 24 6Z" fill="url(#rg-rainbow)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-epic)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M24 6.5C22 15 15 21 6 24"/><path d="M24 6.5C26 15 33 21 42 24"/><path d="M24 7C17.5 18 17.5 32 24 43"/><path d="M24 7C30.5 18 30.5 32 24 43"/></g></symbol>
+  <symbol id="r-enchanted" viewBox="0 0 48 48"><clipPath id="rc-enchanted"><path d="M24.00 4.50 L40.89 14.25 L40.89 33.75 L24.00 43.50 L7.11 33.75 L7.11 14.25Z M11 23.5L24 16.5 37 23.5 24 31Z" fill-rule="evenodd"/></clipPath><path d="M24.00 4.50 L40.89 14.25 L40.89 33.75 L24.00 43.50 L7.11 33.75 L7.11 14.25Z M11 23.5L24 16.5 37 23.5 24 31Z" fill-rule="evenodd" fill="url(#rg-rainbow)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-enchanted)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M14 11.5L17.5 18.5"/><path d="M19.5 8L21.5 15.5"/><path d="M33 31L37 35"/></g></symbol>
+  <symbol id="r-iconic" viewBox="0 0 48 48"><clipPath id="rc-iconic"><path d="M24.00 4.50 L40.89 14.25 L40.89 33.75 L24.00 43.50 L7.11 33.75 L7.11 14.25Z M30.5 24a6.5 6.5 0 1 0 0.01 0Z" fill-rule="evenodd"/></clipPath><path d="M24.00 4.50 L40.89 14.25 L40.89 33.75 L24.00 43.50 L7.11 33.75 L7.11 14.25Z M30.5 24a6.5 6.5 0 1 0 0.01 0Z" fill-rule="evenodd" fill="url(#rg-rainbow2)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-iconic)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M24.00 17.50Q27.12 9.33 41.66 14.61"/><path d="M29.63 20.75Q38.27 19.36 40.96 34.60"/><path d="M29.63 27.25Q35.15 34.04 23.30 43.99"/><path d="M24.00 30.50Q20.88 38.67 6.34 33.39"/><path d="M18.37 27.25Q9.73 28.64 7.04 13.40"/><path d="M18.37 20.75Q12.85 13.96 24.70 4.01"/></g></symbol>
+  <symbol id="fleuron" viewBox="0 0 26 14"><path d="M13 1.5 17 7l-4 5.5L9 7Z" fill="currentColor"/><circle cx="3.5" cy="7" r="1.4" fill="currentColor"/><circle cx="22.5" cy="7" r="1.4" fill="currentColor"/></symbol>
+</svg>
+
+<header class="titlepage col">
+  <div class="crumbline"><a href="index.html">Home</a> · <a href="quick-reference.html">Quick reference</a></div>
+  <div class="kicker" style="margin-top:22px">Lorcana · Collecting</div>
+  <h1>Card Rarity</h1>
+  <p class="sub">What each rarity symbol means, which finishes it comes in, how often it turns up in a pack and what it tends to sell for.</p>
+</header>
+
+<nav class="contents" aria-label="Contents">
+  <ol>
+    <li class="back"><a href="quick-reference.html">← Quick reference</a></li>
+    <li><a href="#rarities"><b>I</b>Rarities</a></li>
+    <li><a href="#finishes"><b>II</b>Finishes</a></li>
+    <li><a href="#packs"><b>III</b>What’s in a pack</a></li>
+    <li><a href="#refs"><b>IV</b>References</a></li>
+  </ol>
+</nav>
+
+<main class="col">
+
+<section class="chapter rarity" id="rarities">
+  <div class="chapter-head"><span class="num">Chapter I</span><h2>Rarities</h2></div>
+  <p class="lead">Every card carries a rarity symbol at the bottom center, below the text box.<sup class="cite"><a href="#ref-8">[8]</a></sup> Common to Legendary climb from a circle through a book, triangle, diamond and pentagon. The three rarest are rainbow foil.</p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 440 128" role="img" aria-labelledby="dg-rar-t">
+      <title id="dg-rar-t">Rarities from most common to rarest: Common, gray circle; Uncommon, white book; Rare, bronze triangle; Super Rare, silver diamond; Legendary, gold pentagon; Epic, rainbow drop; Enchanted, rainbow hexagon; Iconic, rainbow iris.</title>
+      <defs><marker id="dg-rar-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
+      <use href="#r-common" x="14" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="30" y="74" text-anchor="middle">Common</text>
+      <use href="#r-uncommon" x="68" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="84" y="90" text-anchor="middle">Uncommon</text>
+      <use href="#r-rare" x="122" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="138" y="74" text-anchor="middle">Rare</text>
+      <use href="#r-super-rare" x="176" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="192" y="90" text-anchor="middle">Super Rare</text>
+      <use href="#r-legendary" x="230" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="246" y="74" text-anchor="middle">Legendary</text>
+      <use href="#r-epic" x="284" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="300" y="90" text-anchor="middle">Epic</text>
+      <use href="#r-enchanted" x="338" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="354" y="74" text-anchor="middle">Enchanted</text>
+      <use href="#r-iconic" x="392" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="408" y="90" text-anchor="middle">Iconic</text>
+      <path class="dg-line" d="M30 108H408" marker-end="url(#dg-rar-a)"/>
+      <text class="dg-s" x="30" y="125">more common</text><text class="dg-s" x="410" y="125" text-anchor="end">rarer</text>
+    </svg>
+    <figcaption>The rarity ladder, from most common to rarest. Epic and Iconic arrived with Fabled.</figcaption>
+  </figure>
+
+  <div class="table-wrap">
+    <table class="rarity-table">
+      <thead><tr><th>Rarity</th><th>Symbol</th><th>Pull rate</th><th>Description</th><th>Value (USD)</th></tr></thead>
+      <tbody>
+        <tr><td>Common</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Gray circle"><use href="#r-common"/></svg><span class="sym-name">Gray circle</span></span></td><td data-label="Pull rate">6 per pack</td><td>Most of every set: the everyday cards that fill out a deck. Slots 1–6.</td><td data-label="Value (USD)">$0.05–0.50</td></tr>
+        <tr><td>Uncommon</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="White book"><use href="#r-uncommon"/></svg><span class="sym-name">White book</span></span></td><td data-label="Pull rate">3 per pack</td><td>Slightly scarcer staples. Slots 7–9.</td><td data-label="Value (USD)">$0.10–1.50</td></tr>
+        <tr><td>Rare</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Bronze triangle"><use href="#r-rare"/></svg><span class="sym-name">Bronze triangle</span></span></td><td data-label="Pull rate">≈ 1–2 per pack</td><td>Fills most of the two Rare-or-better slots (10–11).</td><td data-label="Value (USD)">$0.50–5</td></tr>
+        <tr><td>Super Rare</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Silver diamond"><use href="#r-super-rare"/></svg><span class="sym-name">Silver diamond</span></span></td><td data-label="Pull rate">≈ 1:2–3</td><td>Shares slots 10–11 with Rares and Legendaries.</td><td data-label="Value (USD)">$1–20</td></tr>
+        <tr><td>Legendary</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Gold pentagon"><use href="#r-legendary"/></svg><span class="sym-name">Gold pentagon</span></span></td><td data-label="Pull rate">≈ 1:5–6</td><td>The top regular rarity, often a set’s strongest or most famous characters. From Shimmering Skies (Set 5) on, parts of the art have a raised, glossy texture, even on non-foil copies.<sup class="cite"><a href="#ref-12">[12]</a></sup><sup class="cite"><a href="#ref-13">[13]</a></sup></td><td data-label="Value (USD)">$2–60</td></tr>
+        <tr><td>Epic</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Rainbow drop"><use href="#r-epic"/></svg><span class="sym-name">Rainbow drop</span></span></td><td data-label="Pull rate">≈ 1:16</td><td>New in Fabled. Frameless art, rainbow foil, holofoil icons and tinted text. Rarer than Legendary, more common than Enchanted. 18 per set.<sup class="cite"><a href="#ref-1">[1]</a></sup></td><td data-label="Value (USD)">$5–40</td></tr>
+        <tr><td>Enchanted</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Rainbow hexagon"><use href="#r-enchanted"/></svg><span class="sym-name">Rainbow hexagon</span></span></td><td data-label="Pull rate">≈ 1:96</td><td>Full alternate art in foil, a chase version of a card from the set. Since Fabled the symbol is holofoil stamped.<sup class="cite"><a href="#ref-1">[1]</a></sup> Estimates run from 1:48 to 1:144.</td><td data-label="Value (USD)">$40–800</td></tr>
+        <tr><td>Iconic</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Rainbow iris"><use href="#r-iconic"/></svg><span class="sym-name">Rainbow iris</span></span></td><td data-label="Pull rate">≈ 1:1,500</td><td>New in Fabled and the rarest of all. A lore-star foil pattern with 3D hot stamping. 2 per set.<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup></td><td data-label="Value (USD)">$700–4,000+</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>About these numbers</b>Ravensburger doesn’t publish pull rates.<sup class="cite"><a href="#ref-3">[3]</a></sup> The rates here are community estimates from opened boxes and cases,<sup class="cite"><a href="#ref-4">[4]</a></sup> written as cards to packs: 1:96 means about one card in every 96 packs. Values are typical prices for single, ungraded, near-mint cards in late 2026.<sup class="cite"><a href="#ref-5">[5]</a></sup><sup class="cite"><a href="#ref-6">[6]</a></sup><sup class="cite"><a href="#ref-7">[7]</a></sup> Popular cards sell well above their range, and foil versions of lower rarities usually cost a little more.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter rarity" id="finishes">
+  <div class="chapter-head"><span class="num">Chapter II</span><h2>Finishes</h2></div>
+  <p class="lead">Finish and rarity are separate. A foil Legendary is still a Legendary: the symbol sets the rarity, the finish is how the card is printed.<sup class="cite"><a href="#ref-9">[9]</a></sup> Common to Legendary each come plain or foil; Epic, Enchanted and Iconic each have a foil all their own.</p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 440 168" role="img" aria-labelledby="dg-fin-t">
+      <title id="dg-fin-t">Which finishes each rarity comes in. Common, Uncommon, Rare, Super Rare and Legendary: standard and foil. Epic, Enchanted and Iconic: their own special foil only.</title>
+      <use href="#r-common" x="115" y="6" width="26" height="26"><title>Common</title></use><use href="#r-uncommon" x="157" y="6" width="26" height="26"><title>Uncommon</title></use><use href="#r-rare" x="199" y="6" width="26" height="26"><title>Rare</title></use><use href="#r-super-rare" x="241" y="6" width="26" height="26"><title>Super Rare</title></use><use href="#r-legendary" x="283" y="6" width="26" height="26"><title>Legendary</title></use><use href="#r-epic" x="325" y="6" width="26" height="26"><title>Epic</title></use><use href="#r-enchanted" x="367" y="6" width="26" height="26"><title>Enchanted</title></use><use href="#r-iconic" x="409" y="6" width="26" height="26"><title>Iconic</title></use>
+      <text class="dg-b" x="0" y="61" style="font-size:14px">Standard</text>
+      <circle class="dg-head" cx="128" cy="56" r="7"/>
+      <circle class="dg-head" cx="170" cy="56" r="7"/>
+      <circle class="dg-head" cx="212" cy="56" r="7"/>
+      <circle class="dg-head" cx="254" cy="56" r="7"/>
+      <circle class="dg-head" cx="296" cy="56" r="7"/>
+      <circle class="dg-lead" cx="338" cy="56" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="380" cy="56" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="422" cy="56" r="3" opacity="20.6"/>
+      <text class="dg-b" x="0" y="105" style="font-size:14px">Foil</text>
+      <circle class="dg-acc" cx="128" cy="100" r="7"/>
+      <circle class="dg-acc" cx="170" cy="100" r="7"/>
+      <circle class="dg-acc" cx="212" cy="100" r="7"/>
+      <circle class="dg-acc" cx="254" cy="100" r="7"/>
+      <circle class="dg-acc" cx="296" cy="100" r="7"/>
+      <circle class="dg-lead" cx="338" cy="100" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="380" cy="100" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="422" cy="100" r="3" opacity="20.6"/>
+      <text class="dg-b" x="0" y="149" style="font-size:14px">Special foil</text>
+      <circle class="dg-lead" cx="128" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="170" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="212" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="254" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="296" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-acc" cx="338" cy="144" r="7"/>
+      <circle class="dg-acc" cx="380" cy="144" r="7"/>
+      <circle class="dg-acc" cx="422" cy="144" r="7"/>
+    </svg>
+    <figcaption>Which finishes each rarity comes in, with columns in ladder order from Common to Iconic. A filled dot means that version exists.</figcaption>
+  </figure>
+
+  <div class="table-wrap">
+    <table class="rarity-table">
+      <thead><tr><th>Finish</th><th>Rarities</th><th>Pull rate</th><th>What it looks like</th><th>Value (USD)</th></tr></thead>
+      <tbody>
+        <tr><td>Standard</td><td>Common to Legendary</td><td data-label="Pull rate">11 per pack</td><td>The plain printing. Legendaries from Set 5 on add a raised, glossy texture on parts of the art.<sup class="cite"><a href="#ref-12">[12]</a></sup><sup class="cite"><a href="#ref-13">[13]</a></sup></td><td data-label="Value (USD)">Base price</td></tr>
+        <tr><td>Foil</td><td>Common to Legendary</td><td data-label="Pull rate">1 per pack</td><td>Every card from Common to Legendary also comes as a foil, printed with a cold foil process that gives a slightly textured sheen; the ink cost and symbols can feel raised.<sup class="cite"><a href="#ref-9">[9]</a></sup><sup class="cite"><a href="#ref-11">[11]</a></sup> A particular rarity in foil is scarcer: early estimates put a foil Rare near 1:7, a foil Super Rare near 1:20 and a foil Legendary near 1:50.<sup class="cite"><a href="#ref-11">[11]</a></sup> A foil Legendary from Set 5 on has the foil and the texture.</td><td data-label="Value (USD)">Usually more</td></tr>
+        <tr><td>Rainbow foil</td><td>Epic only</td><td data-label="Pull rate">≈ 1:16</td><td>Frameless art in rainbow foil, with holofoil icons and tinted text.<sup class="cite"><a href="#ref-1">[1]</a></sup></td><td data-label="Value (USD)">$5–40</td></tr>
+        <tr><td>Enchanted foil</td><td>Enchanted only</td><td data-label="Pull rate">≈ 1:96</td><td>New art across the whole card in a glittering, textured foil, with rainbow foil hot stamping; since Fabled the rarity symbol is holofoil stamped.<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-10">[10]</a></sup> There’s no plain version.</td><td data-label="Value (USD)">≈ 66× its foil</td></tr>
+        <tr><td>Lore-star foil</td><td>Iconic only</td><td data-label="Pull rate">≈ 1:1,500</td><td>Full-card art with a custom lore-star foil pattern and raised 3D hot stamping.<sup class="cite"><a href="#ref-1">[1]</a></sup></td><td data-label="Value (USD)">$700–4,000+</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>Raised or textured cards</b>No finish is officially called embossed; read the rarity symbol. A card that looks like a base card but has a raised, glossy texture on the character is a Legendary from Set 5 on, and with foil as well it’s a foil Legendary. Raised 3D stamping with the rainbow iris symbol is Iconic.</p>
+  <p class="note"><b>Outside booster packs</b>Promo cards from events and Organized Play kits, oversized cards in some gift sets and Illumineer’s Quest scenario cards come in their own finishes. They aren’t part of the rarity ladder.<sup class="cite"><a href="#ref-11">[11]</a></sup></p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="packs">
+  <div class="chapter-head"><span class="num">Chapter III</span><h2>What’s in a pack</h2></div>
+  <p class="lead">A booster pack holds twelve cards, and one of them is always foil.<sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-4">[4]</a></sup></p>
+  <dl class="terms">
+    <dt>Slots 1–6</dt><dd>Commons.</dd>
+    <dt>Slots 7–9</dt><dd>Uncommons.</dd>
+    <dt>Slots 10–11</dt><dd>Rare or better: usually Rares, sometimes a Super Rare, Legendary or Epic.</dd>
+    <dt>Slot 12</dt><dd>The foil. Any rarity can turn up here, and it’s where Enchanted and Iconic cards appear.</dd>
+  </dl>
+  <p class="muted">A booster box holds 24 packs.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="refs">
+  <div class="chapter-head"><span class="num">Chapter IV</span><h2>References</h2></div>
+  <p class="muted">Retrieved 8 November 2026. Only [1] and [2] are official.</p>
+  <ol class="refs">
+    <li id="ref-1">“<a href="https://disneylorcana.com/en/product/fabled/" target="_blank" rel="noopener">Fabled</a>.” <span class="src">Disney Lorcana</span> (product page: new rarities).</li>
+    <li id="ref-2">“<a href="https://disneylorcana.com/en/news/2025/10/2025-10-enchanted-q-and-a/" target="_blank" rel="noopener">Whispers in the Well Creative Spotlight</a>.” <span class="src">Disney Lorcana</span> (news, 24 October 2025).</li>
+    <li id="ref-3">“<a href="https://tcg-pricetracker.com/en/blog/lorcana-enchanted-cards" target="_blank" rel="noopener">Lorcana Rarities Explained: Enchanted, Epic &amp; Iconic</a>.” <span class="src">TCGPriceTracker</span> (updated 23 October 2026).</li>
+    <li id="ref-4">“<a href="https://lorcanacollectors.com/lorcana-pull-rates/" target="_blank" rel="noopener">The Ultimate Disney Lorcana Pull Rate Guide</a>.” <span class="src">Lorcana Collectors</span>.</li>
+    <li id="ref-5">“<a href="https://tcgpricelookup.com/blog/lorcana-rarity-tiers-explained" target="_blank" rel="noopener">Disney Lorcana Rarity Tiers Explained</a>.” <span class="src">TCG Price Lookup</span> (9 April 2026; Common to Enchanted).</li>
+    <li id="ref-6">“<a href="https://www.sportscardinvestor.com/sets/2025-fabled-disney-lorcana" target="_blank" rel="noopener">2025 Fabled Disney Lorcana</a>.” <span class="src">Sports Card Investor</span> (Epic sales).</li>
+    <li id="ref-7">“<a href="https://seller.tcgplayer.com/blog/price-trends-disney-lorcana-cards-climbing-in-price-08-09-2026" target="_blank" rel="noopener">Price Trends: Disney Lorcana Cards Climbing in Price</a>.” <span class="src">TCGplayer</span> (9 August 2026; Iconic prices).</li>
+    <li id="ref-8">“<a href="https://www.thegamer.com/disney-lorcana-rarity-guide-common-uncommon-rare-super-legendary-enchanted-promo/" target="_blank" rel="noopener">How To Tell The Rarity Of A Card In Disney Lorcana</a>.” <span class="src">TheGamer</span> (8 July 2024; symbols and placement).</li>
+    <li id="ref-9">“<a href="https://comicbook.com/gaming/news/disney-lorcana-foil-cards-look-rarity-price/" target="_blank" rel="noopener">Disney Lorcana Co-Designer Explains Game’s Foil Process</a>.” <span class="src">ComicBook.com</span> (27 July 2023).</li>
+    <li id="ref-10">“<a href="https://foilio.net/blog/how-to-tell-if-lorcana-card-rare" target="_blank" rel="noopener">How to Tell if a Disney Lorcana Card Is Rare</a>.” <span class="src">Foilio</span> (18 June 2026; Enchanted vs foil prices).</li>
+    <li id="ref-11">“<a href="https://lorcanaplayer.com/lorcana-card-rarities-pull-rates-holo-foils/" target="_blank" rel="noopener">Lorcana Card Rarities, Pull Rates + Foils Explained</a>.” <span class="src">Lorcana Player</span> (foil odds from the early sets).</li>
+    <li id="ref-12">“<a href="https://lorcanaplayer.com/set/shimmering-skies/" target="_blank" rel="noopener">Disney Lorcana Shimmering Skies Set</a>.” <span class="src">Lorcana Player</span> (textured Legendaries).</li>
+    <li id="ref-13">“<a href="https://www.josephwriteranderson.com/blog/shimmering-skies-review-the-perfect-celebration-for-lorcanas-first-year" target="_blank" rel="noopener">Shimmering Skies Review</a>.” <span class="src">Joseph Writer Anderson</span> (August 2024; texture on non-foil Legendaries).</li>
+  </ol>
+</section>
+
+<footer class="colophon">
+  <h2>Colophon</h2>
+  <p>Symbols are redrawn for this page, not copied from cards. Pull rates and prices are estimates that change with every set and every market swing.</p>
+  <div class="meta">
+    <span class="ver">Version 1.2.1</span>
+    <span>Updated 2026-11-08</span>
+    <a href="quick-reference.html">Quick reference</a>
+    <a href="CHANGELOG.md">View changelog</a>
+    <a href="index.html">Home</a>
+  </div>
+</footer>
+</main>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
