@@ -1,4 +1,4 @@
-/* Lorcana KB classic styles v1.2.0
+/* Lorcana KB classic styles v1.3.0
    The original 1.x look (navy header, rounded cards, pill navigation), rebuilt to style
    the storybook markup so either theme can be picked from the theme menu.
    Layout: full-bleed header, then a single column of bordered cards. */
@@ -202,3 +202,44 @@ ol.refs { margin: 6px 0 12px; padding-left: 1.8em; font-size: .92rem; color: var
 ol.refs li { margin: 5px 0; }
 ol.refs li:target { color: var(--text); font-weight: 500; }
 ol.refs .src { font-style: italic; }
+
+/* lore tracker colors for this theme */
+.tracker { --tk-surface: var(--surface); --tk-field: var(--bg); --tk-line: var(--line); --tk-text: var(--text); --tk-muted: var(--muted); --tk-accent: var(--link); --tk-on-accent: #fff; }
+:root[data-theme="dark"] .tracker { --tk-on-accent: #12111f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tracker { --tk-on-accent: #12111f; } }
+
+/* lore tracker: identical layout in every theme (only the color mapping above differs) */
+.tracker-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin: 14px 0 12px; }
+.tracker-seats, .tracker-actions { display: flex; gap: 6px; align-items: center; }
+.tracker-label { font-size: .9rem; color: var(--tk-muted); margin-right: 4px; }
+.tracker-seats .seat-btn { min-width: 40px; }
+.seat-btn { font: inherit; font-size: .9rem; padding: 7px 14px; border-radius: 8px; cursor: pointer; color: var(--tk-text);
+  background: var(--tk-surface); border: 1px solid var(--tk-line); }
+.seat-btn:hover { border-color: var(--tk-accent); }
+.seat-btn[aria-pressed="true"] { background: var(--tk-accent); border-color: var(--tk-accent); color: var(--tk-on-accent); }
+.seat-btn:disabled { opacity: .45; cursor: default; border-color: var(--tk-line); }
+.seat-btn.confirm { background: var(--tk-field); border-color: var(--ruby); color: var(--ruby); font-weight: 700; }
+.tracker-players { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tracker-players[data-count="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 560px) { .tracker-players[data-count="3"] { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.lore-card { position: relative; display: grid; align-content: start; gap: 6px; padding: 14px 14px 12px; border-radius: 10px; text-align: center; min-width: 0;
+  background: var(--tk-surface); border: 1px solid var(--tk-line); border-top: 4px solid var(--seat); }
+.lore-name { font: inherit; font-weight: 600; width: 100%; min-width: 0; text-align: center; padding: 4px 6px; border-radius: 6px;
+  color: var(--tk-text); background: transparent; border: 1px solid transparent; }
+.lore-name:hover, .lore-name:focus { border-color: var(--tk-line); background: var(--tk-field); }
+.lore-score { display: flex; justify-content: center; align-items: baseline; gap: 6px; }
+.lore-num { font-family: var(--display); font-size: clamp(2.8rem, 12vw, 3.6rem); line-height: 1; font-variant-numeric: tabular-nums; color: var(--tk-text); }
+.lore-goal { font-size: .85rem; color: var(--tk-muted); }
+.lore-meter { height: 6px; border-radius: 3px; background: var(--tk-line); overflow: hidden; }
+.lore-meter span { display: block; height: 100%; width: 0; background: var(--seat); transition: width .2s ease; }
+.lore-win { visibility: hidden; margin: 0; min-height: 1.4em; font-family: var(--display); font-size: 1.05rem; color: var(--tk-accent); }
+.lore-card.won { border-color: var(--seat); box-shadow: 0 0 0 2px var(--seat); }
+.lore-card.won .lore-win { visibility: visible; }
+.lore-btns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 4px; }
+.lore-btns button { font: inherit; font-weight: 700; font-size: 1rem; min-height: 44px; border-radius: 8px; cursor: pointer;
+  color: var(--tk-text); background: var(--tk-field); border: 1px solid var(--tk-line); touch-action: manipulation; }
+.lore-btns button:hover { border-color: var(--seat); }
+.lore-btns button:active { transform: scale(.96); }
+.lore-btns button:disabled { opacity: .4; cursor: default; transform: none; }
+@media (max-width: 560px) { .lore-btns { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (prefers-reduced-motion: reduce) { .lore-meter span { transition: none; } .lore-btns button:active { transform: none; } }

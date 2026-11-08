@@ -16,6 +16,20 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.7.0] - 2026-11-07
+#### Added
+- `rules-changes.html`: official rules updates, errata and bans, newest first, linked from Base Rules, Quick reference and Home
+#### Fixed
+- Underdog keyword (Winterspell) was missing; keyword count is now sixteen
+
+### [3.6.0] - 2026-11-07
+#### Added
+- Newer mechanics chapter on Base Rules (Boost, Teams and new Shift variants, ink drops, Adventurous), from official release notes
+
+### [3.5.0] - 2026-11-07
+#### Added
+- Lore tracker on the Tools page (`table-tools.html`, `assets/js/tools.js`), styled in all three themes
+
 ### [3.4.1] - 2026-11-07
 #### Fixed
 - Home links point at `index.html` instead of the folder, so they open the home page when viewing files locally, not a directory listing (all pages and `scripts/build-inks.py`; ink guides regenerated)
@@ -100,6 +114,18 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## quick-reference.html
+
+### [4.3.0] - 2026-11-07
+#### Added
+- Rules changes in the Base Rules list
+#### Changed
+- Keyword count is now sixteen
+
+### [4.2.0] - 2026-11-07
+#### Added
+- Newer mechanics in the Base Rules list
+#### Changed
+- Keyword count is now fifteen
 
 ### [4.1.0] - 2026-11-07
 #### Added
@@ -218,6 +244,14 @@ Each file is versioned independently. Entries are newest first.
 
 ## docs/knowledgebase.md
 
+### [1.6.0] - 2026-11-07
+#### Added
+- Underdog in the keyword list (now 16); pointer to `rules-changes.html`
+
+### [1.5.0] - 2026-11-07
+#### Added
+- Adventurous keyword (Hyperia City); keyword count is now 15
+
 ### [1.4.2] - 2026-10-29
 #### Fixed
 - Links point to Base Rules and the Inks page
@@ -261,6 +295,20 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## index.html
+
+### [3.3.0] - 2026-11-07
+#### Added
+- Rules changes entry in the contents
+#### Changed
+- Keyword count is now sixteen
+
+### [3.2.2] - 2026-11-07
+#### Changed
+- Base rules description mentions newer mechanics and fifteen keywords
+
+### [3.2.1] - 2026-11-07
+#### Changed
+- Tools entry mentions the lore tracker
 
 ### [3.2.0] - 2026-11-07
 #### Added
@@ -494,6 +542,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/js/tools.js
 
+### [1.3.0] - 2026-11-07
+#### Added
+- Lore tracker logic: saved state (localStorage), undo history, win announcement through a polite live region, two-tap reset
+
 ### [1.2.1] - 2026-10-29
 #### Changed
 - Button reads "Flip Again" after a flip
@@ -512,6 +564,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## table-tools.html
+
+### [2.2.0] - 2026-11-07
+#### Added
+- Tool II Lore Tracker: a Players picker (2, 3, 4), 2 to 4 players with editable names and ink seat colors, −1/+1/+2/+3 buttons, progress to 20 with a win state, Undo, and New game with a second-tap confirm. Saved in this browser
 
 ### [2.1.4] - 2026-10-29
 #### Changed
@@ -556,6 +612,12 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.6.0] - 2026-11-07
+#### Added
+- Lore tracker styles (shared layout; theme colors mapped through `--tk-*` variables)
+#### Changed
+- Footer matches Classic: no "Colophon" heading, same spacing, size and layout; colors still follow the theme
+
 ### [1.5.0] - 2026-11-07
 #### Added
 - Footnote citation (`sup.cite`) and reference list (`ol.refs`) styles for the Lore page
@@ -593,6 +655,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.3.0] - 2026-11-07
+#### Added
+- Lore tracker styles (shared layout; theme colors mapped through `--tk-*` variables)
 
 ### [1.2.0] - 2026-11-07
 #### Added
@@ -665,6 +731,23 @@ Each file is versioned independently. Entries are newest first.
 
 ## base-rules.html
 
+### [3.2.0] - 2026-11-07
+#### Added
+- Underdog in Keywords (now sixteen)
+- Banned cards note in Formats, linking to Rules changes
+- Rules changes link in the footer
+
+### [3.1.0] - 2026-11-07
+#### Added
+- Chapter IX Newer mechanics: Boost (Whispers in the Well), Team, Duo/Combo/Temporary/classification Shift and Vinelings (Attack of the Vine), ink drops and Adventurous (Hyperia City), with open questions noted
+- Adventurous added to Keywords (now fifteen), linking to its section
+- Links to it from Shift, the Boost keyword and the ink drops note
+- Official sources for each mechanic
+#### Changed
+- Glossary is now Chapter X and Formats Chapter XI
+#### Fixed
+- Whispers in the Well release notes link pointed to the news listing instead of the notes
+
 ### [3.0.2] - 2026-10-29
 #### Changed
 - Kicker reads "Lorcana · Rules" instead of "Part I"
@@ -709,9 +792,24 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/illuminary.css
 
+### [1.1.0] - 2026-11-07
+#### Added
+- Lore tracker styles (shared layout; theme colors mapped through `--tk-*` variables)
+#### Changed
+- Footer matches Classic: no "Colophon" heading, same spacing, size and layout; colors still follow the theme
+
 ### [1.0.0] - 2026-11-07
 #### Added
 - Illuminary theme, named for the Great Illuminary: a midnight header with an aurora of the six inks and glimmer specks (dark in both modes), then a quiet reading column
 - Hexagon motif from the card ink-cost frame for ink drops, the ink guide drop and numbered steps
 - Light mode (moonlit paper, ink-blue text) and dark mode (indigo ink, lantern gold), following the system setting or the lightbulb toggle
 - Marcellus headings, Figtree body text
+
+---
+
+## rules-changes.html
+
+### [1.0.0] - 2026-11-07
+#### Added
+- At a glance: current Comprehensive Rules (2.3) and Tournament Rules versions, Core legal sets and banned lists for Core, Infinity and Coconut
+- Change log, newest first, from official release notes and announcements: bans (Apr 2025, Mar 2026, Nov 2026), Fabled rotation, Whispers in the Well, Winterspell (CR 2.0), Wilds Unknown (CR 2.1), Attack of the Vine (CR 2.2), Tournament Rules update, rotation explainer, Format Coconut beta, Hyperia City (CR 2.3); rules, errata and format changes for each with source links
