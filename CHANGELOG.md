@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.8.0] - 2026-11-08
+#### Added
+- Turn flowchart diagram on Base Rules, with shared diagram styles in all three themes
+
 ### [3.7.0] - 2026-11-07
 #### Added
 - `rules-changes.html`: official rules updates, errata and bans, newest first, linked from Base Rules, Quick reference and Home
@@ -612,6 +616,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.7.0] - 2026-11-08
+#### Added
+- Diagram styles (`figure.diagram` and `dg-*` SVG classes), colored through the shared `--tk-*` mapping
+
 ### [1.6.0] - 2026-11-07
 #### Added
 - Lore tracker styles (shared layout; theme colors mapped through `--tk-*` variables)
@@ -655,6 +663,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.4.0] - 2026-11-08
+#### Added
+- Diagram styles (`figure.diagram` and `dg-*` SVG classes), colored through the shared `--tk-*` mapping
 
 ### [1.3.0] - 2026-11-07
 #### Added
@@ -731,6 +743,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## base-rules.html
 
+### [3.3.0] - 2026-11-08
+#### Added
+- Turn flowchart in The turn: beginning steps, main phase actions, end step and the hand-off to the opponent
+
 ### [3.2.0] - 2026-11-07
 #### Added
 - Underdog in Keywords (now sixteen)
@@ -791,6 +807,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/illuminary.css
+
+### [1.2.0] - 2026-11-08
+#### Added
+- Diagram styles (`figure.diagram` and `dg-*` SVG classes), colored through the shared `--tk-*` mapping
 
 ### [1.1.0] - 2026-11-07
 #### Added

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="3.2.0">
+<meta name="version" content="3.3.0">
 <title>Lorcana Base Rules</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,6 +97,50 @@
       </ul>
     </div>
   </div>
+  <figure class="diagram">
+    <svg viewBox="0 0 400 382" role="img" aria-labelledby="dg-turn-t">
+      <title id="dg-turn-t">Flow of a turn: ready, set and draw, then the main phase actions in any order, then the end of the turn, then your opponent's turn.</title>
+      <defs><marker id="dg-turn-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
+      <text class="dg-s" x="40" y="15">Beginning</text>
+      <rect class="dg-box" x="40" y="22" width="100" height="50" rx="8"/>
+      <rect class="dg-box" x="165" y="22" width="100" height="50" rx="8"/>
+      <rect class="dg-box" x="290" y="22" width="100" height="50" rx="8"/>
+      <g text-anchor="middle">
+        <text class="dg-b" x="90" y="43">Ready</text><text class="dg-s" x="90" y="61">exerted cards</text>
+        <text class="dg-b" x="215" y="43">Set</text><text class="dg-s" x="215" y="61">location lore</text>
+        <text class="dg-b" x="340" y="43">Draw</text><text class="dg-s" x="340" y="61">one card</text>
+      </g>
+      <path class="dg-line" d="M340 73v10H215v13" marker-end="url(#dg-turn-a)"/>
+      <path class="dg-line" d="M141 47h22" marker-end="url(#dg-turn-a)"/>
+      <path class="dg-line" d="M266 47h22" marker-end="url(#dg-turn-a)"/>
+
+      <rect class="dg-hl" x="40" y="100" width="350" height="186" rx="10"/>
+      <text class="dg-h" x="56" y="126">Main phase</text>
+      <text class="dg-s" x="56" y="145">Any order, as often as you can pay</text>
+      <g class="dg-pills">
+        <rect class="dg-field" x="56" y="158" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="219" y="158" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="56" y="198" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="219" y="198" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="56" y="238" width="155" height="32" rx="16"/>
+        <rect class="dg-field" x="219" y="238" width="155" height="32" rx="16"/>
+      </g>
+      <g text-anchor="middle" class="dg-t">
+        <text x="133.5" y="179">Ink a card (once)</text><text x="296.5" y="179">Play a card</text>
+        <text x="133.5" y="219">Quest</text><text x="296.5" y="219">Challenge</text>
+        <text x="133.5" y="259">Move to a location</text><text x="296.5" y="259">Use an ability</text>
+      </g>
+
+      <path class="dg-line" d="M215 287v25" marker-end="url(#dg-turn-a)"/>
+      <rect class="dg-box" x="40" y="316" width="350" height="50" rx="8"/>
+      <text class="dg-b" x="215" y="337" text-anchor="middle">End</text>
+      <text class="dg-s" x="215" y="355" text-anchor="middle">end-of-turn effects; an empty deck now loses</text>
+
+      <path class="dg-line dg-dash" d="M40 341H22V47h16" marker-end="url(#dg-turn-a)"/>
+      <text class="dg-s" transform="translate(14 194) rotate(-90)" text-anchor="middle">opponent's turn, then yours again</text>
+    </svg>
+    <figcaption>One turn from start to finish. The first player skips the draw on turn one.</figcaption>
+  </figure>
 </section>
 
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
@@ -284,7 +328,7 @@
     <li><a href="https://gamertagmythras.com/blog/disney-lorcana/lorcana-ink-drops-explained" target="_blank" rel="noopener">Ink drops explained (Comprehensive Rules 2.3.0)</a></li>
   </ul>
   <div class="meta">
-    <span class="ver">Version 3.2.0</span>
+    <span class="ver">Version 3.3.0</span>
     <span>Updated 2026-11-07</span>
     <span>Rules basis: Comprehensive Rules 2.3.0</span>
     <a href="CHANGELOG.md">View changelog</a>
