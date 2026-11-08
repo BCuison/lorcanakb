@@ -1,4 +1,4 @@
-/* Lorcana KB illuminary styles v1.2.1
+/* Lorcana KB illuminary styles v1.3.0
    Named for the Great Illuminary. A midnight "Inklands" header with an aurora of the six inks,
    then a quiet reading column. The one recurring motif is the hexagon from the ink-cost frame
    on Lorcana cards: ink drops and numbered steps are hexagonal badges.
@@ -257,7 +257,7 @@ ol.refs li:target { color: var(--text); background: var(--tag-bg); border-radius
 ol.refs .src { font-style: italic; }
 
 /* lore tracker and diagram colors for this theme */
-.tracker, .diagram { --tk-surface: var(--surface); --tk-field: var(--bg); --tk-line: var(--line); --tk-text: var(--text); --tk-muted: var(--muted); --tk-accent: var(--lantern); --tk-on-accent: var(--surface); }
+.tracker, .diagram, .dictionary { --tk-surface: var(--surface); --tk-field: var(--bg); --tk-line: var(--line); --tk-text: var(--text); --tk-muted: var(--muted); --tk-accent: var(--lantern); --tk-on-accent: var(--surface); }
 :root[data-theme="dark"] .tracker { --tk-on-accent: var(--night); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tracker { --tk-on-accent: var(--night); } }
 
@@ -325,3 +325,7 @@ ol.refs .src { font-style: italic; }
   .diagram { max-width: none; margin-inline: calc(50% - 50vw + 12px); }
   .diagram figcaption { padding-inline: 14px; }
 }
+
+/* keyword icons (Base Rules): original line glyphs from the page's sprite, in the theme accent */
+.kw-icon { width: 1.15em; height: 1.15em; margin-right: .4em; vertical-align: -.2em; color: var(--tk-accent);
+  fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }

@@ -16,6 +16,22 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.16.0] - 2026-11-08
+#### Added
+- Keyword icons on Base Rules, styled in all three themes
+
+### [3.15.0] - 2026-11-08
+#### Added
+- Story timeline at the top of the Lore page
+
+### [3.14.0] - 2026-11-08
+#### Added
+- Core ink pairing grid on the Inks page
+
+### [3.13.0] - 2026-11-08
+#### Added
+- Format legality chart on Rules Changes
+
 ### [3.12.1] - 2026-11-08
 #### Fixed
 - Diagrams use the full screen width on phones so their labels stay readable
@@ -636,6 +652,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.8.0] - 2026-11-08
+#### Added
+- Keyword icon style (`.kw-icon`) in the theme accent; `.dictionary` joins the shared `--tk-*` color mapping
+
 ### [1.7.1] - 2026-11-08
 #### Fixed
 - Diagrams extend into the side padding below 560px wide so labels stay readable on phones
@@ -687,6 +707,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.5.0] - 2026-11-08
+#### Added
+- Keyword icon style (`.kw-icon`) in the theme accent; `.dictionary` joins the shared `--tk-*` color mapping
 
 ### [1.4.1] - 2026-11-08
 #### Fixed
@@ -771,6 +795,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## base-rules.html
 
+### [3.8.0] - 2026-11-08
+#### Added
+- An original line icon beside each of the sixteen keywords (decorative; hidden from screen readers)
+
 ### [3.7.1] - 2026-11-08
 #### Fixed
 - Card anatomy: shorter Lore label so it doesn't run to the edge on phones
@@ -832,6 +860,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## inks.html
 
+### [1.1.0] - 2026-11-08
+#### Added
+- Chapter II Pairings: a 6×6 grid of Core pairings by tier (as of Oct 27, 2026, from the ink guides); each square links to that guide's pairings
+
 ### [1.0.2] - 2026-10-29
 #### Changed
 - Kicker reads "Lorcana · Strategy" instead of "Part II"
@@ -847,6 +879,11 @@ Each file is versioned independently. Entries are newest first.
 
 ## lore.html
 
+### [1.1.0] - 2026-11-08
+#### Added
+- Timeline of Sets 1–14 grouped by story arc, with years; arcs link to their chapters and set numbers to their sections
+- Anchors on each set heading (`#set-1` to `#set-14`)
+
 ### [1.0.0] - 2026-11-07
 #### Added
 - Lore page: the realm, then the story by arc (The Flood, The Sea Witch, The Hexwell Crown, Whispers & Winter, The Vine, Hyperia City) with a subsection per set from The First Chapter to Hyperia City, plus announced 2027 sets
@@ -855,6 +892,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/illuminary.css
+
+### [1.3.0] - 2026-11-08
+#### Added
+- Keyword icon style (`.kw-icon`) in the theme accent; `.dictionary` joins the shared `--tk-*` color mapping
 
 ### [1.2.1] - 2026-11-08
 #### Fixed
@@ -880,6 +921,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## rules-changes.html
+
+### [1.1.0] - 2026-11-08
+#### Added
+- Format legality chart in At a glance: sets legal in Infinity and Core, when Sets 1–8 left Core, and current bans
 
 ### [1.0.0] - 2026-11-07
 #### Added
