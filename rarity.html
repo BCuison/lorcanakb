@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="version" content="1.0.0">
+<title>Lorcana Card Rarity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/illuminary.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="rg-silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1f3f5"/><stop offset=".5" stop-color="#b9c0c7"/><stop offset="1" stop-color="#8c949c"/></linearGradient>
+    <linearGradient id="rg-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc85"/><stop offset=".55" stop-color="#d9a92e"/><stop offset="1" stop-color="#a87a12"/></linearGradient>
+    <linearGradient id="rg-bronze" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0a46b"/><stop offset="1" stop-color="#9a5b2a"/></linearGradient>
+    <linearGradient id="rg-rainbow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e5484d"/><stop offset=".2" stop-color="#f5a524"/><stop offset=".4" stop-color="#f5d90a"/><stop offset=".6" stop-color="#30a46c"/><stop offset=".8" stop-color="#3e8ed0"/><stop offset="1" stop-color="#8e4ec6"/></linearGradient>
+  </defs>
+  <symbol id="r-common" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5" fill="#9ea3a8" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+  <symbol id="r-uncommon" viewBox="0 0 24 24"><path d="M12 7.5C9.8 6 6.8 5.5 3.5 6v11.5c3.3-.5 6.3 0 8.5 1.5 2.2-1.5 5.2-2 8.5-1.5V6c-3.3-.5-6.3 0-8.5 1.5zM12 7.5V19" fill="#fff" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+  <symbol id="r-rare" viewBox="0 0 24 24"><polygon points="12.00,3.80 20.31,18.20 3.69,18.20" fill="url(#rg-bronze)" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+  <symbol id="r-super-rare" viewBox="0 0 24 24"><polygon points="12,2.5 20.5,12 12,21.5 3.5,12" fill="url(#rg-silver)" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+  <symbol id="r-legendary" viewBox="0 0 24 24"><polygon points="12.00,3.20 21.13,9.83 17.64,20.57 6.36,20.57 2.87,9.83" fill="url(#rg-gold)" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+  <symbol id="r-enchanted" viewBox="0 0 24 24"><polygon points="12.00,2.40 20.31,7.20 20.31,16.80 12.00,21.60 3.69,16.80 3.69,7.20" fill="url(#rg-rainbow)" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+  <symbol id="r-unknown" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2.6 2.4"/><text x="12" y="16.2" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor" font-family="system-ui, sans-serif">?</text></symbol>
+  <symbol id="fleuron" viewBox="0 0 26 14"><path d="M13 1.5 17 7l-4 5.5L9 7Z" fill="currentColor"/><circle cx="3.5" cy="7" r="1.4" fill="currentColor"/><circle cx="22.5" cy="7" r="1.4" fill="currentColor"/></symbol>
+</svg>
+
+<header class="titlepage col">
+  <div class="crumbline"><a href="index.html">Home</a> · <a href="quick-reference.html">Quick reference</a></div>
+  <div class="kicker" style="margin-top:22px">Lorcana · Collecting</div>
+  <h1>Card Rarity</h1>
+  <p class="sub">What each rarity symbol means, how often it turns up in a pack and what it tends to sell for.</p>
+</header>
+
+<nav class="contents" aria-label="Contents">
+  <ol>
+    <li class="back"><a href="quick-reference.html">← Quick reference</a></li>
+    <li><a href="#rarities"><b>I</b>Rarities</a></li>
+    <li><a href="#packs"><b>II</b>What’s in a pack</a></li>
+    <li><a href="#refs"><b>III</b>References</a></li>
+  </ol>
+</nav>
+
+<main class="col">
+
+<section class="chapter rarity" id="rarities">
+  <div class="chapter-head"><span class="num">Chapter I</span><h2>Rarities</h2></div>
+  <p class="lead">Every card carries a rarity symbol at the bottom center, below the text box.<sup class="cite"><a href="#ref-8">[8]</a></sup> From Common up to Enchanted, each step adds a side to the shape.</p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 440 128" role="img" aria-labelledby="dg-rar-t">
+      <title id="dg-rar-t">Rarities from most common to rarest: Common, gray circle; Uncommon, white open book; Rare, bronze triangle; Super Rare, silver diamond; Legendary, gold pentagon; Epic, symbol not confirmed; Enchanted, rainbow hexagon; Iconic, symbol not confirmed.</title>
+      <defs><marker id="dg-rar-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
+      <use href="#r-common" x="14" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="30" y="74" text-anchor="middle">Common</text>
+      <use href="#r-uncommon" x="68" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="84" y="90" text-anchor="middle">Uncommon</text>
+      <use href="#r-rare" x="122" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="138" y="74" text-anchor="middle">Rare</text>
+      <use href="#r-super-rare" x="176" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="192" y="90" text-anchor="middle">Super Rare</text>
+      <use href="#r-legendary" x="230" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="246" y="74" text-anchor="middle">Legendary</text>
+      <use href="#r-unknown" x="284" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="300" y="90" text-anchor="middle">Epic</text>
+      <use href="#r-enchanted" x="338" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="354" y="74" text-anchor="middle">Enchanted</text>
+      <use href="#r-unknown" x="392" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="408" y="90" text-anchor="middle">Iconic</text>
+      <path class="dg-line" d="M30 108H408" marker-end="url(#dg-rar-a)"/>
+      <text class="dg-s" x="30" y="125">more common</text><text class="dg-s" x="410" y="125" text-anchor="end">rarer</text>
+    </svg>
+    <figcaption>The rarity ladder. Epic and Iconic arrived with Fabled; their symbols aren’t described in any official source we could find, so they’re shown as question marks.</figcaption>
+  </figure>
+
+  <div class="table-wrap">
+    <table class="rarity-table">
+      <thead><tr><th>Rarity</th><th>Symbol</th><th>Pull rate</th><th>Description</th><th>Value (USD)</th></tr></thead>
+      <tbody>
+        <tr><td>Common</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Gray circle"><use href="#r-common"/></svg><span class="sym-name">Gray circle</span></span></td><td data-label="Pull rate">6 per pack</td><td>Most of every set: the everyday cards that fill out a deck. Slots 1–6.</td><td data-label="Value (USD)">$0.05–0.50</td></tr>
+        <tr><td>Uncommon</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="White open book"><use href="#r-uncommon"/></svg><span class="sym-name">White open book</span></span></td><td data-label="Pull rate">3 per pack</td><td>Slightly scarcer staples. Slots 7–9.</td><td data-label="Value (USD)">$0.10–1.50</td></tr>
+        <tr><td>Rare</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Bronze triangle"><use href="#r-rare"/></svg><span class="sym-name">Bronze triangle</span></span></td><td data-label="Pull rate">≈ 1–2 per pack</td><td>Fills most of the two Rare-or-better slots (10–11).</td><td data-label="Value (USD)">$0.50–5</td></tr>
+        <tr><td>Super Rare</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Silver diamond"><use href="#r-super-rare"/></svg><span class="sym-name">Silver diamond</span></span></td><td data-label="Pull rate">≈ 1:2–3</td><td>Shares slots 10–11 with Rares and Legendaries.</td><td data-label="Value (USD)">$1–20</td></tr>
+        <tr><td>Legendary</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Gold pentagon"><use href="#r-legendary"/></svg><span class="sym-name">Gold pentagon</span></span></td><td data-label="Pull rate">≈ 1:5–6</td><td>The top regular rarity, often a set’s strongest or most famous characters.</td><td data-label="Value (USD)">$2–60</td></tr>
+        <tr><td>Epic</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Not confirmed"><use href="#r-unknown"/></svg><span class="sym-name">Not confirmed</span></span></td><td data-label="Pull rate">≈ 1:16</td><td>New in Fabled. Frameless art, rainbow foil, holofoil icons and tinted text. Rarer than Legendary, more common than Enchanted. 18 per set.<sup class="cite"><a href="#ref-1">[1]</a></sup></td><td data-label="Value (USD)">$5–40</td></tr>
+        <tr><td>Enchanted</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Rainbow hexagon"><use href="#r-enchanted"/></svg><span class="sym-name">Rainbow hexagon</span></span></td><td data-label="Pull rate">≈ 1:96</td><td>Full alternate art in foil, a chase version of a card from the set. Since Fabled the symbol is holofoil stamped.<sup class="cite"><a href="#ref-1">[1]</a></sup> Estimates run from 1:48 to 1:144.</td><td data-label="Value (USD)">$40–800</td></tr>
+        <tr><td>Iconic</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Not confirmed"><use href="#r-unknown"/></svg><span class="sym-name">Not confirmed</span></span></td><td data-label="Pull rate">≈ 1:1,500</td><td>New in Fabled and the rarest of all. A lore-star foil pattern with 3D hot stamping. 2 per set.<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup></td><td data-label="Value (USD)">$700–4,000+</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>About these numbers</b>Ravensburger doesn’t publish pull rates.<sup class="cite"><a href="#ref-3">[3]</a></sup> The rates here are community estimates from opened boxes and cases,<sup class="cite"><a href="#ref-4">[4]</a></sup> written as cards to packs: 1:96 means about one card in every 96 packs. Values are typical prices for single, ungraded, near-mint cards in late 2026.<sup class="cite"><a href="#ref-5">[5]</a></sup><sup class="cite"><a href="#ref-6">[6]</a></sup><sup class="cite"><a href="#ref-7">[7]</a></sup> Popular cards sell well above their range, and foil versions of lower rarities usually cost a little more.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="packs">
+  <div class="chapter-head"><span class="num">Chapter II</span><h2>What’s in a pack</h2></div>
+  <p class="lead">A booster pack holds twelve cards, and one of them is always foil.<sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-4">[4]</a></sup></p>
+  <dl class="terms">
+    <dt>Slots 1–6</dt><dd>Commons.</dd>
+    <dt>Slots 7–9</dt><dd>Uncommons.</dd>
+    <dt>Slots 10–11</dt><dd>Rare or better: usually Rares, sometimes a Super Rare, Legendary or Epic.</dd>
+    <dt>Slot 12</dt><dd>The foil. Any rarity can turn up here, and it’s where Enchanted and Iconic cards appear.</dd>
+  </dl>
+  <p class="muted">A booster box holds 24 packs.</p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
+<section class="chapter" id="refs">
+  <div class="chapter-head"><span class="num">Chapter III</span><h2>References</h2></div>
+  <p class="muted">Retrieved 8 November 2026. Only [1] and [2] are official.</p>
+  <ol class="refs">
+    <li id="ref-1">“<a href="https://disneylorcana.com/en/product/fabled/" target="_blank" rel="noopener">Fabled</a>.” <span class="src">Disney Lorcana</span> (product page: new rarities).</li>
+    <li id="ref-2">“<a href="https://disneylorcana.com/en/news/2025/10/2025-10-enchanted-q-and-a/" target="_blank" rel="noopener">Whispers in the Well Creative Spotlight</a>.” <span class="src">Disney Lorcana</span> (news, 24 October 2025).</li>
+    <li id="ref-3">“<a href="https://tcg-pricetracker.com/en/blog/lorcana-enchanted-cards" target="_blank" rel="noopener">Lorcana Rarities Explained: Enchanted, Epic &amp; Iconic</a>.” <span class="src">TCGPriceTracker</span> (updated 23 October 2026).</li>
+    <li id="ref-4">“<a href="https://lorcanacollectors.com/lorcana-pull-rates/" target="_blank" rel="noopener">The Ultimate Disney Lorcana Pull Rate Guide</a>.” <span class="src">Lorcana Collectors</span>.</li>
+    <li id="ref-5">“<a href="https://tcgpricelookup.com/blog/lorcana-rarity-tiers-explained" target="_blank" rel="noopener">Disney Lorcana Rarity Tiers Explained</a>.” <span class="src">TCG Price Lookup</span> (9 April 2026; Common to Enchanted).</li>
+    <li id="ref-6">“<a href="https://www.sportscardinvestor.com/sets/2025-fabled-disney-lorcana" target="_blank" rel="noopener">2025 Fabled Disney Lorcana</a>.” <span class="src">Sports Card Investor</span> (Epic sales).</li>
+    <li id="ref-7">“<a href="https://seller.tcgplayer.com/blog/price-trends-disney-lorcana-cards-climbing-in-price-08-09-2026" target="_blank" rel="noopener">Price Trends: Disney Lorcana Cards Climbing in Price</a>.” <span class="src">TCGplayer</span> (9 August 2026; Iconic prices).</li>
+    <li id="ref-8">“<a href="https://www.thegamer.com/disney-lorcana-rarity-guide-common-uncommon-rare-super-legendary-enchanted-promo/" target="_blank" rel="noopener">How To Tell The Rarity Of A Card In Disney Lorcana</a>.” <span class="src">TheGamer</span> (8 July 2024; symbols and placement).</li>
+  </ol>
+</section>
+
+<footer class="colophon">
+  <h2>Colophon</h2>
+  <p>Symbols are redrawn for this page, not copied from cards. Pull rates and prices are estimates that change with every set and every market swing.</p>
+  <div class="meta">
+    <span class="ver">Version 1.0.0</span>
+    <span>Updated 2026-11-08</span>
+    <a href="quick-reference.html">Quick reference</a>
+    <a href="CHANGELOG.md">View changelog</a>
+    <a href="index.html">Home</a>
+  </div>
+</footer>
+</main>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

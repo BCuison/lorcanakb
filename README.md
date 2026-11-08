@@ -10,9 +10,10 @@ lorcana-kb/
 ├── CHANGELOG.md           Version history for every file
 ├── .gitignore
 ├── index.html             Site home page
-├── quick-reference.html   Hub: nav to Tools, Lore, Base Rules, The Inks, Illumineer's Quest
+├── quick-reference.html   Hub: nav to Tools, Lore, Rarity, Base Rules, The Inks, Illumineer's Quest
 ├── base-rules.html        Base rules (setup through formats)
 ├── rules-changes.html     Official rules updates, errata and bans, newest first
+├── rarity.html            Card rarity: symbols, pull rates, typical values
 ├── inks.html              Ink guide index
 ├── table-tools.html       Table tools (coin flipper, lore tracker)
 ├── lore.html              Lorcana story, set by set

@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.17.0] - 2026-11-08
+#### Added
+- `rarity.html`: card rarity reference with redrawn rarity symbols, pull-rate estimates, descriptions and typical USD values; linked from Quick reference and Home
+
 ### [3.16.0] - 2026-11-08
 #### Added
 - Keyword icons on Base Rules, styled in all three themes
@@ -154,6 +158,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## quick-reference.html
+
+### [4.4.0] - 2026-11-08
+#### Added
+- Rarity link in the section bar, after Lore
 
 ### [4.3.0] - 2026-11-07
 #### Added
@@ -335,6 +343,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## index.html
+
+### [3.4.0] - 2026-11-08
+#### Added
+- Card rarity entry in Contents
 
 ### [3.3.0] - 2026-11-07
 #### Added
@@ -652,6 +664,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/storybook.css
 
+### [1.9.0] - 2026-11-08
+#### Added
+- Card rarity page styles: symbol cells, table column widths, and a stacked card layout for the table below 560px
+
 ### [1.8.0] - 2026-11-08
 #### Added
 - Keyword icon style (`.kw-icon`) in the theme accent; `.dictionary` joins the shared `--tk-*` color mapping
@@ -707,6 +723,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.6.0] - 2026-11-08
+#### Added
+- Card rarity page styles: symbol cells, table column widths, and a stacked card layout for the table below 560px
 
 ### [1.5.0] - 2026-11-08
 #### Added
@@ -893,6 +913,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/illuminary.css
 
+### [1.4.0] - 2026-11-08
+#### Added
+- Card rarity page styles: symbol cells, table column widths, and a stacked card layout for the table below 560px
+
 ### [1.3.0] - 2026-11-08
 #### Added
 - Keyword icon style (`.kw-icon`) in the theme accent; `.dictionary` joins the shared `--tk-*` color mapping
@@ -930,3 +954,14 @@ Each file is versioned independently. Entries are newest first.
 #### Added
 - At a glance: current Comprehensive Rules (2.3) and Tournament Rules versions, Core legal sets and banned lists for Core, Infinity and Coconut
 - Change log, newest first, from official release notes and announcements: bans (Apr 2025, Mar 2026, Nov 2026), Fabled rotation, Whispers in the Well, Winterspell (CR 2.0), Wilds Unknown (CR 2.1), Attack of the Vine (CR 2.2), Tournament Rules update, rotation explainer, Format Coconut beta, Hyperia City (CR 2.3); rules, errata and format changes for each with source links
+
+---
+
+## rarity.html
+
+### [1.0.0] - 2026-11-08
+#### Added
+- Rarity ladder diagram, Common to Iconic
+- Table of every rarity: symbol, pull rate, description and typical value (USD), with sources
+- What's in a pack: the twelve booster slots
+- References (two official, the rest community trackers and price guides)

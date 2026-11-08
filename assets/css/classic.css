@@ -1,4 +1,4 @@
-/* Lorcana KB classic styles v1.5.0
+/* Lorcana KB classic styles v1.6.0
    The original 1.x look (navy header, rounded cards, pill navigation), rebuilt to style
    the storybook markup so either theme can be picked from the theme menu.
    Layout: full-bleed header, then a single column of bordered cards. */
@@ -204,7 +204,7 @@ ol.refs li:target { color: var(--text); font-weight: 500; }
 ol.refs .src { font-style: italic; }
 
 /* lore tracker and diagram colors for this theme */
-.tracker, .diagram, .dictionary { --tk-surface: var(--surface); --tk-field: var(--bg); --tk-line: var(--line); --tk-text: var(--text); --tk-muted: var(--muted); --tk-accent: var(--link); --tk-on-accent: #fff; }
+.tracker, .diagram, .dictionary, .rarity { --tk-surface: var(--surface); --tk-field: var(--bg); --tk-line: var(--line); --tk-text: var(--text); --tk-muted: var(--muted); --tk-accent: var(--link); --tk-on-accent: #fff; }
 :root[data-theme="dark"] .tracker { --tk-on-accent: #12111f; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tracker { --tk-on-accent: #12111f; } }
 
@@ -276,3 +276,24 @@ ol.refs .src { font-style: italic; }
 /* keyword icons (Base Rules): original line glyphs from the page's sprite, in the theme accent */
 .kw-icon { width: 1.15em; height: 1.15em; margin-right: .4em; vertical-align: -.2em; color: var(--tk-accent);
   fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* card rarity page: symbols keep their card colors; outline follows the theme text color */
+.rarity-sym { width: 28px; height: 28px; flex: none; color: var(--tk-text); }
+.diagram .dg-sym { color: var(--tk-text); }
+.sym-cell { display: flex; align-items: center; gap: 8px; }
+.rarity-table td:nth-child(2), .rarity-table td:nth-child(3), .rarity-table td:nth-child(5) { white-space: nowrap; }
+.rarity-table td:nth-child(4) { min-width: 12em; }
+.rarity-table td { vertical-align: middle; }
+@media (max-width: 560px) {
+  .rarity-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .rarity-table, .rarity-table tbody { display: block; }
+  .rarity-table tr { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "name sym" "rate value" "desc desc";
+    gap: 6px 12px; padding: 14px 0; border-bottom: 1px solid var(--tk-line); }
+  .rarity-table td { display: block; padding: 0; border: 0; min-width: 0 !important; white-space: normal !important; }
+  .rarity-table td:nth-child(1) { grid-area: name; align-self: center; font-size: 1.05rem; }
+  .rarity-table td:nth-child(2) { grid-area: sym; }
+  .rarity-table td:nth-child(3) { grid-area: rate; }
+  .rarity-table td:nth-child(4) { grid-area: desc; color: var(--tk-muted); }
+  .rarity-table td:nth-child(5) { grid-area: value; text-align: right; }
+  .rarity-table td[data-label]::before { content: attr(data-label); display: block; font-size: .78rem; color: var(--tk-muted); }
+}
