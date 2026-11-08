@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "vibe-tools": {
+      "source": { "source": "github", "repo": "BCuison/vibeSDLC" }
+    }
+  },
+  "enabledPlugins": {
+    "vibe-sdlc@vibe-tools": true
+  }
+}

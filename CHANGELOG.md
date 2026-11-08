@@ -16,6 +16,11 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.18.2] - 2026-11-08
+#### Added
+- `.claude/settings.json` enables the `vibe-sdlc` plugin from the `vibe-tools` marketplace (GitHub `BCuison/vibeSDLC`), so `/vibe-sdlc:feature` runs here
+- `CLAUDE.md` with the Agentic SDLC, Design system, Platform and Security focus sections the agents read; points to the README for full details
+
 ### [3.18.1] - 2026-11-08
 #### Fixed
 - Card Rarity: textured Legendaries (from Set 5) and how to read raised or textured cards
