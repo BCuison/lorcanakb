@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="1.0.0">
+<meta name="version" content="1.1.0">
 <title>Lorcana Card Rarity</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,14 +18,17 @@
     <linearGradient id="rg-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc85"/><stop offset=".55" stop-color="#d9a92e"/><stop offset="1" stop-color="#a87a12"/></linearGradient>
     <linearGradient id="rg-bronze" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e0a46b"/><stop offset="1" stop-color="#9a5b2a"/></linearGradient>
     <linearGradient id="rg-rainbow" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e5484d"/><stop offset=".2" stop-color="#f5a524"/><stop offset=".4" stop-color="#f5d90a"/><stop offset=".6" stop-color="#30a46c"/><stop offset=".8" stop-color="#3e8ed0"/><stop offset="1" stop-color="#8e4ec6"/></linearGradient>
+    <linearGradient id="rg-gray" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dbde"/><stop offset="1" stop-color="#9da1a7"/></linearGradient>
+    <linearGradient id="rg-rainbow2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3e8ed0"/><stop offset=".3" stop-color="#30a46c"/><stop offset=".55" stop-color="#f5d90a"/><stop offset=".8" stop-color="#f5a524"/><stop offset="1" stop-color="#e5484d"/></linearGradient>
   </defs>
-  <symbol id="r-common" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5" fill="#9ea3a8" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
-  <symbol id="r-uncommon" viewBox="0 0 24 24"><path d="M12 7.5C9.8 6 6.8 5.5 3.5 6v11.5c3.3-.5 6.3 0 8.5 1.5 2.2-1.5 5.2-2 8.5-1.5V6c-3.3-.5-6.3 0-8.5 1.5zM12 7.5V19" fill="#fff" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
-  <symbol id="r-rare" viewBox="0 0 24 24"><polygon points="12.00,3.80 20.31,18.20 3.69,18.20" fill="url(#rg-bronze)" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
-  <symbol id="r-super-rare" viewBox="0 0 24 24"><polygon points="12,2.5 20.5,12 12,21.5 3.5,12" fill="url(#rg-silver)" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
-  <symbol id="r-legendary" viewBox="0 0 24 24"><polygon points="12.00,3.20 21.13,9.83 17.64,20.57 6.36,20.57 2.87,9.83" fill="url(#rg-gold)" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
-  <symbol id="r-enchanted" viewBox="0 0 24 24"><polygon points="12.00,2.40 20.31,7.20 20.31,16.80 12.00,21.60 3.69,16.80 3.69,7.20" fill="url(#rg-rainbow)" stroke="#454b52" stroke-width="1.1" stroke-linejoin="round"/></symbol>
-  <symbol id="r-unknown" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2.6 2.4"/><text x="12" y="16.2" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor" font-family="system-ui, sans-serif">?</text></symbol>
+  <symbol id="r-common" viewBox="0 0 48 48"><clipPath id="rc-common"><path d="M24 9a15 15 0 1 0 0.01 0Z"/></clipPath><path d="M24 9a15 15 0 1 0 0.01 0Z" fill="url(#rg-gray)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-common)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M31 9.5C21 11 15.5 19.5 19 26.5 22 32.5 29 33.5 33.5 37"/><path d="M9.5 28C13 33.5 18 37.5 25.5 39"/></g></symbol>
+  <symbol id="r-uncommon" viewBox="0 0 48 48"><clipPath id="rc-uncommon"><path d="M7 10.5L24 15.5 41 10.5V36.5L24 41.5 7 36.5Z"/></clipPath><path d="M7 10.5L24 15.5 41 10.5V36.5L24 41.5 7 36.5Z" fill="#ffffff" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-uncommon)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M24 15.5V29"/><path d="M24 40C23 31 16 26.5 7 26"/><path d="M24 40C25 31 32 26.5 41 26"/></g></symbol>
+  <symbol id="r-rare" viewBox="0 0 48 48"><clipPath id="rc-rare"><path d="M24.00 8.00 L40.45 36.50 L7.55 36.50Z"/></clipPath><path d="M24.00 8.00 L40.45 36.50 L7.55 36.50Z" fill="url(#rg-bronze)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-rare)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M15 40C15 31 18.5 25 24 21.5"/><path d="M33 40C33 31 29.5 25 24 21.5"/></g></symbol>
+  <symbol id="r-super-rare" viewBox="0 0 48 48"><clipPath id="rc-super-rare"><path d="M24 4.5L43.5 24 24 43.5 4.5 24Z"/></clipPath><path d="M24 4.5L43.5 24 24 43.5 4.5 24Z" fill="url(#rg-silver)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-super-rare)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M16.5 36.5Q24 32.5 31.5 36.5"/><path d="M22.5 34V6"/><path d="M25.5 34V6"/><path d="M20 34.5C15.5 27 12.5 21 11 17"/><path d="M28 34.5C32.5 27 35.5 21 37 17"/></g></symbol>
+  <symbol id="r-legendary" viewBox="0 0 48 48"><clipPath id="rc-legendary"><path d="M24.00 7.50 L41.59 20.28 L34.87 40.97 L13.13 40.97 L6.41 20.28Z"/></clipPath><path d="M24.00 7.50 L41.59 20.28 L34.87 40.97 L13.13 40.97 L6.41 20.28Z" fill="url(#rg-gold)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-legendary)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M24 7.5C20 17 14 24 8 28"/><path d="M24 7.5C22.5 19 20.5 31 19.5 43"/><path d="M24 7.5C28 17 34 24 40 28"/><path d="M24 7.5C25.5 19 27.5 31 28.5 43"/></g></symbol>
+  <symbol id="r-epic" viewBox="0 0 48 48"><clipPath id="rc-epic"><path d="M24 6C33 6 42.5 12.5 42.5 22 42.5 31 31 36.5 24 43.5 17 36.5 5.5 31 5.5 22 5.5 12.5 15 6 24 6Z"/></clipPath><path d="M24 6C33 6 42.5 12.5 42.5 22 42.5 31 31 36.5 24 43.5 17 36.5 5.5 31 5.5 22 5.5 12.5 15 6 24 6Z" fill="url(#rg-rainbow)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-epic)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M24 6.5C22 15 15 21 6 24"/><path d="M24 6.5C26 15 33 21 42 24"/><path d="M24 7C17.5 18 17.5 32 24 43"/><path d="M24 7C30.5 18 30.5 32 24 43"/></g></symbol>
+  <symbol id="r-enchanted" viewBox="0 0 48 48"><clipPath id="rc-enchanted"><path d="M24.00 4.50 L40.89 14.25 L40.89 33.75 L24.00 43.50 L7.11 33.75 L7.11 14.25Z M11 23.5L24 16.5 37 23.5 24 31Z" fill-rule="evenodd"/></clipPath><path d="M24.00 4.50 L40.89 14.25 L40.89 33.75 L24.00 43.50 L7.11 33.75 L7.11 14.25Z M11 23.5L24 16.5 37 23.5 24 31Z" fill-rule="evenodd" fill="url(#rg-rainbow)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-enchanted)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M14 11.5L17.5 18.5"/><path d="M19.5 8L21.5 15.5"/><path d="M33 31L37 35"/></g></symbol>
+  <symbol id="r-iconic" viewBox="0 0 48 48"><clipPath id="rc-iconic"><path d="M24.00 4.50 L40.89 14.25 L40.89 33.75 L24.00 43.50 L7.11 33.75 L7.11 14.25Z M30.5 24a6.5 6.5 0 1 0 0.01 0Z" fill-rule="evenodd"/></clipPath><path d="M24.00 4.50 L40.89 14.25 L40.89 33.75 L24.00 43.50 L7.11 33.75 L7.11 14.25Z M30.5 24a6.5 6.5 0 1 0 0.01 0Z" fill-rule="evenodd" fill="url(#rg-rainbow2)" stroke="#454b52" stroke-width="1" stroke-linejoin="round"/><g clip-path="url(#rc-iconic)" fill="none" stroke="#1c1d38" stroke-width="2.2" stroke-linecap="round"><path d="M24.00 17.50Q27.12 9.33 41.66 14.61"/><path d="M29.63 20.75Q38.27 19.36 40.96 34.60"/><path d="M29.63 27.25Q35.15 34.04 23.30 43.99"/><path d="M24.00 30.50Q20.88 38.67 6.34 33.39"/><path d="M18.37 27.25Q9.73 28.64 7.04 13.40"/><path d="M18.37 20.75Q12.85 13.96 24.70 4.01"/></g></symbol>
   <symbol id="fleuron" viewBox="0 0 26 14"><path d="M13 1.5 17 7l-4 5.5L9 7Z" fill="currentColor"/><circle cx="3.5" cy="7" r="1.4" fill="currentColor"/><circle cx="22.5" cy="7" r="1.4" fill="currentColor"/></symbol>
 </svg>
 
@@ -49,24 +52,24 @@
 
 <section class="chapter rarity" id="rarities">
   <div class="chapter-head"><span class="num">Chapter I</span><h2>Rarities</h2></div>
-  <p class="lead">Every card carries a rarity symbol at the bottom center, below the text box.<sup class="cite"><a href="#ref-8">[8]</a></sup> From Common up to Enchanted, each step adds a side to the shape.</p>
+  <p class="lead">Every card carries a rarity symbol at the bottom center, below the text box.<sup class="cite"><a href="#ref-8">[8]</a></sup> Common to Legendary climb from a circle through a book, triangle, diamond and pentagon. The three rarest are rainbow foil.</p>
 
   <figure class="diagram">
     <svg viewBox="0 0 440 128" role="img" aria-labelledby="dg-rar-t">
-      <title id="dg-rar-t">Rarities from most common to rarest: Common, gray circle; Uncommon, white open book; Rare, bronze triangle; Super Rare, silver diamond; Legendary, gold pentagon; Epic, symbol not confirmed; Enchanted, rainbow hexagon; Iconic, symbol not confirmed.</title>
+      <title id="dg-rar-t">Rarities from most common to rarest: Common, gray circle; Uncommon, white book; Rare, bronze triangle; Super Rare, silver diamond; Legendary, gold pentagon; Epic, rainbow drop; Enchanted, rainbow hexagon; Iconic, rainbow iris.</title>
       <defs><marker id="dg-rar-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
       <use href="#r-common" x="14" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="30" y="74" text-anchor="middle">Common</text>
       <use href="#r-uncommon" x="68" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="84" y="90" text-anchor="middle">Uncommon</text>
       <use href="#r-rare" x="122" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="138" y="74" text-anchor="middle">Rare</text>
       <use href="#r-super-rare" x="176" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="192" y="90" text-anchor="middle">Super Rare</text>
       <use href="#r-legendary" x="230" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="246" y="74" text-anchor="middle">Legendary</text>
-      <use href="#r-unknown" x="284" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="300" y="90" text-anchor="middle">Epic</text>
+      <use href="#r-epic" x="284" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="300" y="90" text-anchor="middle">Epic</text>
       <use href="#r-enchanted" x="338" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="354" y="74" text-anchor="middle">Enchanted</text>
-      <use href="#r-unknown" x="392" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="408" y="90" text-anchor="middle">Iconic</text>
+      <use href="#r-iconic" x="392" y="22" width="32" height="32" class="dg-sym"/><text class="dg-s" x="408" y="90" text-anchor="middle">Iconic</text>
       <path class="dg-line" d="M30 108H408" marker-end="url(#dg-rar-a)"/>
       <text class="dg-s" x="30" y="125">more common</text><text class="dg-s" x="410" y="125" text-anchor="end">rarer</text>
     </svg>
-    <figcaption>The rarity ladder. Epic and Iconic arrived with Fabled; their symbols aren’t described in any official source we could find, so they’re shown as question marks.</figcaption>
+    <figcaption>The rarity ladder, from most common to rarest. Epic and Iconic arrived with Fabled.</figcaption>
   </figure>
 
   <div class="table-wrap">
@@ -74,13 +77,13 @@
       <thead><tr><th>Rarity</th><th>Symbol</th><th>Pull rate</th><th>Description</th><th>Value (USD)</th></tr></thead>
       <tbody>
         <tr><td>Common</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Gray circle"><use href="#r-common"/></svg><span class="sym-name">Gray circle</span></span></td><td data-label="Pull rate">6 per pack</td><td>Most of every set: the everyday cards that fill out a deck. Slots 1–6.</td><td data-label="Value (USD)">$0.05–0.50</td></tr>
-        <tr><td>Uncommon</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="White open book"><use href="#r-uncommon"/></svg><span class="sym-name">White open book</span></span></td><td data-label="Pull rate">3 per pack</td><td>Slightly scarcer staples. Slots 7–9.</td><td data-label="Value (USD)">$0.10–1.50</td></tr>
+        <tr><td>Uncommon</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="White book"><use href="#r-uncommon"/></svg><span class="sym-name">White book</span></span></td><td data-label="Pull rate">3 per pack</td><td>Slightly scarcer staples. Slots 7–9.</td><td data-label="Value (USD)">$0.10–1.50</td></tr>
         <tr><td>Rare</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Bronze triangle"><use href="#r-rare"/></svg><span class="sym-name">Bronze triangle</span></span></td><td data-label="Pull rate">≈ 1–2 per pack</td><td>Fills most of the two Rare-or-better slots (10–11).</td><td data-label="Value (USD)">$0.50–5</td></tr>
         <tr><td>Super Rare</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Silver diamond"><use href="#r-super-rare"/></svg><span class="sym-name">Silver diamond</span></span></td><td data-label="Pull rate">≈ 1:2–3</td><td>Shares slots 10–11 with Rares and Legendaries.</td><td data-label="Value (USD)">$1–20</td></tr>
         <tr><td>Legendary</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Gold pentagon"><use href="#r-legendary"/></svg><span class="sym-name">Gold pentagon</span></span></td><td data-label="Pull rate">≈ 1:5–6</td><td>The top regular rarity, often a set’s strongest or most famous characters.</td><td data-label="Value (USD)">$2–60</td></tr>
-        <tr><td>Epic</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Not confirmed"><use href="#r-unknown"/></svg><span class="sym-name">Not confirmed</span></span></td><td data-label="Pull rate">≈ 1:16</td><td>New in Fabled. Frameless art, rainbow foil, holofoil icons and tinted text. Rarer than Legendary, more common than Enchanted. 18 per set.<sup class="cite"><a href="#ref-1">[1]</a></sup></td><td data-label="Value (USD)">$5–40</td></tr>
+        <tr><td>Epic</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Rainbow drop"><use href="#r-epic"/></svg><span class="sym-name">Rainbow drop</span></span></td><td data-label="Pull rate">≈ 1:16</td><td>New in Fabled. Frameless art, rainbow foil, holofoil icons and tinted text. Rarer than Legendary, more common than Enchanted. 18 per set.<sup class="cite"><a href="#ref-1">[1]</a></sup></td><td data-label="Value (USD)">$5–40</td></tr>
         <tr><td>Enchanted</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Rainbow hexagon"><use href="#r-enchanted"/></svg><span class="sym-name">Rainbow hexagon</span></span></td><td data-label="Pull rate">≈ 1:96</td><td>Full alternate art in foil, a chase version of a card from the set. Since Fabled the symbol is holofoil stamped.<sup class="cite"><a href="#ref-1">[1]</a></sup> Estimates run from 1:48 to 1:144.</td><td data-label="Value (USD)">$40–800</td></tr>
-        <tr><td>Iconic</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Not confirmed"><use href="#r-unknown"/></svg><span class="sym-name">Not confirmed</span></span></td><td data-label="Pull rate">≈ 1:1,500</td><td>New in Fabled and the rarest of all. A lore-star foil pattern with 3D hot stamping. 2 per set.<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup></td><td data-label="Value (USD)">$700–4,000+</td></tr>
+        <tr><td>Iconic</td><td><span class="sym-cell"><svg class="rarity-sym" role="img" aria-label="Rainbow iris"><use href="#r-iconic"/></svg><span class="sym-name">Rainbow iris</span></span></td><td data-label="Pull rate">≈ 1:1,500</td><td>New in Fabled and the rarest of all. A lore-star foil pattern with 3D hot stamping. 2 per set.<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-2">[2]</a></sup></td><td data-label="Value (USD)">$700–4,000+</td></tr>
       </tbody>
     </table>
   </div>
@@ -122,7 +125,7 @@
   <h2>Colophon</h2>
   <p>Symbols are redrawn for this page, not copied from cards. Pull rates and prices are estimates that change with every set and every market swing.</p>
   <div class="meta">
-    <span class="ver">Version 1.0.0</span>
+    <span class="ver">Version 1.1.0</span>
     <span>Updated 2026-11-08</span>
     <a href="quick-reference.html">Quick reference</a>
     <a href="CHANGELOG.md">View changelog</a>

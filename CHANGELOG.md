@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.17.1] - 2026-11-08
+#### Changed
+- Card rarity symbols redrawn to match the official rarity chart, including Epic and Iconic
+
 ### [3.17.0] - 2026-11-08
 #### Added
 - `rarity.html`: card rarity reference with redrawn rarity symbols, pull-rate estimates, descriptions and typical USD values; linked from Quick reference and Home
@@ -958,6 +962,11 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## rarity.html
+
+### [1.1.0] - 2026-11-08
+#### Changed
+- All eight rarity symbols redrawn from the official rarity chart: line details added to Common through Legendary, and Epic (rainbow drop) and Iconic (rainbow iris) drawn instead of question marks
+- Uncommon renamed "White book"; intro and ladder caption no longer call Epic and Iconic unconfirmed
 
 ### [1.0.0] - 2026-11-08
 #### Added
