@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="1.1.0">
+<meta name="version" content="1.2.0">
 <title>Lorcana Card Rarity</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,15 +36,16 @@
   <div class="crumbline"><a href="index.html">Home</a> · <a href="quick-reference.html">Quick reference</a></div>
   <div class="kicker" style="margin-top:22px">Lorcana · Collecting</div>
   <h1>Card Rarity</h1>
-  <p class="sub">What each rarity symbol means, how often it turns up in a pack and what it tends to sell for.</p>
+  <p class="sub">What each rarity symbol means, which finishes it comes in, how often it turns up in a pack and what it tends to sell for.</p>
 </header>
 
 <nav class="contents" aria-label="Contents">
   <ol>
     <li class="back"><a href="quick-reference.html">← Quick reference</a></li>
     <li><a href="#rarities"><b>I</b>Rarities</a></li>
-    <li><a href="#packs"><b>II</b>What’s in a pack</a></li>
-    <li><a href="#refs"><b>III</b>References</a></li>
+    <li><a href="#finishes"><b>II</b>Finishes</a></li>
+    <li><a href="#packs"><b>III</b>What’s in a pack</a></li>
+    <li><a href="#refs"><b>IV</b>References</a></li>
   </ol>
 </nav>
 
@@ -92,8 +93,64 @@
 
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
 
+<section class="chapter rarity" id="finishes">
+  <div class="chapter-head"><span class="num">Chapter II</span><h2>Finishes</h2></div>
+  <p class="lead">Finish and rarity are separate. A foil Legendary is still a Legendary: the symbol sets the rarity, the finish is how the card is printed.<sup class="cite"><a href="#ref-9">[9]</a></sup> Common to Legendary each come plain or foil; Epic, Enchanted and Iconic each have a foil all their own.</p>
+
+  <figure class="diagram">
+    <svg viewBox="0 0 440 168" role="img" aria-labelledby="dg-fin-t">
+      <title id="dg-fin-t">Which finishes each rarity comes in. Common, Uncommon, Rare, Super Rare and Legendary: standard and foil. Epic, Enchanted and Iconic: their own special foil only.</title>
+      <use href="#r-common" x="115" y="6" width="26" height="26"><title>Common</title></use><use href="#r-uncommon" x="157" y="6" width="26" height="26"><title>Uncommon</title></use><use href="#r-rare" x="199" y="6" width="26" height="26"><title>Rare</title></use><use href="#r-super-rare" x="241" y="6" width="26" height="26"><title>Super Rare</title></use><use href="#r-legendary" x="283" y="6" width="26" height="26"><title>Legendary</title></use><use href="#r-epic" x="325" y="6" width="26" height="26"><title>Epic</title></use><use href="#r-enchanted" x="367" y="6" width="26" height="26"><title>Enchanted</title></use><use href="#r-iconic" x="409" y="6" width="26" height="26"><title>Iconic</title></use>
+      <text class="dg-b" x="0" y="61" style="font-size:14px">Standard</text>
+      <circle class="dg-head" cx="128" cy="56" r="7"/>
+      <circle class="dg-head" cx="170" cy="56" r="7"/>
+      <circle class="dg-head" cx="212" cy="56" r="7"/>
+      <circle class="dg-head" cx="254" cy="56" r="7"/>
+      <circle class="dg-head" cx="296" cy="56" r="7"/>
+      <circle class="dg-lead" cx="338" cy="56" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="380" cy="56" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="422" cy="56" r="3" opacity="20.6"/>
+      <text class="dg-b" x="0" y="105" style="font-size:14px">Foil</text>
+      <circle class="dg-acc" cx="128" cy="100" r="7"/>
+      <circle class="dg-acc" cx="170" cy="100" r="7"/>
+      <circle class="dg-acc" cx="212" cy="100" r="7"/>
+      <circle class="dg-acc" cx="254" cy="100" r="7"/>
+      <circle class="dg-acc" cx="296" cy="100" r="7"/>
+      <circle class="dg-lead" cx="338" cy="100" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="380" cy="100" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="422" cy="100" r="3" opacity="20.6"/>
+      <text class="dg-b" x="0" y="149" style="font-size:14px">Special foil</text>
+      <circle class="dg-lead" cx="128" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="170" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="212" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="254" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-lead" cx="296" cy="144" r="3" opacity="20.6"/>
+      <circle class="dg-acc" cx="338" cy="144" r="7"/>
+      <circle class="dg-acc" cx="380" cy="144" r="7"/>
+      <circle class="dg-acc" cx="422" cy="144" r="7"/>
+    </svg>
+    <figcaption>Which finishes each rarity comes in, with columns in ladder order from Common to Iconic. A filled dot means that version exists.</figcaption>
+  </figure>
+
+  <div class="table-wrap">
+    <table class="rarity-table">
+      <thead><tr><th>Finish</th><th>Rarities</th><th>Pull rate</th><th>What it looks like</th><th>Value (USD)</th></tr></thead>
+      <tbody>
+        <tr><td>Standard</td><td>Common to Legendary</td><td data-label="Pull rate">11 per pack</td><td>The plain printing.</td><td data-label="Value (USD)">Base price</td></tr>
+        <tr><td>Foil</td><td>Common to Legendary</td><td data-label="Pull rate">1 per pack</td><td>Every card from Common to Legendary also comes as a foil, printed with a cold foil process that gives a slightly textured sheen; the ink cost and symbols can feel raised.<sup class="cite"><a href="#ref-9">[9]</a></sup><sup class="cite"><a href="#ref-11">[11]</a></sup> A particular rarity in foil is scarcer: early estimates put a foil Rare near 1:7, a foil Super Rare near 1:20 and a foil Legendary near 1:50.<sup class="cite"><a href="#ref-11">[11]</a></sup></td><td data-label="Value (USD)">Usually more</td></tr>
+        <tr><td>Rainbow foil</td><td>Epic only</td><td data-label="Pull rate">≈ 1:16</td><td>Frameless art in rainbow foil, with holofoil icons and tinted text.<sup class="cite"><a href="#ref-1">[1]</a></sup></td><td data-label="Value (USD)">$5–40</td></tr>
+        <tr><td>Enchanted foil</td><td>Enchanted only</td><td data-label="Pull rate">≈ 1:96</td><td>New art across the whole card in a glittering, textured foil, with rainbow foil hot stamping; since Fabled the rarity symbol is holofoil stamped.<sup class="cite"><a href="#ref-1">[1]</a></sup><sup class="cite"><a href="#ref-10">[10]</a></sup> There’s no plain version.</td><td data-label="Value (USD)">≈ 66× its foil</td></tr>
+        <tr><td>Lore-star foil</td><td>Iconic only</td><td data-label="Pull rate">≈ 1:1,500</td><td>Full-card art with a custom lore-star foil pattern and raised 3D hot stamping.<sup class="cite"><a href="#ref-1">[1]</a></sup> This raised stamping is most likely what reads as “embossed”.</td><td data-label="Value (USD)">$700–4,000+</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>Outside booster packs</b>Promo cards from events and Organized Play kits, oversized cards in some gift sets and Illumineer’s Quest scenario cards come in their own finishes. They aren’t part of the rarity ladder.<sup class="cite"><a href="#ref-11">[11]</a></sup></p>
+</section>
+
+<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
+
 <section class="chapter" id="packs">
-  <div class="chapter-head"><span class="num">Chapter II</span><h2>What’s in a pack</h2></div>
+  <div class="chapter-head"><span class="num">Chapter III</span><h2>What’s in a pack</h2></div>
   <p class="lead">A booster pack holds twelve cards, and one of them is always foil.<sup class="cite"><a href="#ref-3">[3]</a></sup><sup class="cite"><a href="#ref-4">[4]</a></sup></p>
   <dl class="terms">
     <dt>Slots 1–6</dt><dd>Commons.</dd>
@@ -107,7 +164,7 @@
 <div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>
 
 <section class="chapter" id="refs">
-  <div class="chapter-head"><span class="num">Chapter III</span><h2>References</h2></div>
+  <div class="chapter-head"><span class="num">Chapter IV</span><h2>References</h2></div>
   <p class="muted">Retrieved 8 November 2026. Only [1] and [2] are official.</p>
   <ol class="refs">
     <li id="ref-1">“<a href="https://disneylorcana.com/en/product/fabled/" target="_blank" rel="noopener">Fabled</a>.” <span class="src">Disney Lorcana</span> (product page: new rarities).</li>
@@ -118,6 +175,9 @@
     <li id="ref-6">“<a href="https://www.sportscardinvestor.com/sets/2025-fabled-disney-lorcana" target="_blank" rel="noopener">2025 Fabled Disney Lorcana</a>.” <span class="src">Sports Card Investor</span> (Epic sales).</li>
     <li id="ref-7">“<a href="https://seller.tcgplayer.com/blog/price-trends-disney-lorcana-cards-climbing-in-price-08-09-2026" target="_blank" rel="noopener">Price Trends: Disney Lorcana Cards Climbing in Price</a>.” <span class="src">TCGplayer</span> (9 August 2026; Iconic prices).</li>
     <li id="ref-8">“<a href="https://www.thegamer.com/disney-lorcana-rarity-guide-common-uncommon-rare-super-legendary-enchanted-promo/" target="_blank" rel="noopener">How To Tell The Rarity Of A Card In Disney Lorcana</a>.” <span class="src">TheGamer</span> (8 July 2024; symbols and placement).</li>
+    <li id="ref-9">“<a href="https://comicbook.com/gaming/news/disney-lorcana-foil-cards-look-rarity-price/" target="_blank" rel="noopener">Disney Lorcana Co-Designer Explains Game’s Foil Process</a>.” <span class="src">ComicBook.com</span> (27 July 2023).</li>
+    <li id="ref-10">“<a href="https://foilio.net/blog/how-to-tell-if-lorcana-card-rare" target="_blank" rel="noopener">How to Tell if a Disney Lorcana Card Is Rare</a>.” <span class="src">Foilio</span> (18 June 2026; Enchanted vs foil prices).</li>
+    <li id="ref-11">“<a href="https://lorcanaplayer.com/lorcana-card-rarities-pull-rates-holo-foils/" target="_blank" rel="noopener">Lorcana Card Rarities, Pull Rates + Foils Explained</a>.” <span class="src">Lorcana Player</span> (foil odds from the early sets).</li>
   </ol>
 </section>
 
@@ -125,7 +185,7 @@
   <h2>Colophon</h2>
   <p>Symbols are redrawn for this page, not copied from cards. Pull rates and prices are estimates that change with every set and every market swing.</p>
   <div class="meta">
-    <span class="ver">Version 1.1.0</span>
+    <span class="ver">Version 1.2.0</span>
     <span>Updated 2026-11-08</span>
     <a href="quick-reference.html">Quick reference</a>
     <a href="CHANGELOG.md">View changelog</a>

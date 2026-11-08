@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.18.0] - 2026-11-08
+#### Added
+- Finishes chapter on the Card Rarity page: standard, foil and the special foils of Epic, Enchanted and Iconic
+
 ### [3.17.1] - 2026-11-08
 #### Changed
 - Card rarity symbols redrawn to match the official rarity chart, including Epic and Iconic
@@ -962,6 +966,13 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## rarity.html
+
+### [1.2.0] - 2026-11-08
+#### Added
+- Chapter II Finishes: rarity-by-finish grid and a table of each finish (rarities, pull rate, look, value), most common first; note on promos and other cards outside packs
+- Three references (foil process, Enchanted vs foil prices, early foil odds)
+#### Changed
+- What's in a pack and References renumbered to III and IV
 
 ### [1.1.0] - 2026-11-08
 #### Changed
