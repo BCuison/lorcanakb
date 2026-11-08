@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.14.0] - 2026-11-08
+#### Added
+- Core ink pairing grid on the Inks page
+
 ### [3.13.0] - 2026-11-08
 #### Added
 - Format legality chart on Rules Changes
@@ -835,6 +839,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## inks.html
+
+### [1.1.0] - 2026-11-08
+#### Added
+- Chapter II Pairings: a 6×6 grid of Core pairings by tier (as of Oct 27, 2026, from the ink guides); each square links to that guide's pairings
 
 ### [1.0.2] - 2026-10-29
 #### Changed
