@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="3.4.0">
+<meta name="version" content="3.5.0">
 <title>Lorcana Base Rules</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -238,6 +238,40 @@
     <li><span><b>Trade blows.</b> Each deals damage equal to its strength to the other, at the same time.</span></li>
     <li><span><b>Banish the fallen.</b> Damage equal to or above willpower sends a character to the discard.</span></li>
   </ol>
+  <figure class="diagram">
+    <svg viewBox="0 0 440 262" role="img" aria-labelledby="dg-chal-t">
+      <title id="dg-chal-t">Example challenge. Your challenger, strength 3 and willpower 4, exerts and challenges an exerted opposing character with strength 2 and willpower 3. Each deals its strength as damage to the other. Your challenger takes 2, less than its willpower of 4, and stays. The target takes 3, equal to its willpower of 3, and is banished.</title>
+      <defs><marker id="dg-chal-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 10 5 0 10z"/></marker></defs>
+      <g text-anchor="middle">
+        <text class="dg-h" x="100" y="20">Your challenger</text><text class="dg-s" x="100" y="38">exerts to challenge</text>
+        <text class="dg-h" x="340" y="20">The target</text><text class="dg-s" x="340" y="38">must already be exerted</text>
+      </g>
+      <rect class="dg-box" x="40" y="52" width="120" height="80" rx="8"/>
+      <rect class="dg-box" x="280" y="52" width="120" height="80" rx="8"/>
+      <g text-anchor="middle">
+        <text class="dg-n" x="70" y="95">3</text><text class="dg-s" x="70" y="116">strength</text>
+        <text class="dg-n" x="130" y="95">4</text><text class="dg-s" x="130" y="116">willpower</text>
+        <text class="dg-n" x="310" y="95">2</text><text class="dg-s" x="310" y="116">strength</text>
+        <text class="dg-n" x="370" y="95">3</text><text class="dg-s" x="370" y="116">willpower</text>
+      </g>
+      <path class="dg-line" d="M168 78h102" marker-end="url(#dg-chal-a)"/>
+      <path class="dg-line" d="M272 108H170" marker-end="url(#dg-chal-a)"/>
+      <g text-anchor="middle" class="dg-t" style="font-size:13.5px">
+        <text x="220" y="70">deals 3</text><text x="220" y="128">deals 2</text>
+      </g>
+      <text class="dg-s" x="220" y="96" text-anchor="middle">at once</text>
+
+      <path class="dg-line dg-dash" d="M100 140v16M340 140v16"/>
+      <rect class="dg-good" x="30" y="162" width="140" height="62" rx="10"/>
+      <rect class="dg-bad" x="270" y="162" width="140" height="62" rx="10"/>
+      <g text-anchor="middle">
+        <text class="dg-b" x="100" y="187">Stays in play</text><text class="dg-s" x="100" y="208">2 damage, below 4</text>
+        <text class="dg-b" x="340" y="187">Banished</text><text class="dg-s" x="340" y="208">3 damage, reaches 3</text>
+      </g>
+      <text class="dg-s" x="220" y="252" text-anchor="middle">Cards drawn sideways are exerted.</text>
+    </svg>
+    <figcaption>One challenge, worked through. Damage stays on the survivor until it is healed. A location can be the target too, but it never deals damage back.</figcaption>
+  </figure>
   <p class="note"><b>Remember</b>Damage stays until healed or banished. Locations never deal damage back.</p>
 </section>
 
@@ -372,7 +406,7 @@
     <li><a href="https://gamertagmythras.com/blog/disney-lorcana/lorcana-ink-drops-explained" target="_blank" rel="noopener">Ink drops explained (Comprehensive Rules 2.3.0)</a></li>
   </ul>
   <div class="meta">
-    <span class="ver">Version 3.4.0</span>
+    <span class="ver">Version 3.5.0</span>
     <span>Updated 2026-11-07</span>
     <span>Rules basis: Comprehensive Rules 2.3.0</span>
     <a href="CHANGELOG.md">View changelog</a>

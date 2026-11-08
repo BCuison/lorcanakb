@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.10.0] - 2026-11-08
+#### Added
+- Challenge diagram on Base Rules
+
 ### [3.9.0] - 2026-11-08
 #### Added
 - Card anatomy diagram on Base Rules
@@ -746,6 +750,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## base-rules.html
+
+### [3.5.0] - 2026-11-08
+#### Added
+- Worked challenge diagram in Challenges: both characters exerted, damage traded at once, one survives and one is banished
 
 ### [3.4.0] - 2026-11-08
 #### Added
