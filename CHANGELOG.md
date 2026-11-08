@@ -16,6 +16,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.13.0] - 2026-11-08
+#### Added
+- Format legality chart on Rules Changes
+
 ### [3.12.1] - 2026-11-08
 #### Fixed
 - Diagrams use the full screen width on phones so their labels stay readable
@@ -880,6 +884,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## rules-changes.html
+
+### [1.1.0] - 2026-11-08
+#### Added
+- Format legality chart in At a glance: sets legal in Infinity and Core, when Sets 1–8 left Core, and current bans
 
 ### [1.0.0] - 2026-11-07
 #### Added
