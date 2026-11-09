@@ -16,6 +16,13 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.19.0] - 2026-11-09
+#### Added
+- Deck building guide (`deck-building.html`): official deck rules and the mulligan, then labelled community advice on inkables, curve, archetypes, card roles, copy counts and mulligans, a worked 60-card example with a curve diagram, and sources
+- Tool III Deck Odds on Table Tools: exact odds of drawing a card or hitting inkables by a given turn, on the play or the draw
+- `scripts/test-odds.js`: Node tests for the deck odds math, validation and page wiring (run `node scripts/test-odds.js`; no dependencies)
+- Deck building links in the Quick reference nav and the home page Contents
+
 ### [3.18.2] - 2026-11-08
 #### Added
 - `.claude/settings.json` enables the `vibe-sdlc` plugin from the `vibe-tools` marketplace (GitHub `BCuison/vibeSDLC`), so `/vibe-sdlc:feature` runs here
@@ -175,6 +182,10 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## quick-reference.html
+
+### [4.5.0] - 2026-11-09
+#### Added
+- Deck building link in the section bar, after Rarity
 
 ### [4.4.0] - 2026-11-08
 #### Added
@@ -360,6 +371,12 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## index.html
+
+### [3.5.0] - 2026-11-09
+#### Added
+- Deck building entry in Contents, after Card rarity
+#### Changed
+- Tools description now mentions the deck odds calculator
 
 ### [3.4.0] - 2026-11-08
 #### Added
@@ -611,6 +628,10 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/js/tools.js
 
+### [1.4.0] - 2026-11-09
+#### Added
+- Deck odds calculator: exact draw odds (hypergeometric) and inkables-by-turn odds (exact per-turn checkpoints), input validation with plain-language messages, and result sentences. Writes only with `textContent` and stores nothing. The math is exposed as `window.lorcanaOdds` for the Node tests
+
 ### [1.3.0] - 2026-11-07
 #### Added
 - Lore tracker logic: saved state (localStorage), undo history, win announcement through a polite live region, two-tap reset
@@ -633,6 +654,12 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## table-tools.html
+
+### [2.3.0] - 2026-11-09
+#### Added
+- Tool III Deck Odds: Draw a card / Inkables mode, On the play / On the draw, deck size, copies or inkables and turn inputs, a live result with a cards-seen line, and a no-JavaScript note
+#### Changed
+- Subtitle, contents nav and colophon mention the odds tool ("The odds tool stores nothing.")
 
 ### [2.2.0] - 2026-11-07
 #### Added
@@ -680,6 +707,12 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/storybook.css
+
+### [1.10.0] - 2026-11-09
+#### Added
+- Deck odds tool styles (`.deck-odds`, `.odds-*`): toggle bar, fields (one column at 560px or less), input hover, error and focus states, result and note; `.deck-odds` joins the shared `--tk-*` color mapping, including the dark overrides
+- References links wrap anywhere so long URLs don't overflow on phones
+- In light mode the odds error text uses a darker ruby (`#b02236`) so it meets 4.5:1 contrast on the result panel; dark mode keeps `--ruby`
 
 ### [1.9.0] - 2026-11-08
 #### Added
@@ -740,6 +773,11 @@ Each file is versioned independently. Entries are newest first.
 ---
 
 ## assets/css/classic.css
+
+### [1.7.0] - 2026-11-09
+#### Added
+- Deck odds tool styles (`.deck-odds`, `.odds-*`): toggle bar, fields (one column at 560px or less), input hover, error and focus states, result and note; `.deck-odds` joins the shared `--tk-*` color mapping, including the dark overrides
+- References links wrap anywhere so long URLs don't overflow on phones
 
 ### [1.6.0] - 2026-11-08
 #### Added
@@ -930,6 +968,11 @@ Each file is versioned independently. Entries are newest first.
 
 ## assets/css/illuminary.css
 
+### [1.5.0] - 2026-11-09
+#### Added
+- Deck odds tool styles (`.deck-odds`, `.odds-*`): toggle bar, fields (one column at 560px or less), input hover, error and focus states, result and note; `.deck-odds` joins the shared `--tk-*` color mapping, including the dark overrides
+- References links wrap anywhere so long URLs don't overflow on phones
+
 ### [1.4.0] - 2026-11-08
 #### Added
 - Card rarity page styles: symbol cells, table column widths, and a stacked card layout for the table below 560px
@@ -1000,3 +1043,14 @@ Each file is versioned independently. Entries are newest first.
 - Table of every rarity: symbol, pull rate, description and typical value (USD), with sources
 - What's in a pack: the twelve booster slots
 - References (two official, the rest community trackers and price guides)
+
+---
+
+## deck-building.html
+
+### [1.0.0] - 2026-11-09
+#### Added
+- Deck building guide. Official rules: I Deck rules (60+ cards, one or two inks, up to 4 per full name, dual-ink cards) and II The mulligan, from the Comprehensive Rules 2.2.0
+- Community advice, each chapter labelled as such: III Introduction, IV Inkables, V Curve, VI Archetypes, VII Card roles, VIII Copy counts (with the Rule of Eight), IX Mulligan advice, with links to the deck odds tool and ink pairings
+- X Worked example: a 60-card curve diagram with odds from the deck odds tool
+- Sources: the Comprehensive Rules plus eleven community guides, cited inline

@@ -1,5 +1,6 @@
-/* Lorcana KB tools v1.3.0
-   Coin flipper: fair 50/50 using the browser's crypto random source. Lore tracker below.
+/* Lorcana KB tools v1.4.0
+   Coin flipper: fair 50/50 using the browser's crypto random source. Lore tracker and
+   deck odds calculator below.
    Tap the coin itself or the button to flip. */
 (function () {
   var btn = document.getElementById('coin-flip');
@@ -188,4 +189,179 @@
   }
 
   render();
+})();
+
+/* Deck odds: exact draw and inkable odds for an opening hand plus normal draws.
+   The math is exposed as window.lorcanaOdds before the root guard so it can be
+   tested in Node (scripts/test-odds.js). */
+(function () {
+  window.lorcanaOdds = {
+    cardsSeen: cardsSeen, drawOdds: drawOdds, inkOdds: inkOdds, formatPct: formatPct,
+    validate: validate, describe: describe
+  };
+  var root = document.getElementById('deck-odds-root');
+  if (!root) return;
+
+  function clamp(p) {
+    return p < 0 ? 0 : (p > 1 ? 1 : p);
+  }
+
+  // Seven-card opening hand, plus one draw per turn (none on turn 1 on the play).
+  function cardsSeen(turn, onPlay, D) {
+    return Math.min(D, onPlay ? 6 + turn : 7 + turn);
+  }
+
+  // P(at least one of K copies among the cards seen by turn T) = 1 - C(D-K,n)/C(D,n).
+  function drawOdds(D, K, T, onPlay) {
+    var n = cardsSeen(T, onPlay, D);
+    var ratio = 1;
+    for (var i = 0; i < n; i++) {
+      var num = D - K - i;
+      if (num <= 0) { ratio = 0; break; }
+      ratio *= num / (D - i);
+    }
+    return clamp(1 - ratio);
+  }
+
+  // P(inkables seen by turn t >= t for every t = 1..N), exact.
+  // dist[i] = P(i inkables drawn so far and every earlier checkpoint passed).
+  function inkOdds(D, K, N, onPlay) {
+    var dist = [1];
+    var j = 0; // cards drawn so far
+    for (var t = 1; t <= N; t++) {
+      var target = cardsSeen(t, onPlay, D);
+      for (; j < target; j++) {
+        var next = new Array(dist.length + 1);
+        for (var x = 0; x < next.length; x++) next[x] = 0;
+        for (var i = 0; i < dist.length; i++) {
+          var p = dist[i];
+          if (p === 0) continue;
+          var pInk = (K - i) / (D - j);
+          if (pInk > 0) next[i + 1] += p * pInk;
+          if (pInk < 1) next[i] += p * (1 - pInk);
+        }
+        dist = next;
+      }
+      for (var k = 0; k < t && k < dist.length; k++) dist[k] = 0;
+    }
+    var sum = 0;
+    for (var m = 0; m < dist.length; m++) sum += dist[m];
+    return clamp(sum);
+  }
+
+  function formatPct(p) {
+    return (clamp(p) * 100).toFixed(1) + '%';
+  }
+
+  // Checks deck, then count, then turn; the first error wins.
+  function validate(mode, deckStr, countStr, turnStr) {
+    var countName = mode === 'ink' ? 'inkables' : 'copies';
+    var fields = [
+      { key: 'deck', name: 'deck size', str: deckStr },
+      { key: 'count', name: countName, str: countStr },
+      { key: 'turn', name: 'turn number', str: turnStr }
+    ];
+    var values = {};
+    for (var f = 0; f < fields.length; f++) {
+      var fd = fields[f];
+      var text = String(fd.str == null ? '' : fd.str).trim();
+      var v = Number(text);
+      var msg = null;
+      if (text === '' || isNaN(v)) msg = 'enter a whole number for ' + fd.name + '.';
+      else if (!isFinite(v) || Math.floor(v) !== v) msg = fd.name + ' must be a whole number.';
+      else if (v < 0) msg = fd.name + " can't be negative.";
+      else if (fd.key !== 'count' && v < 1) msg = fd.name + ' must be at least 1.';
+      else if (fd.key !== 'count' && v > 999) msg = fd.name + ' must be 999 or less.';
+      else if (fd.key === 'count' && v > values.deck) msg = countName + " can't be more than the deck size.";
+      if (msg) return { ok: false, field: fd.key, message: 'Check the inputs: ' + msg };
+      values[fd.key] = v;
+    }
+    return { ok: true, deck: values.deck, count: values.count, turn: values.turn };
+  }
+
+  function describe(mode, onPlay, turn, seen) {
+    var seat = onPlay ? 'on the play' : 'on the draw';
+    if (mode === 'ink') {
+      return 'Chance to have an inkable card to ink on every turn through turn ' + turn + ', ' + seat + '.';
+    }
+    return 'Chance to have drawn at least one copy by turn ' + turn + ', ' + seat + '. ' + seen + ' cards seen.';
+  }
+
+  // DOM glue. Everything is written with textContent; nothing is stored.
+  var DEFAULT_COUNT = { draw: '4', ink: '24' };
+  var LABELS = {
+    draw: { count: 'Copies in deck', turn: 'Turn number' },
+    ink: { count: 'Inkable cards in deck', turn: 'Through turn' }
+  };
+  var inputs = {
+    deck: document.getElementById('odds-deck'),
+    count: document.getElementById('odds-count'),
+    turn: document.getElementById('odds-turn')
+  };
+  var countLabel = root.querySelector('label[for="odds-count"]');
+  var turnLabel = root.querySelector('label[for="odds-turn"]');
+  var result = document.getElementById('odds-result');
+  var numEl = result.querySelector('.odds-num');
+  var textEl = result.querySelector('.odds-text');
+  var modeBtns = root.querySelectorAll('[data-mode]');
+  var seatBtns = root.querySelectorAll('[data-seat]');
+  var mode = 'draw';
+  var onPlay = true;
+
+  function press(btns, attr, value) {
+    for (var b = 0; b < btns.length; b++) {
+      btns[b].setAttribute('aria-pressed', btns[b].getAttribute(attr) === value ? 'true' : 'false');
+    }
+  }
+
+  function recompute() {
+    var r = validate(mode, inputs.deck.value, inputs.count.value, inputs.turn.value);
+    for (var key in inputs) {
+      if (r.ok || key !== r.field) {
+        inputs[key].removeAttribute('aria-invalid');
+        inputs[key].removeAttribute('aria-describedby');
+      } else {
+        inputs[key].setAttribute('aria-invalid', 'true');
+        inputs[key].setAttribute('aria-describedby', 'odds-result');
+      }
+    }
+    if (!r.ok) {
+      result.setAttribute('data-state', 'error');
+      numEl.textContent = '';
+      textEl.textContent = r.message;
+      return;
+    }
+    result.removeAttribute('data-state');
+    var p = mode === 'ink' ? inkOdds(r.deck, r.count, r.turn, onPlay) : drawOdds(r.deck, r.count, r.turn, onPlay);
+    numEl.textContent = formatPct(p);
+    textEl.textContent = describe(mode, onPlay, r.turn, cardsSeen(r.turn, onPlay, r.deck));
+  }
+
+  function setMode(next) {
+    if (next === mode) return;
+    var prev = mode;
+    mode = next;
+    press(modeBtns, 'data-mode', mode);
+    countLabel.textContent = LABELS[mode].count;
+    turnLabel.textContent = LABELS[mode].turn;
+    if (inputs.count.value.trim() === DEFAULT_COUNT[prev]) inputs.count.value = DEFAULT_COUNT[mode];
+    recompute();
+  }
+
+  function setSeat(next) {
+    var play = next === 'play';
+    if (play === onPlay) return;
+    onPlay = play;
+    press(seatBtns, 'data-seat', next);
+    recompute();
+  }
+
+  for (var mb = 0; mb < modeBtns.length; mb++) modeBtns[mb].addEventListener('click', function () {
+    setMode(this.getAttribute('data-mode'));
+  });
+  for (var sb = 0; sb < seatBtns.length; sb++) seatBtns[sb].addEventListener('click', function () {
+    setSeat(this.getAttribute('data-seat'));
+  });
+  root.addEventListener('input', recompute);
+  recompute();
 })();

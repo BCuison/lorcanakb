@@ -1,0 +1,28 @@
+# Progress — Deck building guide plus odds calculator
+- [x] requirements — business-analyst → 01-requirements.md
+- [x] design-spec — product-designer → 03-design-spec.md
+- [x] tech-spec — architect → 04-tech-spec.md
+- [x] build T-1 — developer
+- [x] build T-2 — developer
+- [x] build T-3 — developer
+- [x] build T-4 — developer
+- [x] research sources — general-purpose (web) → research-sources.md
+- [x] build T-5 — developer
+- [x] build T-6 — developer
+- [x] build T-7 — developer
+- [x] build T-8 — developer
+- [x] build T-9 — developer
+- [x] build T-10 — developer
+- [x] qa round 1 pass A1 (suite + AC-1..AC-6) — qa-engineer
+- [x] qa round 1 pass A2 (AC-7..AC-12) — qa-engineer
+- [x] qa round 1 pass A3 (AC-13..AC-18) — qa-engineer
+- [x] qa round 1 pass A4 (AC-19..AC-24) — qa-engineer
+- [x] qa round 1 pass A5 (AC-25..AC-26) — qa-engineer
+- [x] qa round 1 pass B (browser + accessibility) — qa-engineer
+- [x] qa round 1 pass C (regression + exploratory + verdict) — qa-engineer
+- [x] sign-off — business-analyst → 08-signoff.md
+- [x] bugfix round 1 BUG-1 — developer
+- [x] bugfix round 1 BUG-2 — developer
+- [x] qa round 2 re-test — qa-engineer
+- [x] sign-off (after round 2) — business-analyst → 08-signoff.md
+bugfix rounds used: 1/3
