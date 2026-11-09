@@ -1,4 +1,4 @@
-/* Lorcana KB illuminary styles v1.4.0
+/* Lorcana KB illuminary styles v1.5.0
    Named for the Great Illuminary. A midnight "Inklands" header with an aurora of the six inks,
    then a quiet reading column. The one recurring motif is the hexagon from the ink-cost frame
    on Lorcana cards: ink drops and numbered steps are hexagonal badges.
@@ -255,11 +255,12 @@ ol.refs { margin: 6px 0 12px; padding-left: 1.8em; font-size: .93rem; color: var
 ol.refs li { margin: 6px 0; }
 ol.refs li:target { color: var(--text); background: var(--tag-bg); border-radius: 4px; }
 ol.refs .src { font-style: italic; }
+ol.refs a { overflow-wrap: anywhere; }
 
 /* lore tracker and diagram colors for this theme */
-.tracker, .diagram, .dictionary, .rarity { --tk-surface: var(--surface); --tk-field: var(--bg); --tk-line: var(--line); --tk-text: var(--text); --tk-muted: var(--muted); --tk-accent: var(--lantern); --tk-on-accent: var(--surface); }
-:root[data-theme="dark"] .tracker { --tk-on-accent: var(--night); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tracker { --tk-on-accent: var(--night); } }
+.tracker, .diagram, .dictionary, .rarity, .deck-odds { --tk-surface: var(--surface); --tk-field: var(--bg); --tk-line: var(--line); --tk-text: var(--text); --tk-muted: var(--muted); --tk-accent: var(--lantern); --tk-on-accent: var(--surface); }
+:root[data-theme="dark"] .tracker, :root[data-theme="dark"] .deck-odds { --tk-on-accent: var(--night); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tracker, :root:not([data-theme="light"]) .deck-odds { --tk-on-accent: var(--night); } }
 
 /* lore tracker: identical layout in every theme (only the color mapping above differs) */
 .tracker-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin: 14px 0 12px; }
@@ -296,6 +297,24 @@ ol.refs .src { font-style: italic; }
 .lore-btns button:disabled { opacity: .4; cursor: default; transform: none; }
 @media (max-width: 560px) { .lore-btns { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: reduce) { .lore-meter span { transition: none; } .lore-btns button:active { transform: none; } }
+
+/* deck odds (Table Tools): identical layout in every theme (only the color mapping above differs) */
+.odds-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin: 14px 0 12px; }
+.odds-bar .tracker-seats { flex-wrap: wrap; }
+.odds-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 560px) { .odds-fields { grid-template-columns: minmax(0, 1fr); } }
+.odds-field { display: grid; gap: 4px; min-width: 0; }
+.odds-label { font-size: .9rem; color: var(--tk-text); }
+.odds-input { width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; font-variant-numeric: tabular-nums; padding: 8px 10px; border-radius: 8px; min-height: 44px;
+  color: var(--tk-text); background: var(--tk-field); border: 1px solid var(--tk-line); }
+.odds-input:hover { border-color: var(--tk-accent); }
+.odds-input[aria-invalid="true"] { border-color: var(--ruby); }
+.odds-input:focus-visible { outline: 2px solid var(--glimmer); outline-offset: 2px; border-color: var(--tk-accent); }
+.odds-result { margin-top: 16px; padding: 16px; text-align: center; border: 1px solid var(--tk-line); border-radius: 10px; background: var(--tk-surface); min-height: 7.5rem; }
+.odds-num { font-family: var(--display); font-size: clamp(2.8rem, 12vw, 3.6rem); line-height: 1; font-variant-numeric: tabular-nums; color: var(--tk-text); margin: 0; }
+.odds-text { font-size: .95rem; color: var(--tk-muted); margin: 6px 0 0; }
+.odds-result[data-state="error"] .odds-text { color: var(--ruby); }
+.odds-note { font-size: .85rem; color: var(--tk-muted); margin-top: 10px; }
 
 /* diagrams: inline SVG figures on Base Rules. Identical layout in every theme;
    colors come from the --tk-* mapping above, so they follow light and dark mode */

@@ -10,12 +10,13 @@ lorcana-kb/
 ├── CHANGELOG.md           Version history for every file
 ├── .gitignore
 ├── index.html             Site home page
-├── quick-reference.html   Hub: nav to Tools, Lore, Rarity, Base Rules, The Inks, Illumineer's Quest
+├── quick-reference.html   Hub: nav to Tools, Lore, Rarity, Deck building, Base Rules, The Inks, Illumineer's Quest
 ├── base-rules.html        Base rules (setup through formats)
 ├── rules-changes.html     Official rules updates, errata and bans, newest first
 ├── rarity.html            Card rarity: symbols, pull rates, typical values
+├── deck-building.html     Deck building guide: official rules, community advice, worked example
 ├── inks.html              Ink guide index
-├── table-tools.html       Table tools (coin flipper, lore tracker)
+├── table-tools.html       Table tools (coin flipper, lore tracker, deck odds calculator)
 ├── lore.html              Lorcana story, set by set
 ├── illumineers-quest.html Co-op quest index
 ├── quests/
@@ -26,9 +27,10 @@ lorcana-kb/
 │   ├── css/storybook.css  Storybook theme
 │   └── js/
 │       ├── site.js        Shared script (scroll reset, light/dark toggle, theme menu)
-│       └── tools.js       Interactive tools (coin flipper, lore tracker)
+│       └── tools.js       Interactive tools (coin flipper, lore tracker, deck odds calculator)
 ├── scripts/
-│   └── build-inks.py      Generates the six ink guides
+│   ├── build-inks.py      Generates the six ink guides
+│   └── test-odds.js       Node tests for the deck odds math
 ├── inks/
 │   └── <ink>.html         One guide per ink (amber, amethyst, emerald, ruby, sapphire, steel)
 └── docs/
