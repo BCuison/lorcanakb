@@ -33,3 +33,9 @@ A personal Disney Lorcana knowledgebase: a static HTML site plus long-form notes
   - uses `innerHTML` or similar with anything not hard-coded (`site.js` and `tools.js` already use `innerHTML`, so check new uses);
   - stores new data in `localStorage`;
   - changes how `build-inks.py` escapes data (it uses `html.escape`, so keep that).
+
+## Models
+
+The vibe-sdlc pipeline runs these roles on the local Ollama model (default `qwen3-14b-32k`); everything else stays on Claude. Needs the Ollama app running. If Ollama or the model isn't available, the pipeline says so and uses Claude.
+
+local: api-designer, product-designer, business-analyst signoff
