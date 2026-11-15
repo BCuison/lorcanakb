@@ -5,7 +5,7 @@ A personal Disney Lorcana knowledgebase: a static HTML site plus long-form notes
 ## Agentic SDLC
 
 - Feature work uses the `vibe-sdlc` plugin (GitHub `BCuison/vibeSDLC`), enabled in `.claude/settings.json`. Run it with `/vibe-sdlc:feature <description>`. The agents are named `vibe-sdlc:<name>`.
-- Feature artifacts go in `docs/features/<slug>/`. Keep them, because they're how the agents hand work to each other. This is a new folder alongside the existing `docs/knowledgebase.md`.
+- Feature artifacts go in `docs/features/<slug>/`. Keep them, because they're how the agents hand work to each other.
 - Only the developer agent modifies source.
 
 ## Design system
@@ -21,6 +21,7 @@ A personal Disney Lorcana knowledgebase: a static HTML site plus long-form notes
 - Plain static HTML, CSS and JS. Pages have no build step, and there are no dependencies or package manager.
 - Site pages sit at the repo root and use relative links, so the site works on any static host (GitHub Pages ready).
 - **The ink guides are generated.** Never hand-edit `inks/<ink>.html`. Edit the data in `scripts/build-inks.py`, then run `python3 scripts/build-inks.py .` from the repo root.
+- **Tests:** `node scripts/test-odds.js` from the repo root checks the deck-odds maths in `assets/js/tools.js` and exits 1 on any failure. Run it after any change to `tools.js`.
 - **Preview and browser QA:** run `python3 -m http.server 8000` from the repo root and open `http://localhost:8000/`. For any visual change, check every theme in both light and dark mode, and check phone width (about 375px).
 - Small state is saved in `localStorage` under `lorcana-kb-skin` (theme), `lorcana-kb-theme` (light/dark) and `lorcana-kb-tracker` (lore tracker). Changing its shape must not break values users already have saved.
 - **Versioning:** every file has its own semantic version, shown in the HTML footer (and `<meta name="version">`) or the Markdown header, and every change gets a `CHANGELOG.md` entry, newest first. A feature isn't done until the version and changelog are updated. See the README's Versioning section.
