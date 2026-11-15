@@ -16,6 +16,11 @@ Each file is versioned independently. Entries are newest first.
 
 ## Repository
 
+### [3.20.0] - 2026-11-14
+#### Added
+- GitHub Actions workflow `.github/workflows/test.yml` (v1.0.0): runs `node scripts/test-odds.js` on every pull request and on pushes to `main`. Node 22, read-only permissions, nothing to install
+- README file tree and CLAUDE.md's Tests note mention the workflow
+
 ### [3.19.1] - 2026-11-14
 #### Fixed
 - Pages no longer flash the default theme on load: every page and the ink guide template apply the saved theme and light/dark mode from an inline `<head>` script before first paint

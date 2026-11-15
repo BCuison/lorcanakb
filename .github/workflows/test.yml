@@ -1,0 +1,24 @@
+# Tests v1.0.0
+# Runs the deck odds tests (scripts/test-odds.js) on every pull request and on pushes to main.
+# The tests use only Node built-ins, so there is nothing to install.
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test-odds:
+    name: Deck odds math
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/test-odds.js

@@ -9,6 +9,8 @@ lorcana-kb/
 ├── README.md              Repo overview (this file)
 ├── CHANGELOG.md           Version history for every file
 ├── .gitignore
+├── .github/workflows/
+│   └── test.yml           Runs scripts/test-odds.js on every PR and push to main
 ├── index.html             Site home page
 ├── quick-reference.html   Hub: nav to Tools, Lore, Rarity, Deck building, Base Rules, The Inks, Illumineer's Quest
 ├── base-rules.html        Base rules (setup through formats)
