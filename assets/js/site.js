@@ -1,22 +1,24 @@
-/* Lorcana KB shared script v1.4.0
-   1. Opens every page at the top unless the link targets a section (#id).
-   2. Light/dark toggle (lightbulb, top left). Choice is remembered per browser.
-   4. Tracks the contents bar height (--nav-h) so section links land below it when it wraps.
-   3. Theme menu (right of the lightbulb): Classic, Illuminary (default) or Storybook, listed alphabetically.
-      Swaps the page stylesheet between classic.css, illuminary.css and storybook.css. */
+/* Lorcana KB shared script v1.4.1
+   1. Light/dark toggle (lightbulb, top left). Choice is remembered per browser.
+   2. Theme menu (right of the lightbulb): Classic, Illuminary (default) or Storybook, listed alphabetically.
+      Swaps the page stylesheet between classic.css, illuminary.css and storybook.css.
+      A small inline script in each page's <head> applies the saved choices before first paint;
+      this file applies them again (harmlessly) and builds the controls.
+   3. Opens every page at the top unless the link targets a section (#id).
+   4. Tracks the contents bar height (--nav-h) so section links land below it when it wraps. */
 (function () {
   var KEY = 'lorcana-kb-theme';
   var root = document.documentElement;
 
   /* ---- theme ---- */
-  function stored() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
-  function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function stored(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+  function save(key, v) { try { localStorage.setItem(key, v); } catch (e) {} }
   function current() {
     var t = root.getAttribute('data-theme');
     if (t === 'light' || t === 'dark') return t;
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
-  var s = stored();
+  var s = stored(KEY);
   if (s === 'light' || s === 'dark') root.setAttribute('data-theme', s);
 
   /* ---- design theme (skin) ---- */
@@ -30,8 +32,7 @@
     return null;
   }
   function getSkin() {
-    var v = null;
-    try { v = localStorage.getItem(SKIN_KEY); } catch (e) {}
+    var v = stored(SKIN_KEY);
     for (var i = 0; i < SKINS.length; i++) if (SKINS[i][0] === v) return v;
     return DEFAULT_SKIN;
   }
@@ -59,7 +60,7 @@
     });
     sel.value = getSkin();
     sel.addEventListener('change', function () {
-      try { localStorage.setItem(SKIN_KEY, sel.value); } catch (e) {}
+      save(SKIN_KEY, sel.value);
       applySkin(sel.value);
     });
     wrap.appendChild(label); wrap.appendChild(sel);
@@ -90,7 +91,7 @@
     btn.addEventListener('click', function () {
       var next = current() === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
-      save(next);
+      save(KEY, next);
       label(btn);
     });
     document.body.insertBefore(btn, document.body.firstChild);

@@ -1,4 +1,4 @@
-/* Lorcana KB tools v1.4.0
+/* Lorcana KB tools v1.4.1
    Coin flipper: fair 50/50 using the browser's crypto random source. Lore tracker and
    deck odds calculator below.
    Tap the coin itself or the button to flip. */
@@ -53,7 +53,8 @@
 
 /* Lore tracker: 2 to 4 players, first to 20 lore wins.
    Scores, names and player count are saved in this browser (localStorage).
-   Undo steps back through score changes made since the page opened. */
+   Undo steps back through score and player-count changes made since the page opened.
+   Dropping to fewer players clears the hidden seats' scores; Undo brings them back. */
 (function () {
   var root = document.getElementById('tracker');
   if (!root) return;
@@ -152,7 +153,11 @@
   });
 
   for (var s = 0; s < seatBtns.length; s++) seatBtns[s].addEventListener('click', function () {
-    state.count = +this.getAttribute('data-count');
+    var next = +this.getAttribute('data-count');
+    if (next === state.count) return;
+    history.push({ count: state.count, scores: state.scores.slice() });
+    for (var k = next; k < 4; k++) state.scores[k] = 0;
+    state.count = next;
     save(); render();
     status.textContent = state.count + ' players.';
   });
@@ -160,11 +165,16 @@
   undoBtn.addEventListener('click', function () {
     var h = history.pop();
     if (!h) return;
-    if (h.i < state.count) {
-      state.scores[h.i] = h.prev;
-      save(); update(h.i);
-      status.textContent = 'Undone. ' + name(h.i) + ': ' + h.prev + ' lore.';
+    if (h.count) {
+      state.count = h.count;
+      state.scores = h.scores;
+      save(); render();
+      status.textContent = 'Undone. ' + state.count + ' players.';
+      return;
     }
+    state.scores[h.i] = h.prev;
+    save(); update(h.i);
+    status.textContent = 'Undone. ' + name(h.i) + ': ' + h.prev + ' lore.';
     undoBtn.disabled = history.length === 0;
   });
 

@@ -1,7 +1,8 @@
 # Generates inks/<ink>.html from the page template and the INKS data below.
-# Usage (from repo root): python3 scripts/build-inks.py .
+# Usage (from repo root): python3 scripts/build-inks.py .   (the output folder defaults to .)
+# Every value from the data below goes through E() (html.escape) before it reaches the page.
 import html, sys
-OUT = sys.argv[1]
+OUT = sys.argv[1] if len(sys.argv) > 1 else "."
 E = html.escape
 
 QR = "../base-rules.html"
@@ -24,6 +25,8 @@ CARDS_CORE_ASOF = "Sets 9 to 13 · Sep 2026"
 CARDS_CORE_NOTE = "From the official post-rotation writeup. Hyperia City cards are not reflected yet."
 
 FONTS = '<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500&display=swap" rel="stylesheet">'
+# Same as the inline script in every hand-written page's <head>: applies the saved theme before first paint.
+HEAD_JS = '<script>/* Apply the saved light/dark and theme before first paint (site.js builds the controls) */(function(){try{var d=document.documentElement,t=localStorage.getItem(\'lorcana-kb-theme\'),s=localStorage.getItem(\'lorcana-kb-skin\'),l=document.querySelector(\'link[href$="illuminary.css"]\');if(t===\'light\'||t===\'dark\')d.setAttribute(\'data-theme\',t);if(l&&(s===\'classic\'||s===\'storybook\')){l.setAttribute(\'href\',l.getAttribute(\'href\').replace(\'illuminary.css\',s+\'.css\'));d.setAttribute(\'data-skin\',s);}}catch(e){}})();</script>'
 FLEURON = '<div class="fleuron" aria-hidden="true"><svg><use href="#fleuron"/></svg></div>'
 FLEURON_DEF = '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="fleuron" viewBox="0 0 26 14"><path d="M13 1.5 17 7l-4 5.5L9 7Z" fill="currentColor"/><circle cx="3.5" cy="7" r="1.4" fill="currentColor"/><circle cx="22.5" cy="7" r="1.4" fill="currentColor"/></symbol></svg>'
 ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII"]
@@ -35,7 +38,7 @@ def tier(label):
 
 def pair_rows(rows):
     return "\n".join(
-        f'        <li><div class="entry-top"><span class="drop" style="background:var(--{ink})"></span><span class="name">{E(name)}</span>{tier(lab)}</div>{E(text)}</li>'
+        f'        <li><div class="entry-top"><span class="drop" style="background:var(--{E(ink)})"></span><span class="name">{E(name)}</span>{tier(lab)}</div>{E(text)}</li>'
         for ink, name, lab, text in rows)
 
 def card_rows(rows):
@@ -45,7 +48,7 @@ def card_rows(rows):
 
 def fmt(title, asof, rows, note):
     return f'''    <section>
-      <h3>{title}</h3><span class="asof">{E(asof)}</span>
+      <h3>{E(title)}</h3><span class="asof">{E(asof)}</span>
       <ul class="entries">
 {rows}
       </ul>
@@ -54,23 +57,24 @@ def fmt(title, asof, rows, note):
 
 def chapter(i, cid, title, body):
     return f'''<section class="chapter" id="{cid}">
-  <div class="chapter-head"><span class="num">Chapter {ROMAN[i]}</span><h2>{title}</h2></div>
+  <div class="chapter-head"><span class="num">Chapter {ROMAN[i]}</span><h2>{E(title)}</h2></div>
 {body}
 </section>'''
 
 def page(d):
-    n = d["name"]
+    n = E(d["name"])
+    ver = E(d["version"])
     strengths = "\n".join(f"      <li>{E(x)}</li>" for x in d["strengths"])
     weaknesses = "\n".join(f"      <li>{E(x)}</li>" for x in d["weaknesses"])
     mech = "\n".join(
-        f'    <p><span class="term">{E(t)}</span>' + (f'<a class="rules-link" href="{QR}#{a}">rules →</a>' if a else "") + f'<br>{E(x)}</p>'
+        f'    <p><span class="term">{E(t)}</span>' + (f'<a class="rules-link" href="{QR}#{E(a)}">rules →</a>' if a else "") + f'<br>{E(x)}</p>'
         for t, x, a in d["mechanics"])
     phases = "\n".join(
         f'    <div><span class="when">{E(t)}</span><h3>{E(h)}</h3><p>{E(p)}</p></div>'
         for t, h, p in zip(["Turns 1 to 3", "Turns 4 to 6", "Turns 7 and on"], d["phase_titles"], d["phases"]))
     against = "\n".join(f"    <li><span><b>{E(b)}</b> {E(t)}</span></li>" for b, t in d["against"])
     mistakes = "\n".join(f'    <p><span class="term">{E(h)}</span><br>{E(p)}</p>' for h, p in d["mistakes"])
-    srcs = "\n".join(f'    <li><a href="{SRC[k][1]}" target="_blank" rel="noopener">{E(SRC[k][0])}</a></li>' for k in d["sources"])
+    srcs = "\n".join(f'    <li><a href="{E(SRC[k][1])}" target="_blank" rel="noopener">{E(SRC[k][0])}</a></li>' for k in d["sources"])
 
     chapters = [
         chapter(0, "identity", "Identity", f'''  <div class="pair">
@@ -98,7 +102,7 @@ def page(d):
 {fmt("Core Constructed", CARDS_CORE_ASOF, card_rows(d["core_cards"]), d.get("core_cards_note", CARDS_CORE_NOTE))}
 {fmt("Infinity Constructed", d.get("inf_cards_asof", "Needs verification"), card_rows(d["inf_cards"]), d["inf_cards_note"])}
   </div>'''),
-        chapter(5, "against", f"Facing {n}", f'''  <ol class="rules">
+        chapter(5, "against", "Facing " + d["name"], f'''  <ol class="rules">
 {against}
   </ol>'''),
         chapter(6, "mistakes", "Common mistakes", f'''  <div class="dictionary">
@@ -112,14 +116,15 @@ def page(d):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="version" content="{d["version"]}">
+<meta name="version" content="{ver}">
 <title>{n} Ink Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {FONTS}
 <link rel="stylesheet" href="../assets/css/illuminary.css">
+{HEAD_JS}
 </head>
-<body style="--accent: var(--{d["slug"]})">
+<body style="--accent: var(--{E(d["slug"])})">
 {FLEURON_DEF}
 
 <header class="titlepage col">
@@ -154,8 +159,8 @@ def page(d):
 {srcs}
   </ul>
   <div class="meta">
-    <span class="ver">Version {d["version"]}</span>
-    <span>Updated 2026-10-27</span>
+    <span class="ver">Version {ver}</span>
+    <span>Updated {E(d["updated"])}</span>
     <a href="{INKS_PAGE}">All inks</a>
     <a href="{QR}">Base rules</a>
     <a href="../CHANGELOG.md">View changelog</a>
@@ -181,7 +186,7 @@ RS_ITEMS = ("Items (Ruby/Sapphire)", "Classic list", "One Jump Ahead, How Far I�
 ELINOR = ("Elinor (Amber/Emerald)", "", "Elinor - Renowned Diplomat (needs three or more exerted characters at end of turn)")
 
 INKS = [
-dict(slug="amber", name="Amber", version="2.0.1",
+dict(slug="amber", name="Amber", version="2.0.2", updated="2026-11-14",
  tagline="Songs, support and healing. Amber builds a board that gets stronger together and keeps it alive.",
  strengths=["Cheap singers play expensive songs early, for free", "Abilities that trigger off your other characters reward going wide", "Healing and protection keep key characters in play"],
  weaknesses=["Not known for dealing damage; removal usually comes from songs or the partner ink", "Wide boards are exposed to board sweepers", "Singers exert to sing, which leaves them open to challenges"],
@@ -222,7 +227,7 @@ dict(slug="amber", name="Amber", version="2.0.1",
   ("Questing into open challengers", "An exerted engine piece is a free target. Quest with what you can afford to lose.")],
  sources=["official", "core_inks", "quest", "inf_inks", "colors", "aliens", "steelsong"]),
 
-dict(slug="amethyst", name="Amethyst", version="2.0.1",
+dict(slug="amethyst", name="Amethyst", version="2.0.2", updated="2026-11-14",
  tagline="Card draw, bounce and magic. Amethyst wins on card advantage and flexible, tricky plays.",
  strengths=["Draws extra cards and digs for answers", "Bounce and recursion reset threats or reuse your best cards", "Flexible across aggro, midrange and control"],
  weaknesses=["Often relies on the partner ink for board presence", "Card-draw engines take time to pay off", "Bounce only buys time if the opponent can replay the card"],
@@ -260,7 +265,7 @@ dict(slug="amethyst", name="Amethyst", version="2.0.1",
   ("Forgetting the lore race", "Amethyst can out-card the opponent and still lose to 20 lore.")],
  sources=["official", "core_inks", "quest", "inf_inks", "inf_meta", "colors"]),
 
-dict(slug="emerald", name="Emerald", version="2.0.1",
+dict(slug="emerald", name="Emerald", version="2.0.2", updated="2026-11-14",
  tagline="Tricks, evasion and disruption. Emerald harasses the opponent’s hand and board while slipping past defenses.",
  strengths=["Discard disrupts the opponent’s plans", "Evasive and Ward characters are hard to challenge or target", "Cheap characters make fast, wide starts"],
  weaknesses=["Small characters lose fair challenges", "Disruption alone doesn’t win; it needs a lore plan", "Wide boards are exposed to sweepers"],
@@ -297,7 +302,7 @@ dict(slug="emerald", name="Emerald", version="2.0.1",
   ("Overextending", "Keep a reload in hand in case the board gets swept.")],
  sources=["official", "core_inks", "quest", "inf_inks", "inf_meta", "colors"]),
 
-dict(slug="ruby", name="Ruby", version="2.0.1",
+dict(slug="ruby", name="Ruby", version="2.0.2", updated="2026-11-14",
  tagline="Aggression and damage. Ruby hits hard, hits early and removes whatever is in the way.",
  strengths=["Rush and Challenger win challenges early", "Strong removal through damage and banishing", "Big, hard-hitting characters"],
  weaknesses=["Reckless characters can’t quest", "Works best with a partner ink that stabilizes", "Runs out of steam if the opponent survives the early game"],
@@ -334,7 +339,7 @@ dict(slug="ruby", name="Ruby", version="2.0.1",
   ("Overcommitting", "Keep threats in hand in case the board gets swept.")],
  sources=["official", "core_inks", "inf_inks", "inf_meta", "colors", "rubysapph"]),
 
-dict(slug="sapphire", name="Sapphire", version="2.0.1",
+dict(slug="sapphire", name="Sapphire", version="2.0.2", updated="2026-11-14",
  tagline="Items, locations and control. Sapphire ramps ahead on ink and plays the long game.",
  strengths=["Ramp puts extra cards in the inkwell for early big plays", "Items and locations generate steady value and lore", "Card selection finds the right answer"],
  weaknesses=["Slow starts can fall behind on lore", "Value engines are vulnerable to item and location removal", "Fewer cheap aggressive characters"],
@@ -372,7 +377,7 @@ dict(slug="sapphire", name="Sapphire", version="2.0.1",
   ("Holding answers too long", "Control still needs to remove threats before they quest.")],
  sources=["core_inks", "quest", "inf_inks", "inf_meta", "colors", "rubysapph"]),
 
-dict(slug="steel", name="Steel", version="2.0.1",
+dict(slug="steel", name="Steel", version="2.0.2", updated="2026-11-14",
  tagline="Big bodies and resilience. Steel builds sturdy characters that win fights and protect the board.",
  strengths=["High strength and willpower win challenges", "Resist and Bodyguard keep the board alive", "Direct damage removes threats"],
  weaknesses=["Big bodies cost more, so starts can be slow", "Evasive threats walk past ground blockers", "Card draw usually comes from the partner ink"],
@@ -411,6 +416,6 @@ dict(slug="steel", name="Steel", version="2.0.1",
 ]
 
 for d in INKS:
-    with open(f"{OUT}/inks/{d['slug']}.html", "w") as f:
+    with open(f"{OUT}/inks/{d['slug']}.html", "w", encoding="utf-8") as f:
         f.write(page(d))
 print("built", len(INKS))
